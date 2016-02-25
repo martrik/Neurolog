@@ -1,0 +1,3 @@
+rootProject.name = 'Neurolog'
+
+include ':app'
