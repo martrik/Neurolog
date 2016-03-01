@@ -5,28 +5,83 @@
 'use strict';
 import React, {
   AppRegistry,
-  Component,
+  Navigator,
   StyleSheet,
+  View,
   Text,
-  View
+  Component
 } from 'react-native';
 
+import SimpleButton from './app/components/SimpleButton';
+import NewRecordScreen from './app/components/NewRecordScreen';
+
+var NavigationBarRouteMapper = {
+    LeftButton: function(route, navigator, index, navState) {
+		switch (route.name) {
+        case 'home':
+            return (
+            	<SimpleButton
+	               onPress={() => {
+	                 navigator.push({
+	                   name: 'newRecord'
+	                   }); }}
+	               	customText='Create New Record'
+             	/>
+			); 
+        default:
+            return null;
+       } 
+	},
+    
+    RightButton: function(route, navigator, index, navState) {
+	},
+    Title: function(route, navigator, index, navState) {
+    	switch (route.name) {
+    	case 'home':
+           return (
+             <Text>React Notes</Text>
+           );
+        case 'createNote':
+           	return (
+            	<Text>Create Note</Text>
+           	);
+		} 	
+	}
+};
+
 class Neurolog extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
-  }
+	renderScene (route, navigator) {
+		switch (route.name) {
+		case 'home':
+			return (
+				<View style={styles.container}>
+					<SimpleButton
+						onPress={() => {
+							 navigator.push({
+		                     name: 'newRecord'
+							});
+						}}
+						customText='Add new record'
+					/>
+				</View> 
+			);
+		case 'newRecord':
+			<NewRecordScreen/>	
+		}
+	}
+	render() {
+		return (
+			<Navigator
+			    initialRoute={{name: 'home'}}
+			    renderScene={this.renderScene}
+			    navigationBar={
+			    	<Navigator.NavigationBar
+			    		routeMapper={NavigationBarRouteMapper}
+			    	/>
+			    }
+			/>
+		);
+	}
 }
 
 const styles = StyleSheet.create({
