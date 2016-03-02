@@ -14,9 +14,10 @@ import React, {
 
 import SimpleButton from './app/components/SimpleButton';
 import NewRecordScreen from './app/components/NewRecordScreen';
+import HomeScreen from './app/components/HomeScreen';
 
 var NavigationBarRouteMapper = {
-    LeftButton: function(route, navigator, index, navState) {
+    RightButton: function(route, navigator, index, navState) {
 		switch (route.name) {
         case 'home':
             return (
@@ -29,11 +30,21 @@ var NavigationBarRouteMapper = {
              	/>
 			); 
         default:
-            return null;
+            return(null);
        } 
 	},
-    
-    RightButton: function(route, navigator, index, navState) {
+    LeftButton: function(route, navigator, index, navState) {
+		switch (route.name) {
+        case 'newRecord':
+           return (
+             <SimpleButton
+               onPress={() => navigator.pop()}
+               customText='Back'
+              />
+		); 
+        default:
+           return null;
+       }
 	},
     Title: function(route, navigator, index, navState) {
     	switch (route.name) {
@@ -53,20 +64,10 @@ class Neurolog extends Component {
 	renderScene (route, navigator) {
 		switch (route.name) {
 		case 'home':
-			return (
-				<View style={styles.container}>
-					<SimpleButton
-						onPress={() => {
-							 navigator.push({
-		                     name: 'newRecord'
-							});
-						}}
-						customText='Add new record'
-					/>
-				</View> 
-			);
+			return (<HomeScreen/>);
+
 		case 'newRecord':
-			<NewRecordScreen/>	
+			return (<NewRecordScreen/>);
 		}
 	}
 	render() {
