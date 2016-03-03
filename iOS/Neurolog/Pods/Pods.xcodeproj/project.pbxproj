@@ -1,0 +1,897 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0676B179B48CA1D0ABF0772F2F9EE121 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D635D41133915B228CE899EF89DD95CE /* Foundation.framework */; };
+		085BD05092BC62B995C722E27AA446C4 /* Pods-NeurologTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D072E3AD99DC40793CE8D121E2EF1A7 /* Pods-NeurologTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		098769B5C2FEECE3762BF097029466C6 /* ActionSheetMultipleStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E668A06BB8C37BF2359F52F5E1C47FA /* ActionSheetMultipleStringPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1CAEEBC4F132DA53C8DB6B4461608D70 /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CFBFDCDFE941ECF81DB994EAC61F78 /* ActionSheetDistancePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1CC9E081387D99D2B70909751C22AA30 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 086C9BB20FDDB53D3906CA1583413803 /* DistancePickerView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		33D29EA1D345EE1486E1B431883C9FE3 /* Pods-NeurologTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A5CEE602272393E3DCE329BB480F4D /* Pods-NeurologTests-dummy.m */; };
+		3605B742811405EB6C273DBF3E60BA65 /* ActionSheetCustomPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = CCFF8962890382B357B0CEE2401DADF9 /* ActionSheetCustomPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		409A1BD79370BB3F3B809ACAB8B14AA8 /* ActionSheetPicker-3.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BB4584A293865661605294BFF38DB /* ActionSheetPicker-3.0-dummy.m */; };
+		53E0825DC621F2555B3FA9A8687CF7B4 /* DistancePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = CCDA8D17CF2D7407FC0354A732CB4258 /* DistancePickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		604B8C8AA0BE64FC723059CE79F0B4F2 /* Pods-NeurologUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F11A9CA5021FC4CDD2AABFAF92C24638 /* Pods-NeurologUITests-dummy.m */; };
+		6058C40D9AFABF7CFB162DA72B192392 /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0411B763BD30ABF699F609443944B8 /* ActionSheetDatePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		627A79010BA75672F25EA6B97520FA07 /* ActionSheetDistancePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = FEEF9DD7DCA79866D39510B4B3836A16 /* ActionSheetDistancePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6294549B14095C587B1B06CB1239B5E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D635D41133915B228CE899EF89DD95CE /* Foundation.framework */; };
+		68FB561B4E31FF535A983D289E8659CA /* SWActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B85C6C39986DB389CF827D43FC38656 /* SWActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A794C91A2AB93BF38279819BADCD8C /* ActionSheetCustomPickerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C568B07D7817264B94197F093BD292F9 /* ActionSheetCustomPickerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		770BEFACCB678FBCD001529D16DC7D97 /* ActionSheetLocalePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = E33A609A31EC0E8493E555C8759C000B /* ActionSheetLocalePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		848C447B17BB93A8BC6757BB8DD4EC99 /* ActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 0937C8B68D89F7C7732C67E7BF61D850 /* ActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8604F9A80F34D21870FCB70BF030722B /* ActionSheetDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AC0945BA2993786D8C8CB31A8B2B05C /* ActionSheetDatePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97D20777AC5994F619D9E53306D8B159 /* Pods-NeurologUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 97CC373E436D2B920A48E2F6F8011108 /* Pods-NeurologUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CA21846EB596294EEA9166C5123102E /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F924914A7C17D78AE7B652B981724E /* AbstractActionSheetPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9D35A78E05E56CA2D298C6524C353D8F /* AbstractActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = C0B3B5AEF57DDB103BABC898AACB0F19 /* AbstractActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5100DCB67140DB0DD547696D2121A3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D635D41133915B228CE899EF89DD95CE /* Foundation.framework */; };
+		ABBF380D4804467E4D7CB1604E701515 /* ActionSheetLocalePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A139D8751FAFFA73664DC890D44C508 /* ActionSheetLocalePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B0BB57516C3CEC4EE42E3FE727292187 /* ActionSheetPicker-3.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F0E672E563F5E19BD623A008CB038DD /* ActionSheetPicker-3.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B640015FD6F6684CB649C15A87933AF6 /* ActionSheetMultipleStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = E13EF4565283497DA8231BFE0A63E06E /* ActionSheetMultipleStringPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE4CE40EC8D0C307C5E3494CE22C699F /* Pods-Neurolog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B624E75842FF2C08617922A79691B35 /* Pods-Neurolog-dummy.m */; };
+		CA7D0B8C3543FF3C833B6FEDD5903BBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF066F8D85A4D7A3B3A04D25E4D2AC88 /* UIKit.framework */; };
+		CEA3240572C6DC666437DBDD3415ABDD /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5087EB01E4D0F4BEE53232C3CB94B5B2 /* ActionSheetStringPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D3F26F54B9333EC0DE81CA192E83875B /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A0573E8A3A98E7C64FA4A498911E45 /* ActionSheetCustomPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D4447FF472FB1BB8EEC77B7694DA3C7F /* ActionSheetStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A7FB5AF07C70BF12318BE490621954 /* ActionSheetStringPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DED46C6C83ED1D27AB93ECB691E531E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D635D41133915B228CE899EF89DD95CE /* Foundation.framework */; };
+		E9F339DE75CB68B1AC97BB659A4A25CF /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E60CFA1A2D37281B9FB7AC8BF76C4B6 /* SWActionSheet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FE7C334B5BD6EAD0E9A677E6B68FEAF6 /* Pods-Neurolog-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 64AE9329C9E2BC653B812DFEB789E2C5 /* Pods-Neurolog-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B67ACC3F6FA2F03E81324125BD36B1E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 053617A05C5A952CF2888B88D119FE01;
+			remoteInfo = "ActionSheetPicker-3.0";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0374279E22536F05812C3F2E5BB5E2D4 /* Pods_Neurolog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neurolog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		086C9BB20FDDB53D3906CA1583413803 /* DistancePickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DistancePickerView.m; path = Pickers/DistancePickerView.m; sourceTree = "<group>"; };
+		0937C8B68D89F7C7732C67E7BF61D850 /* ActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetPicker.h; path = Pickers/ActionSheetPicker.h; sourceTree = "<group>"; };
+		0D072E3AD99DC40793CE8D121E2EF1A7 /* Pods-NeurologTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NeurologTests-umbrella.h"; sourceTree = "<group>"; };
+		17069F994A3BCAA5D0A3A7778E1F83CB /* ActionSheetPicker_3_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActionSheetPicker_3_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A139D8751FAFFA73664DC890D44C508 /* ActionSheetLocalePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetLocalePicker.m; path = Pickers/ActionSheetLocalePicker.m; sourceTree = "<group>"; };
+		1B22E51081F092987CA3F2CFA3044115 /* Pods-NeurologUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NeurologUITests-frameworks.sh"; sourceTree = "<group>"; };
+		1E668A06BB8C37BF2359F52F5E1C47FA /* ActionSheetMultipleStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetMultipleStringPicker.m; path = Pickers/ActionSheetMultipleStringPicker.m; sourceTree = "<group>"; };
+		235A5A33BFF159DED3889BD6E972DD9D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		294D60FF00EBCFA931040CB3000C0D39 /* Pods-Neurolog-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Neurolog-resources.sh"; sourceTree = "<group>"; };
+		29A7FB5AF07C70BF12318BE490621954 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetStringPicker.h; path = Pickers/ActionSheetStringPicker.h; sourceTree = "<group>"; };
+		366F5A281F0CC097185279AA888C7399 /* Pods-Neurolog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Neurolog.release.xcconfig"; sourceTree = "<group>"; };
+		37A6BE817655D185EE6D192BC38E8D3D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A4C1EF40CC3CD86CD762BF96514F9F3 /* ActionSheetPicker-3.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ActionSheetPicker-3.0.xcconfig"; sourceTree = "<group>"; };
+		3F0E672E563F5E19BD623A008CB038DD /* ActionSheetPicker-3.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActionSheetPicker-3.0-umbrella.h"; sourceTree = "<group>"; };
+		3F40A36F9FF60695046729AC7B24E570 /* Pods-NeurologUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NeurologUITests.release.xcconfig"; sourceTree = "<group>"; };
+		440ABDC4E8D029DE93140E3A5100AE53 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4444C78D6B39A89F38F785104058FF93 /* ActionSheetPicker-3.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "ActionSheetPicker-3.0.modulemap"; sourceTree = "<group>"; };
+		46B2501BBEBF76224F22DFD71B68EE57 /* Pods-NeurologUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NeurologUITests-resources.sh"; sourceTree = "<group>"; };
+		4B624E75842FF2C08617922A79691B35 /* Pods-Neurolog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Neurolog-dummy.m"; sourceTree = "<group>"; };
+		5087EB01E4D0F4BEE53232C3CB94B5B2 /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetStringPicker.m; path = Pickers/ActionSheetStringPicker.m; sourceTree = "<group>"; };
+		52BD263A1A9685F4E70895CBEEF4AF72 /* Pods-NeurologTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NeurologTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		593204011BA201B60BC063BFD2A1E76A /* ActionSheetPicker-3.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActionSheetPicker-3.0-prefix.pch"; sourceTree = "<group>"; };
+		5AC0945BA2993786D8C8CB31A8B2B05C /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDatePicker.h; path = Pickers/ActionSheetDatePicker.h; sourceTree = "<group>"; };
+		5AEFC997A5C5EBD9F2FE7E67369CBADA /* Pods-NeurologTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NeurologTests.release.xcconfig"; sourceTree = "<group>"; };
+		5B3AE127A8A42426D1C283170694F9FD /* Pods-NeurologTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NeurologTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		64AE9329C9E2BC653B812DFEB789E2C5 /* Pods-Neurolog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Neurolog-umbrella.h"; sourceTree = "<group>"; };
+		6B85C6C39986DB389CF827D43FC38656 /* SWActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWActionSheet.h; path = Pickers/SWActionSheet.h; sourceTree = "<group>"; };
+		76E8693D5B548861877D8F1D86536708 /* Pods-Neurolog-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Neurolog-frameworks.sh"; sourceTree = "<group>"; };
+		79CC95EFC0BB318A8D6DA0992BAB28BF /* Pods-NeurologTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-NeurologTests.modulemap"; sourceTree = "<group>"; };
+		7E60CFA1A2D37281B9FB7AC8BF76C4B6 /* SWActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWActionSheet.m; path = Pickers/SWActionSheet.m; sourceTree = "<group>"; };
+		85F4AC3578F847BCA4E15A38DA3F7BA6 /* Pods_NeurologUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeurologUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FE904AB87791ADA9BAC84BD4B2EFC93 /* Pods-NeurologTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NeurologTests.debug.xcconfig"; sourceTree = "<group>"; };
+		97CC373E436D2B920A48E2F6F8011108 /* Pods-NeurologUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NeurologUITests-umbrella.h"; sourceTree = "<group>"; };
+		9AF962C85652AD6F86F56DDDBC5604B6 /* Pods_NeurologTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeurologTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D0D060402DF1D9DD4FF0265272ABD9D /* Pods-NeurologUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NeurologUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A5CFBFDCDFE941ECF81DB994EAC61F78 /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDistancePicker.m; path = Pickers/ActionSheetDistancePicker.m; sourceTree = "<group>"; };
+		ADFC1B26B98D01319A64D3D0B0203D55 /* Pods-Neurolog.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Neurolog.modulemap"; sourceTree = "<group>"; };
+		AF066F8D85A4D7A3B3A04D25E4D2AC88 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B5A0573E8A3A98E7C64FA4A498911E45 /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetCustomPicker.m; path = Pickers/ActionSheetCustomPicker.m; sourceTree = "<group>"; };
+		B96DAB39B2CDDD88B963077AE65DECDA /* Pods-Neurolog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Neurolog.debug.xcconfig"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BB1936582338C92D6B26A51266D1AC5D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C05B3BEC29C5C15E9FBBA56B78C0CDBC /* Pods-Neurolog-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Neurolog-acknowledgements.plist"; sourceTree = "<group>"; };
+		C0A5CEE602272393E3DCE329BB480F4D /* Pods-NeurologTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NeurologTests-dummy.m"; sourceTree = "<group>"; };
+		C0B3B5AEF57DDB103BABC898AACB0F19 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractActionSheetPicker.h; path = Pickers/AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		C568B07D7817264B94197F093BD292F9 /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPickerDelegate.h; path = Pickers/ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
+		C8AFB89A72D92D1718B4A44B295013A1 /* Pods-NeurologUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NeurologUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		CCDA8D17CF2D7407FC0354A732CB4258 /* DistancePickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DistancePickerView.h; path = Pickers/DistancePickerView.h; sourceTree = "<group>"; };
+		CCFF8962890382B357B0CEE2401DADF9 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPicker.h; path = Pickers/ActionSheetCustomPicker.h; sourceTree = "<group>"; };
+		CE7BB4584A293865661605294BFF38DB /* ActionSheetPicker-3.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ActionSheetPicker-3.0-dummy.m"; sourceTree = "<group>"; };
+		D635D41133915B228CE899EF89DD95CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DBA0CBEABF76CDC332E5E0039C0D2A18 /* Pods-NeurologUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NeurologUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DC5C474624066EAD5970413722DD2DB5 /* Pods-NeurologUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-NeurologUITests.modulemap"; sourceTree = "<group>"; };
+		E13EF4565283497DA8231BFE0A63E06E /* ActionSheetMultipleStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetMultipleStringPicker.h; path = Pickers/ActionSheetMultipleStringPicker.h; sourceTree = "<group>"; };
+		E33A609A31EC0E8493E555C8759C000B /* ActionSheetLocalePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetLocalePicker.h; path = Pickers/ActionSheetLocalePicker.h; sourceTree = "<group>"; };
+		E7B660092438E584DD0FAB7EC776A4CF /* Pods-NeurologTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NeurologTests-resources.sh"; sourceTree = "<group>"; };
+		EAF44DA6032C6507765123C5E63E290A /* Pods-Neurolog-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Neurolog-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F11A9CA5021FC4CDD2AABFAF92C24638 /* Pods-NeurologUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NeurologUITests-dummy.m"; sourceTree = "<group>"; };
+		F8F924914A7C17D78AE7B652B981724E /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AbstractActionSheetPicker.m; path = Pickers/AbstractActionSheetPicker.m; sourceTree = "<group>"; };
+		FA61E1B8076C0D61FB072F73E36DDE02 /* Pods-NeurologTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NeurologTests-frameworks.sh"; sourceTree = "<group>"; };
+		FD0411B763BD30ABF699F609443944B8 /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDatePicker.m; path = Pickers/ActionSheetDatePicker.m; sourceTree = "<group>"; };
+		FEEF9DD7DCA79866D39510B4B3836A16 /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDistancePicker.h; path = Pickers/ActionSheetDistancePicker.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		171D3B37935ADCC911CFAA3A9069E1E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0676B179B48CA1D0ABF0772F2F9EE121 /* Foundation.framework in Frameworks */,
+				CA7D0B8C3543FF3C833B6FEDD5903BBD /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45CD42DC51210D127FD69C2F71D2E94F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DED46C6C83ED1D27AB93ECB691E531E5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6AE6BDE00B3C8EF576B7984B63DE8A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6294549B14095C587B1B06CB1239B5E2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE642602291DF094B02BCFC9F356B089 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5100DCB67140DB0DD547696D2121A3F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02C66CEC1EDE22E3327E1D6903C99AC9 /* ActionSheetPicker-3.0 */ = {
+			isa = PBXGroup;
+			children = (
+				C0B3B5AEF57DDB103BABC898AACB0F19 /* AbstractActionSheetPicker.h */,
+				F8F924914A7C17D78AE7B652B981724E /* AbstractActionSheetPicker.m */,
+				CCFF8962890382B357B0CEE2401DADF9 /* ActionSheetCustomPicker.h */,
+				B5A0573E8A3A98E7C64FA4A498911E45 /* ActionSheetCustomPicker.m */,
+				C568B07D7817264B94197F093BD292F9 /* ActionSheetCustomPickerDelegate.h */,
+				5AC0945BA2993786D8C8CB31A8B2B05C /* ActionSheetDatePicker.h */,
+				FD0411B763BD30ABF699F609443944B8 /* ActionSheetDatePicker.m */,
+				FEEF9DD7DCA79866D39510B4B3836A16 /* ActionSheetDistancePicker.h */,
+				A5CFBFDCDFE941ECF81DB994EAC61F78 /* ActionSheetDistancePicker.m */,
+				E33A609A31EC0E8493E555C8759C000B /* ActionSheetLocalePicker.h */,
+				1A139D8751FAFFA73664DC890D44C508 /* ActionSheetLocalePicker.m */,
+				E13EF4565283497DA8231BFE0A63E06E /* ActionSheetMultipleStringPicker.h */,
+				1E668A06BB8C37BF2359F52F5E1C47FA /* ActionSheetMultipleStringPicker.m */,
+				0937C8B68D89F7C7732C67E7BF61D850 /* ActionSheetPicker.h */,
+				29A7FB5AF07C70BF12318BE490621954 /* ActionSheetStringPicker.h */,
+				5087EB01E4D0F4BEE53232C3CB94B5B2 /* ActionSheetStringPicker.m */,
+				CCDA8D17CF2D7407FC0354A732CB4258 /* DistancePickerView.h */,
+				086C9BB20FDDB53D3906CA1583413803 /* DistancePickerView.m */,
+				6B85C6C39986DB389CF827D43FC38656 /* SWActionSheet.h */,
+				7E60CFA1A2D37281B9FB7AC8BF76C4B6 /* SWActionSheet.m */,
+				97E765E8CF6B3409EA5B16CB3D2C584A /* Support Files */,
+			);
+			path = "ActionSheetPicker-3.0";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E294F3BD993E240DCFCB4DC1329C9F36 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		513CF4D9048A7BB6713FBD2634BE7437 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17069F994A3BCAA5D0A3A7778E1F83CB /* ActionSheetPicker_3_0.framework */,
+				0374279E22536F05812C3F2E5BB5E2D4 /* Pods_Neurolog.framework */,
+				9AF962C85652AD6F86F56DDDBC5604B6 /* Pods_NeurologTests.framework */,
+				85F4AC3578F847BCA4E15A38DA3F7BA6 /* Pods_NeurologUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59197D82F2296B7E8B2FBD85500D9156 /* Pods-Neurolog */ = {
+			isa = PBXGroup;
+			children = (
+				37A6BE817655D185EE6D192BC38E8D3D /* Info.plist */,
+				ADFC1B26B98D01319A64D3D0B0203D55 /* Pods-Neurolog.modulemap */,
+				EAF44DA6032C6507765123C5E63E290A /* Pods-Neurolog-acknowledgements.markdown */,
+				C05B3BEC29C5C15E9FBBA56B78C0CDBC /* Pods-Neurolog-acknowledgements.plist */,
+				4B624E75842FF2C08617922A79691B35 /* Pods-Neurolog-dummy.m */,
+				76E8693D5B548861877D8F1D86536708 /* Pods-Neurolog-frameworks.sh */,
+				294D60FF00EBCFA931040CB3000C0D39 /* Pods-Neurolog-resources.sh */,
+				64AE9329C9E2BC653B812DFEB789E2C5 /* Pods-Neurolog-umbrella.h */,
+				B96DAB39B2CDDD88B963077AE65DECDA /* Pods-Neurolog.debug.xcconfig */,
+				366F5A281F0CC097185279AA888C7399 /* Pods-Neurolog.release.xcconfig */,
+			);
+			name = "Pods-Neurolog";
+			path = "Target Support Files/Pods-Neurolog";
+			sourceTree = "<group>";
+		};
+		6853DE212DEFC4A00A3E48A12799F5A1 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				59197D82F2296B7E8B2FBD85500D9156 /* Pods-Neurolog */,
+				A345805D4E919812139EDEDA70616B36 /* Pods-NeurologTests */,
+				EE05E49F98F7F0AB01716ED5101BC91A /* Pods-NeurologUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				CD3DD77C158DC0540CB1AAD6FD80938F /* Pods */,
+				513CF4D9048A7BB6713FBD2634BE7437 /* Products */,
+				6853DE212DEFC4A00A3E48A12799F5A1 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		97E765E8CF6B3409EA5B16CB3D2C584A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4444C78D6B39A89F38F785104058FF93 /* ActionSheetPicker-3.0.modulemap */,
+				3A4C1EF40CC3CD86CD762BF96514F9F3 /* ActionSheetPicker-3.0.xcconfig */,
+				CE7BB4584A293865661605294BFF38DB /* ActionSheetPicker-3.0-dummy.m */,
+				593204011BA201B60BC063BFD2A1E76A /* ActionSheetPicker-3.0-prefix.pch */,
+				3F0E672E563F5E19BD623A008CB038DD /* ActionSheetPicker-3.0-umbrella.h */,
+				235A5A33BFF159DED3889BD6E972DD9D /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ActionSheetPicker-3.0";
+			sourceTree = "<group>";
+		};
+		A345805D4E919812139EDEDA70616B36 /* Pods-NeurologTests */ = {
+			isa = PBXGroup;
+			children = (
+				440ABDC4E8D029DE93140E3A5100AE53 /* Info.plist */,
+				79CC95EFC0BB318A8D6DA0992BAB28BF /* Pods-NeurologTests.modulemap */,
+				5B3AE127A8A42426D1C283170694F9FD /* Pods-NeurologTests-acknowledgements.markdown */,
+				52BD263A1A9685F4E70895CBEEF4AF72 /* Pods-NeurologTests-acknowledgements.plist */,
+				C0A5CEE602272393E3DCE329BB480F4D /* Pods-NeurologTests-dummy.m */,
+				FA61E1B8076C0D61FB072F73E36DDE02 /* Pods-NeurologTests-frameworks.sh */,
+				E7B660092438E584DD0FAB7EC776A4CF /* Pods-NeurologTests-resources.sh */,
+				0D072E3AD99DC40793CE8D121E2EF1A7 /* Pods-NeurologTests-umbrella.h */,
+				8FE904AB87791ADA9BAC84BD4B2EFC93 /* Pods-NeurologTests.debug.xcconfig */,
+				5AEFC997A5C5EBD9F2FE7E67369CBADA /* Pods-NeurologTests.release.xcconfig */,
+			);
+			name = "Pods-NeurologTests";
+			path = "Target Support Files/Pods-NeurologTests";
+			sourceTree = "<group>";
+		};
+		CD3DD77C158DC0540CB1AAD6FD80938F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				02C66CEC1EDE22E3327E1D6903C99AC9 /* ActionSheetPicker-3.0 */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E294F3BD993E240DCFCB4DC1329C9F36 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D635D41133915B228CE899EF89DD95CE /* Foundation.framework */,
+				AF066F8D85A4D7A3B3A04D25E4D2AC88 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		EE05E49F98F7F0AB01716ED5101BC91A /* Pods-NeurologUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BB1936582338C92D6B26A51266D1AC5D /* Info.plist */,
+				DC5C474624066EAD5970413722DD2DB5 /* Pods-NeurologUITests.modulemap */,
+				DBA0CBEABF76CDC332E5E0039C0D2A18 /* Pods-NeurologUITests-acknowledgements.markdown */,
+				C8AFB89A72D92D1718B4A44B295013A1 /* Pods-NeurologUITests-acknowledgements.plist */,
+				F11A9CA5021FC4CDD2AABFAF92C24638 /* Pods-NeurologUITests-dummy.m */,
+				1B22E51081F092987CA3F2CFA3044115 /* Pods-NeurologUITests-frameworks.sh */,
+				46B2501BBEBF76224F22DFD71B68EE57 /* Pods-NeurologUITests-resources.sh */,
+				97CC373E436D2B920A48E2F6F8011108 /* Pods-NeurologUITests-umbrella.h */,
+				9D0D060402DF1D9DD4FF0265272ABD9D /* Pods-NeurologUITests.debug.xcconfig */,
+				3F40A36F9FF60695046729AC7B24E570 /* Pods-NeurologUITests.release.xcconfig */,
+			);
+			name = "Pods-NeurologUITests";
+			path = "Target Support Files/Pods-NeurologUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		490B7EF18D838BF1BE9C32287BD43898 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D35A78E05E56CA2D298C6524C353D8F /* AbstractActionSheetPicker.h in Headers */,
+				3605B742811405EB6C273DBF3E60BA65 /* ActionSheetCustomPicker.h in Headers */,
+				75A794C91A2AB93BF38279819BADCD8C /* ActionSheetCustomPickerDelegate.h in Headers */,
+				8604F9A80F34D21870FCB70BF030722B /* ActionSheetDatePicker.h in Headers */,
+				627A79010BA75672F25EA6B97520FA07 /* ActionSheetDistancePicker.h in Headers */,
+				770BEFACCB678FBCD001529D16DC7D97 /* ActionSheetLocalePicker.h in Headers */,
+				B640015FD6F6684CB649C15A87933AF6 /* ActionSheetMultipleStringPicker.h in Headers */,
+				B0BB57516C3CEC4EE42E3FE727292187 /* ActionSheetPicker-3.0-umbrella.h in Headers */,
+				848C447B17BB93A8BC6757BB8DD4EC99 /* ActionSheetPicker.h in Headers */,
+				D4447FF472FB1BB8EEC77B7694DA3C7F /* ActionSheetStringPicker.h in Headers */,
+				53E0825DC621F2555B3FA9A8687CF7B4 /* DistancePickerView.h in Headers */,
+				68FB561B4E31FF535A983D289E8659CA /* SWActionSheet.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62CC7BC84A1F9823FE7719E47148B873 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				085BD05092BC62B995C722E27AA446C4 /* Pods-NeurologTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CCA470D491F8BD408E4CA7A6D900F4F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97D20777AC5994F619D9E53306D8B159 /* Pods-NeurologUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E17691EAAC6E3BC822EFA6338F0BEB86 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE7C334B5BD6EAD0E9A677E6B68FEAF6 /* Pods-Neurolog-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		053617A05C5A952CF2888B88D119FE01 /* ActionSheetPicker-3.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7336C43B6A6FA65C1B548F97CD9D05DB /* Build configuration list for PBXNativeTarget "ActionSheetPicker-3.0" */;
+			buildPhases = (
+				67756F3C62152256A44D9A114F22363D /* Sources */,
+				171D3B37935ADCC911CFAA3A9069E1E5 /* Frameworks */,
+				490B7EF18D838BF1BE9C32287BD43898 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ActionSheetPicker-3.0";
+			productName = "ActionSheetPicker-3.0";
+			productReference = 17069F994A3BCAA5D0A3A7778E1F83CB /* ActionSheetPicker_3_0.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		31CD3AFB450794B9CFB161E739AC1174 /* Pods-Neurolog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 497C250B4DC7D3D8C19AEEA2F1A5931C /* Build configuration list for PBXNativeTarget "Pods-Neurolog" */;
+			buildPhases = (
+				18B081D55B883BD60ABB5983461DD345 /* Sources */,
+				EE642602291DF094B02BCFC9F356B089 /* Frameworks */,
+				E17691EAAC6E3BC822EFA6338F0BEB86 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5013CF15D9F35BEEF505EEAA7DFCC8E4 /* PBXTargetDependency */,
+			);
+			name = "Pods-Neurolog";
+			productName = "Pods-Neurolog";
+			productReference = 0374279E22536F05812C3F2E5BB5E2D4 /* Pods_Neurolog.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		925CA325420ACAAD90D51FAC2040ADED /* Pods-NeurologTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33F3545A159D6EA5E50C423EF0F89F5F /* Build configuration list for PBXNativeTarget "Pods-NeurologTests" */;
+			buildPhases = (
+				BE162F847F4E816528EC6715E1D6BE77 /* Sources */,
+				45CD42DC51210D127FD69C2F71D2E94F /* Frameworks */,
+				62CC7BC84A1F9823FE7719E47148B873 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-NeurologTests";
+			productName = "Pods-NeurologTests";
+			productReference = 9AF962C85652AD6F86F56DDDBC5604B6 /* Pods_NeurologTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FF963DDF296D0734F536AD487FB200E5 /* Pods-NeurologUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DDA2F28BE915427F6C765792F239EB6 /* Build configuration list for PBXNativeTarget "Pods-NeurologUITests" */;
+			buildPhases = (
+				9F8882A2168C3C4537619A7330586B2E /* Sources */,
+				D6AE6BDE00B3C8EF576B7984B63DE8A6 /* Frameworks */,
+				8CCA470D491F8BD408E4CA7A6D900F4F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-NeurologUITests";
+			productName = "Pods-NeurologUITests";
+			productReference = 85F4AC3578F847BCA4E15A38DA3F7BA6 /* Pods_NeurologUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 513CF4D9048A7BB6713FBD2634BE7437 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				053617A05C5A952CF2888B88D119FE01 /* ActionSheetPicker-3.0 */,
+				31CD3AFB450794B9CFB161E739AC1174 /* Pods-Neurolog */,
+				925CA325420ACAAD90D51FAC2040ADED /* Pods-NeurologTests */,
+				FF963DDF296D0734F536AD487FB200E5 /* Pods-NeurologUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18B081D55B883BD60ABB5983461DD345 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE4CE40EC8D0C307C5E3494CE22C699F /* Pods-Neurolog-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67756F3C62152256A44D9A114F22363D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CA21846EB596294EEA9166C5123102E /* AbstractActionSheetPicker.m in Sources */,
+				D3F26F54B9333EC0DE81CA192E83875B /* ActionSheetCustomPicker.m in Sources */,
+				6058C40D9AFABF7CFB162DA72B192392 /* ActionSheetDatePicker.m in Sources */,
+				1CAEEBC4F132DA53C8DB6B4461608D70 /* ActionSheetDistancePicker.m in Sources */,
+				ABBF380D4804467E4D7CB1604E701515 /* ActionSheetLocalePicker.m in Sources */,
+				098769B5C2FEECE3762BF097029466C6 /* ActionSheetMultipleStringPicker.m in Sources */,
+				409A1BD79370BB3F3B809ACAB8B14AA8 /* ActionSheetPicker-3.0-dummy.m in Sources */,
+				CEA3240572C6DC666437DBDD3415ABDD /* ActionSheetStringPicker.m in Sources */,
+				1CC9E081387D99D2B70909751C22AA30 /* DistancePickerView.m in Sources */,
+				E9F339DE75CB68B1AC97BB659A4A25CF /* SWActionSheet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F8882A2168C3C4537619A7330586B2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				604B8C8AA0BE64FC723059CE79F0B4F2 /* Pods-NeurologUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE162F847F4E816528EC6715E1D6BE77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33D29EA1D345EE1486E1B431883C9FE3 /* Pods-NeurologTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5013CF15D9F35BEEF505EEAA7DFCC8E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ActionSheetPicker-3.0";
+			target = 053617A05C5A952CF2888B88D119FE01 /* ActionSheetPicker-3.0 */;
+			targetProxy = B67ACC3F6FA2F03E81324125BD36B1E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2ABB295E1660905C5579ABE0AD081F12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A4C1EF40CC3CD86CD762BF96514F9F3 /* ActionSheetPicker-3.0.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ActionSheetPicker-3.0/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ActionSheetPicker_3_0;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		60D78833C309CB561C110D53D301C776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A4C1EF40CC3CD86CD762BF96514F9F3 /* ActionSheetPicker-3.0.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ActionSheetPicker-3.0/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ActionSheetPicker_3_0;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		69D7F330A268BA628420111E0B14C15C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FE904AB87791ADA9BAC84BD4B2EFC93 /* Pods-NeurologTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-NeurologTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NeurologTests/Pods-NeurologTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NeurologTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		70ED7BA863FEDDFCA6088A0E04B5409E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		75F2C578D542CC661565E658731AB70A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D0D060402DF1D9DD4FF0265272ABD9D /* Pods-NeurologUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-NeurologUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NeurologUITests/Pods-NeurologUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NeurologUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		936C141B8B4CF4AE06B0DD7CAB0362F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B96DAB39B2CDDD88B963077AE65DECDA /* Pods-Neurolog.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Neurolog/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Neurolog/Pods-Neurolog.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Neurolog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B234C6D57D9475121C718BFDBBA3C0BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AEFC997A5C5EBD9F2FE7E67369CBADA /* Pods-NeurologTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-NeurologTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NeurologTests/Pods-NeurologTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NeurologTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E1B685D9073CDF53C548503CD4FD8B53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		EBE80E772E0A2AD9DB0F3718BD598E64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F40A36F9FF60695046729AC7B24E570 /* Pods-NeurologUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-NeurologUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NeurologUITests/Pods-NeurologUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NeurologUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F4EABA39B278B928C40DAC076997460C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 366F5A281F0CC097185279AA888C7399 /* Pods-Neurolog.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Neurolog/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Neurolog/Pods-Neurolog.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Neurolog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1B685D9073CDF53C548503CD4FD8B53 /* Debug */,
+				70ED7BA863FEDDFCA6088A0E04B5409E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33F3545A159D6EA5E50C423EF0F89F5F /* Build configuration list for PBXNativeTarget "Pods-NeurologTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69D7F330A268BA628420111E0B14C15C /* Debug */,
+				B234C6D57D9475121C718BFDBBA3C0BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DDA2F28BE915427F6C765792F239EB6 /* Build configuration list for PBXNativeTarget "Pods-NeurologUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75F2C578D542CC661565E658731AB70A /* Debug */,
+				EBE80E772E0A2AD9DB0F3718BD598E64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		497C250B4DC7D3D8C19AEEA2F1A5931C /* Build configuration list for PBXNativeTarget "Pods-Neurolog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				936C141B8B4CF4AE06B0DD7CAB0362F3 /* Debug */,
+				F4EABA39B278B928C40DAC076997460C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7336C43B6A6FA65C1B548F97CD9D05DB /* Build configuration list for PBXNativeTarget "ActionSheetPicker-3.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60D78833C309CB561C110D53D301C776 /* Debug */,
+				2ABB295E1660905C5579ABE0AD081F12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

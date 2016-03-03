@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>ActionSheetPicker-3.0.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Neurolog.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-NeurologTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-NeurologUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>053617A05C5A952CF2888B88D119FE01</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>31CD3AFB450794B9CFB161E739AC1174</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>925CA325420ACAAD90D51FAC2040ADED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF963DDF296D0734F536AD487FB200E5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
