@@ -43,7 +43,6 @@ class AddRecord: UIViewController, UITextFieldDelegate {
             }
         }
         else if (textField == timeField) {
-            print("Hello")
             DatePickerDialog().show("Select the time:", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: .Time) {
                 (time) -> Void in
                 

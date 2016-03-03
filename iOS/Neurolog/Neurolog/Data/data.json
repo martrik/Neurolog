@@ -1,0 +1,41 @@
+{
+    "Major Topics within Neurology Curriculum": {
+        "Head Injury": [],
+        "Headache": [],
+        "Disorders of Consciousness": [],
+        "Disorders of Sleep": [],
+        "Disorders of Higher Function & Behaviour": [],
+        "Epilepsy and Loss of Consciousness": [],
+        "Cerebrovascular Disease": [],
+        "Tumours of the NS, Neurological Complications of Systemic Cancer, Complications of Treatment of Cancer": [],
+        "Infections of Nervous System": [],
+        "CSF Disorders": [],
+        "Demyelination & Vasculitis": [],
+        "The Neurological Complications of Immunosuppression": [],
+        "Parkinsonism & Movement Disorders": [],
+        "Motor Neuron Disease": [],
+        "Toxic & Metabolic States": [],
+        "Disorders of the Visual System": [],
+        "Disorders of Cranial Nerves": [],
+        "Disorders of Spine, Spinal Cord, Roots and Spinal Injury": [],
+        "Disorders of Peripheral Nerve": [],
+        "Disorders of Autonomic Nervous System": [],
+        "Disorders of Muscle": [],
+        "Pain": []    
+    },
+    "Allied Topics within Neurology Curriculum": {
+        "Clinical Neurophysiology": [],
+        "Neuroendocrinology": [],
+        "Neurogenetics": [],
+        "Neurointensive Care": [],
+        "Neuro-otology": [],
+        "Neuropaediatrics": [],
+        "Neuropathology": [],
+        "Neuropsychiatry": [],
+        "Neuropsychology": [],
+        "Neuroradiology": [],
+        "Neurorehabilitation": [],
+        "Neurosurgery": [],
+        "Neurourology": []
+    }
+}
