@@ -1,12 +1,20 @@
 PODS:
   - ActionSheetPicker-3.0 (2.0.5)
+  - Realm (0.98.3):
+    - Realm/Headers (= 0.98.3)
+  - Realm/Headers (0.98.3)
+  - RealmSwift (0.98.3):
+    - Realm (= 0.98.3)
 
 DEPENDENCIES:
   - ActionSheetPicker-3.0
+  - RealmSwift
 
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: 8312778b6815578e6a86d630fbcf31dc94c534e7
+  Realm: c6a7d00221a2d5177810a674aebd40c5e0b70b0f
+  RealmSwift: d6ecad6e4c2a645d6ac956c2c7e9efb375f39c31
 
-PODFILE CHECKSUM: e0a653a1b0bb2ab0a124613661e46e16e440e8a0
+PODFILE CHECKSUM: a5b8e4ef8298b66349f4ee26d405628951972d9b
 
-COCOAPODS: 1.0.0.beta.3
+COCOAPODS: 1.0.0.beta.4

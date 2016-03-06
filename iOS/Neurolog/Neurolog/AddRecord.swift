@@ -29,6 +29,7 @@ class AddRecord: UIViewController, UITextFieldDelegate {
         self.facilityField.delegate = self
         self.portfolioField.delegate = self
         self.diseaseField.delegate = self
+        enableDiseasesField(false)
     }
     
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
@@ -54,12 +55,33 @@ class AddRecord: UIViewController, UITextFieldDelegate {
             }
         }
         else {
-            ActionSheetStringPicker.showPickerWithTitle("Select:", rows: ["Hello", "There"], initialSelection: 0, doneBlock: { (actionSheet:ActionSheetStringPicker!, index: Int, selected: AnyObject!) -> Void in
-                    print("Selected")
+            var rows = [String]()
+            
+            switch textField {
+            case facilityField:
+                rows = SelectionDataManger.sharedInstance.getFacility()
+            case portfolioField:
+                rows = SelectionDataManger.sharedInstance.getPortfolioTopics()
+            case diseaseField:
+                rows = SelectionDataManger.sharedInstance.getDiseaseForPortfolio(portfolioField.text!)
+            default:
+                break
+            }
+            
+            ActionSheetStringPicker.showPickerWithTitle("Select:", rows: rows, initialSelection: 0, doneBlock: { (actionSheet:ActionSheetStringPicker!, index: Int, selected: AnyObject!) -> Void in
+                    textField.text = selected as! String!
+                if textField == self.portfolioField {
+                    self.enableDiseasesField(true)
+                }
                 }, cancelBlock: nil, origin: textField)
             
         }
         return false;
+    }
+    
+    func enableDiseasesField(state: Bool) {
+        diseaseField.alpha = state ? 1 : 0.6
+        diseaseField.enabled = state
     }
 
     override func didReceiveMemoryWarning() {

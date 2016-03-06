@@ -1,4 +1,6 @@
 {
+    "Facility" : ["Wards", "Clinic", "Hospital"],
+    "Portfolio" : {
     "Major Topics within Neurology Curriculum": {
         "Head Injury": [],
         "Headache": [],
@@ -37,5 +39,6 @@
         "Neurorehabilitation": [],
         "Neurosurgery": [],
         "Neurourology": []
+    }
     }
 }
