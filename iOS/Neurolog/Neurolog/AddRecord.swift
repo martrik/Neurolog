@@ -11,6 +11,7 @@ import ActionSheetPicker_3_0
 
 class AddRecord: UIViewController, UITextFieldDelegate {
 
+    internal var editingRecord: Record? = nil
     @IBOutlet weak var dateField: UITextField!
     @IBOutlet weak var timeField: UITextField!
     @IBOutlet weak var facilityField: UITextField!
@@ -30,6 +31,16 @@ class AddRecord: UIViewController, UITextFieldDelegate {
         self.portfolioField.delegate = self
         self.diseaseField.delegate = self
         enableDiseasesField(false)
+        
+        // Is editing
+        if let record = self.editingRecord {
+            self.dateField.text = record.date
+            self.timeField.text = record.time
+            self.facilityField.text = record.facility
+            self.portfolioField.text = record.portfolio
+            self.diseaseField.text = record.disease
+            enableDiseasesField(true)
+        }
     }
     
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
@@ -84,6 +95,14 @@ class AddRecord: UIViewController, UITextFieldDelegate {
         diseaseField.enabled = state
     }
 
+    // MARK: - Save
+    
+    @IBAction func didTapSave(sender: AnyObject) {
+        let info = [self.dateField.text!, self.timeField.text!, self.facilityField.text!, self.portfolioField.text!, self.diseaseField.text!]
+        RecordsDataManager.sharedInstance.saveRecordWith(info, signed: false, supervisor: nil)
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

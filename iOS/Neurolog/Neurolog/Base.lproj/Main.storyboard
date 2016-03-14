@@ -17,18 +17,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ogP-Qb-NzV">
-                                <rect key="frame" x="0.0" y="122" width="375" height="545"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ma3-dl-PPw">
                                 <rect key="frame" x="83" y="79" width="209" height="29"/>
                                 <segments>
                                     <segment title="All"/>
                                     <segment title="Diseases"/>
-                                    <segment title="Portfolio"/>
+                                    <segment title="Facility"/>
                                 </segments>
                             </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ogP-Qb-NzV">
+                                <rect key="frame" x="0.0" y="122" width="375" height="545"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="recordcell" textLabel="gmm-b2-ae1" detailTextLabel="xCf-UC-NzP" style="IBUITableViewCellStyleSubtitle" id="xSM-P5-Zx0">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xSM-P5-Zx0" id="s6i-ox-Ua4">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gmm-b2-ae1">
+                                                    <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xCf-UC-NzP">
+                                                    <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -43,10 +69,13 @@
                     <navigationItem key="navigationItem" title="Neurolog" id="s0P-BU-K1n">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZrI-wD-SU6">
                             <connections>
-                                <segue destination="hxT-Hq-w5N" kind="show" id="tLv-Ij-Cbk"/>
+                                <segue destination="hxT-Hq-w5N" kind="show" identifier="CreateRecordSegue" id="tLv-Ij-Cbk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="table" destination="ogP-Qb-NzV" id="st6-Ze-MrJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,7 +96,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8t-er-ITi">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KEG-3Y-JGI">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KEG-3Y-JGI" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6o-Md-NYq">
@@ -145,7 +174,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yXi-T3-L1b">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yXi-T3-L1b">
                                                 <rect key="frame" x="94.5" y="510.5" width="51" height="31"/>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z84-Qj-9NN">
@@ -201,6 +230,7 @@
                                             <constraint firstAttribute="trailing" secondItem="9Ge-8r-lps" secondAttribute="trailing" constant="23" id="eCp-fc-DnT"/>
                                             <constraint firstAttribute="trailing" secondItem="Peb-ue-FC4" secondAttribute="trailing" constant="23" id="f6H-p2-tTP"/>
                                             <constraint firstItem="M22-lX-Sls" firstAttribute="top" secondItem="gQC-TJ-s4v" secondAttribute="bottom" constant="25" id="hZO-R8-2u5"/>
+                                            <constraint firstAttribute="height" constant="603" id="i0L-Rq-LEH"/>
                                             <constraint firstItem="Peb-ue-FC4" firstAttribute="leading" secondItem="beY-O2-VsW" secondAttribute="leading" id="mcs-63-CK5"/>
                                             <constraint firstItem="wHE-RD-GmE" firstAttribute="top" secondItem="P6o-Md-NYq" secondAttribute="bottom" constant="13.5" id="qwa-bD-Z8g"/>
                                             <constraint firstItem="beY-O2-VsW" firstAttribute="top" secondItem="YDk-9n-Xtc" secondAttribute="bottom" constant="25" id="rFf-QH-Ukb"/>
@@ -224,6 +254,11 @@
                                     <constraint firstAttribute="bottom" secondItem="KEG-3Y-JGI" secondAttribute="bottom" id="vob-Fm-HWh"/>
                                     <constraint firstItem="KEG-3Y-JGI" firstAttribute="width" secondItem="k8t-er-ITi" secondAttribute="width" id="wo8-6P-nUm"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Wk3-MT-s6B"/>
+                                    </mask>
+                                </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.044841360230000002" green="0.54912814610000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -236,9 +271,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Record" id="grj-A1-SKO">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="ohd-K4-dxU"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="ohd-K4-dxU">
+                            <connections>
+                                <action selector="didTapSave:" destination="hxT-Hq-w5N" id="Ou3-dY-cwf"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="dateField" destination="wHE-RD-GmE" id="L1S-bA-a7H"/>
                         <outlet property="diseaseField" destination="Peb-ue-FC4" id="R7p-8s-0Lw"/>
