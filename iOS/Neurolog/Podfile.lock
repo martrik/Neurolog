@@ -1,20 +1,21 @@
 PODS:
   - ActionSheetPicker-3.0 (2.0.5)
-  - Realm (0.98.3):
-    - Realm/Headers (= 0.98.3)
-  - Realm/Headers (0.98.3)
-  - RealmSwift (0.98.3):
-    - Realm (= 0.98.3)
+  - Realm (0.98.4):
+    - Realm/Headers (= 0.98.4)
+  - Realm/Headers (0.98.4)
+  - RealmSwift (0.98.4):
+    - Realm (= 0.98.4)
+  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - ActionSheetPicker-3.0
   - RealmSwift
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: 8312778b6815578e6a86d630fbcf31dc94c534e7
-  Realm: c6a7d00221a2d5177810a674aebd40c5e0b70b0f
-  RealmSwift: d6ecad6e4c2a645d6ac956c2c7e9efb375f39c31
+  Realm: 7745674cb1b7cb2a84a655bfd420b86efdaad36e
+  RealmSwift: 18742f4f13f98117aeec53b92058918ac93bf38f
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: a5b8e4ef8298b66349f4ee26d405628951972d9b
-
-COCOAPODS: 1.0.0.beta.4
+COCOAPODS: 0.39.0

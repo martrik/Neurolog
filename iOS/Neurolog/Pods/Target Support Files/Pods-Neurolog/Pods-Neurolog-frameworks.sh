@@ -84,12 +84,14 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$CONFIGURATION_BUILD_DIR/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework"
-  install_framework "$CONFIGURATION_BUILD_DIR/Realm/Realm.framework"
-  install_framework "$CONFIGURATION_BUILD_DIR/RealmSwift/RealmSwift.framework"
+  install_framework "Pods-Neurolog/ActionSheetPicker_3_0.framework"
+  install_framework "Pods-Neurolog/Realm.framework"
+  install_framework "Pods-Neurolog/RealmSwift.framework"
+  install_framework "Pods-Neurolog/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$CONFIGURATION_BUILD_DIR/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework"
-  install_framework "$CONFIGURATION_BUILD_DIR/Realm/Realm.framework"
-  install_framework "$CONFIGURATION_BUILD_DIR/RealmSwift/RealmSwift.framework"
+  install_framework "Pods-Neurolog/ActionSheetPicker_3_0.framework"
+  install_framework "Pods-Neurolog/Realm.framework"
+  install_framework "Pods-Neurolog/RealmSwift.framework"
+  install_framework "Pods-Neurolog/SwiftyJSON.framework"
 fi
