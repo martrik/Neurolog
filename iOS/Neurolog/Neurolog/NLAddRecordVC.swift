@@ -9,7 +9,7 @@
 import UIKit
 import ActionSheetPicker_3_0
 
-class AddRecord: UIViewController, UITextFieldDelegate {
+class NLAddRecordVC: UIViewController, UITextFieldDelegate {
 
     internal var editingRecord: Record? = nil
     @IBOutlet weak var dateField: UITextField!
@@ -40,6 +40,8 @@ class AddRecord: UIViewController, UITextFieldDelegate {
             self.portfolioField.text = record.portfolio
             self.diseaseField.text = record.disease
             enableDiseasesField(true)
+            
+            self.title = "Update record"
         }
     }
     
@@ -70,11 +72,11 @@ class AddRecord: UIViewController, UITextFieldDelegate {
             
             switch textField {
             case facilityField:
-                rows = SelectionDataManger.sharedInstance.getFacility()
+                rows = NLSelectionDataManger.sharedInstance.getFacilities()
             case portfolioField:
-                rows = SelectionDataManger.sharedInstance.getPortfolioTopics()
+                rows = NLSelectionDataManger.sharedInstance.getPortfolioTopics()
             case diseaseField:
-                rows = SelectionDataManger.sharedInstance.getDiseaseForPortfolio(portfolioField.text!)
+                rows = NLSelectionDataManger.sharedInstance.getDiseaseForPortfolio(portfolioField.text!)
             default:
                 break
             }
@@ -98,8 +100,26 @@ class AddRecord: UIViewController, UITextFieldDelegate {
     // MARK: - Save
     
     @IBAction func didTapSave(sender: AnyObject) {
-        let info = [self.dateField.text!, self.timeField.text!, self.facilityField.text!, self.portfolioField.text!, self.diseaseField.text!]
-        RecordsDataManager.sharedInstance.saveRecordWith(info, signed: false, supervisor: nil)
+        let info = [dateField.text!, timeField.text!, facilityField.text!, portfolioField.text!,diseaseField.text!]
+        
+        if let record = editingRecord {
+            NLRecordsDataManager.sharedInstance.updateRecord(record, info: info, signed: false, supervisor: nil)
+        } else {
+            NLRecordsDataManager.sharedInstance.saveRecordWith(info, signed: false, supervisor: nil)
+        }
+        
+        if self.editingRecord == nil {
+            self.noticeSuccess("Saved!")
+        } else {
+            self.noticeSuccess("Updated!")
+        }
+        
+        let dispatchTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(0.7 * Double(NSEC_PER_SEC)))
+        dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+            self.clearAllNotice()
+        })
+        
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     
@@ -107,8 +127,6 @@ class AddRecord: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
 
     /*
     // MARK: - Navigation

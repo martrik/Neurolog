@@ -10,10 +10,10 @@ import UIKit
 
 import SwiftyJSON
 
-class SelectionDataManger: NSObject {
-    static let sharedInstance = SelectionDataManger()
+class NLSelectionDataManger: NSObject {
+    static let sharedInstance = NLSelectionDataManger()
     
-    func getFacility() -> ([String]) {
+    func getFacilities() -> ([String]) {
         var facilities = [String]()
         
         for (_,subJson):(String, JSON) in getJSONObject()!["Facility"] {

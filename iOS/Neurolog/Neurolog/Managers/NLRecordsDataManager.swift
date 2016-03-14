@@ -20,8 +20,8 @@ class Record: Object {
     
 }
 
-class RecordsDataManager: NSObject {
-    static let sharedInstance = RecordsDataManager()
+class NLRecordsDataManager: NSObject {
+    static let sharedInstance = NLRecordsDataManager()
     
     func saveRecordWith(info: [String], signed: Bool, supervisor: String?) {
         let realm = try! Realm()
@@ -43,11 +43,39 @@ class RecordsDataManager: NSObject {
         }
     }
     
+    func updateRecord(record: Record, info: [String], signed: Bool, supervisor: String?) {
+        let realm = try! Realm()
+        
+        try! realm.write {
+            record.date = info[0]
+            record.time = info[1]
+            record.facility = info[2]
+            record.portfolio = info[3]
+            record.disease = info[4]
+            record.signed = signed
+            record.supervisor = supervisor
+        }
+    }
+    
     func getAllRecords() -> ([Record]) {
         let realm = try! Realm()
         let allRecords = realm.objects(Record)
         
         return Array(allRecords)
+    }
+    
+    func getRecordsWithFacility(facility: String) -> ([Record]) {
+        let realm = try! Realm()
+        let facilityRecords = realm.objects(Record).filter("facility = '\(facility)'")
+        
+        return Array(facilityRecords)
+    }
+    
+    func getRecordsWithDisease(disease: String) -> ([Record]) {
+        let realm = try! Realm()
+        let facilityRecords = realm.objects(Record).filter("disease = \(disease)")
+        
+        return Array(facilityRecords)
     }
 
 }

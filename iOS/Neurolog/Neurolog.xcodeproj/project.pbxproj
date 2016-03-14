@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		411D9F2B1C883CCB0042D058 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411D9F2A1C883CCB0042D058 /* AppDelegate.swift */; };
-		411D9F2D1C883CCB0042D058 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411D9F2C1C883CCB0042D058 /* ViewController.swift */; };
+		411D9F2D1C883CCB0042D058 /* NLMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411D9F2C1C883CCB0042D058 /* NLMainVC.swift */; };
 		411D9F301C883CCB0042D058 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 411D9F2E1C883CCB0042D058 /* Main.storyboard */; };
 		411D9F321C883CCB0042D058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 411D9F311C883CCB0042D058 /* Assets.xcassets */; };
 		411D9F351C883CCB0042D058 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 411D9F331C883CCB0042D058 /* LaunchScreen.storyboard */; };
 		411D9F401C883CCB0042D058 /* NeurologTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411D9F3F1C883CCB0042D058 /* NeurologTests.swift */; };
 		411D9F4B1C883CCB0042D058 /* NeurologUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411D9F4A1C883CCB0042D058 /* NeurologUITests.swift */; };
-		411D9F591C8840380042D058 /* AddRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411D9F581C8840380042D058 /* AddRecord.swift */; };
+		411D9F591C8840380042D058 /* NLAddRecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411D9F581C8840380042D058 /* NLAddRecordVC.swift */; };
 		411D9F5C1C88471A0042D058 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411D9F5B1C88471A0042D058 /* DatePickerDialog.swift */; };
-		4141A3F61C8CC98F00454754 /* SelectionDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4141A3F51C8CC98F00454754 /* SelectionDataManger.swift */; };
+		4141A3F61C8CC98F00454754 /* NLSelectionDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4141A3F51C8CC98F00454754 /* NLSelectionDataManger.swift */; };
 		4141A3F81C8CCF0100454754 /* CustomField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4141A3F71C8CCF0100454754 /* CustomField.swift */; };
 		4181B9E31C88655C00951A94 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4181B9E21C88655C00951A94 /* data.json */; };
-		419D9A451C96290000276A2F /* RecordsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419D9A441C96290000276A2F /* RecordsDataManager.swift */; };
+		419D9A451C96290000276A2F /* NLRecordsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419D9A441C96290000276A2F /* NLRecordsDataManager.swift */; };
+		41E451001C976DA400A8F1E1 /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E450FF1C976DA400A8F1E1 /* SwiftNotice.swift */; };
+		41E451021C97754300A8F1E1 /* NLDetailRecordsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E451011C97754300A8F1E1 /* NLDetailRecordsVC.swift */; };
 		5327DB3D262BF6745C8EA204 /* Pods_Neurolog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CC4B7EDFE32F56FC92006CC /* Pods_Neurolog.framework */; };
 		89F2DDBCF891AD6EAD3307D9 /* Pods_NeurologUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7513AC52A101710CEC73897C /* Pods_NeurologUITests.framework */; };
 		952126BB5D52979EE2ED5DE3 /* Pods_NeurologTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A13EC207D0B8932E09AF6A /* Pods_NeurologTests.framework */; };
@@ -59,7 +61,7 @@
 		315F85B3F6F2C7CE72A32804 /* Pods-Neurolog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neurolog.release.xcconfig"; path = "Pods/Target Support Files/Pods-Neurolog/Pods-Neurolog.release.xcconfig"; sourceTree = "<group>"; };
 		411D9F271C883CCB0042D058 /* Neurolog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neurolog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		411D9F2A1C883CCB0042D058 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		411D9F2C1C883CCB0042D058 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		411D9F2C1C883CCB0042D058 /* NLMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLMainVC.swift; sourceTree = "<group>"; };
 		411D9F2F1C883CCB0042D058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		411D9F311C883CCB0042D058 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		411D9F341C883CCB0042D058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,12 +72,14 @@
 		411D9F461C883CCB0042D058 /* NeurologUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeurologUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		411D9F4A1C883CCB0042D058 /* NeurologUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeurologUITests.swift; sourceTree = "<group>"; };
 		411D9F4C1C883CCB0042D058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		411D9F581C8840380042D058 /* AddRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecord.swift; sourceTree = "<group>"; };
+		411D9F581C8840380042D058 /* NLAddRecordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLAddRecordVC.swift; sourceTree = "<group>"; };
 		411D9F5B1C88471A0042D058 /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
-		4141A3F51C8CC98F00454754 /* SelectionDataManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionDataManger.swift; sourceTree = "<group>"; };
+		4141A3F51C8CC98F00454754 /* NLSelectionDataManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLSelectionDataManger.swift; sourceTree = "<group>"; };
 		4141A3F71C8CCF0100454754 /* CustomField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomField.swift; sourceTree = "<group>"; };
 		4181B9E21C88655C00951A94 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
-		419D9A441C96290000276A2F /* RecordsDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsDataManager.swift; sourceTree = "<group>"; };
+		419D9A441C96290000276A2F /* NLRecordsDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLRecordsDataManager.swift; sourceTree = "<group>"; };
+		41E450FF1C976DA400A8F1E1 /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = "<group>"; };
+		41E451011C97754300A8F1E1 /* NLDetailRecordsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLDetailRecordsVC.swift; sourceTree = "<group>"; };
 		5A965C382DC5126D3BDA7615 /* Pods-NeurologUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeurologUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NeurologUITests/Pods-NeurologUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		62A13EC207D0B8932E09AF6A /* Pods_NeurologTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeurologTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7B2F447C195AF21682DB36 /* Pods-NeurologTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeurologTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NeurologTests/Pods-NeurologTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,8 +159,9 @@
 				4181B9E11C88600000951A94 /* Data */,
 				4141A3F41C8CC8ED00454754 /* Managers */,
 				411D9F2A1C883CCB0042D058 /* AppDelegate.swift */,
-				411D9F2C1C883CCB0042D058 /* ViewController.swift */,
-				411D9F581C8840380042D058 /* AddRecord.swift */,
+				411D9F2C1C883CCB0042D058 /* NLMainVC.swift */,
+				41E451011C97754300A8F1E1 /* NLDetailRecordsVC.swift */,
+				411D9F581C8840380042D058 /* NLAddRecordVC.swift */,
 				411D9F5A1C8846E70042D058 /* Views */,
 				411D9F2E1C883CCB0042D058 /* Main.storyboard */,
 				411D9F311C883CCB0042D058 /* Assets.xcassets */,
@@ -187,6 +192,7 @@
 		411D9F5A1C8846E70042D058 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				41E450FF1C976DA400A8F1E1 /* SwiftNotice.swift */,
 				411D9F5B1C88471A0042D058 /* DatePickerDialog.swift */,
 				4141A3F71C8CCF0100454754 /* CustomField.swift */,
 			);
@@ -196,8 +202,8 @@
 		4141A3F41C8CC8ED00454754 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				4141A3F51C8CC98F00454754 /* SelectionDataManger.swift */,
-				419D9A441C96290000276A2F /* RecordsDataManager.swift */,
+				4141A3F51C8CC98F00454754 /* NLSelectionDataManger.swift */,
+				419D9A441C96290000276A2F /* NLRecordsDataManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -484,13 +490,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				411D9F2D1C883CCB0042D058 /* ViewController.swift in Sources */,
+				41E451021C97754300A8F1E1 /* NLDetailRecordsVC.swift in Sources */,
+				411D9F2D1C883CCB0042D058 /* NLMainVC.swift in Sources */,
 				411D9F5C1C88471A0042D058 /* DatePickerDialog.swift in Sources */,
-				4141A3F61C8CC98F00454754 /* SelectionDataManger.swift in Sources */,
+				4141A3F61C8CC98F00454754 /* NLSelectionDataManger.swift in Sources */,
+				41E451001C976DA400A8F1E1 /* SwiftNotice.swift in Sources */,
 				4141A3F81C8CCF0100454754 /* CustomField.swift in Sources */,
 				411D9F2B1C883CCB0042D058 /* AppDelegate.swift in Sources */,
-				419D9A451C96290000276A2F /* RecordsDataManager.swift in Sources */,
-				411D9F591C8840380042D058 /* AddRecord.swift in Sources */,
+				419D9A451C96290000276A2F /* NLRecordsDataManager.swift in Sources */,
+				411D9F591C8840380042D058 /* NLAddRecordVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,45 +8,65 @@
         <!--Neurolog-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Neurolog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NLMainVC" customModule="Neurolog" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ma3-dl-PPw">
-                                <rect key="frame" x="83" y="79" width="209" height="29"/>
+                                <rect key="frame" x="83" y="15" width="209" height="29"/>
                                 <segments>
                                     <segment title="All"/>
                                     <segment title="Diseases"/>
                                     <segment title="Facility"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="1E4-Cc-Phe"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ogP-Qb-NzV">
-                                <rect key="frame" x="0.0" y="122" width="375" height="545"/>
+                                <rect key="frame" x="0.0" y="58" width="375" height="545"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="recordcell" textLabel="gmm-b2-ae1" detailTextLabel="xCf-UC-NzP" style="IBUITableViewCellStyleSubtitle" id="xSM-P5-Zx0">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="recordcell" textLabel="gmm-b2-ae1" detailTextLabel="xCf-UC-NzP" style="IBUITableViewCellStyleSubtitle" id="xSM-P5-Zx0">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xSM-P5-Zx0" id="s6i-ox-Ua4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gmm-b2-ae1">
                                                     <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xCf-UC-NzP">
                                                     <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="detailcell" textLabel="NdX-Mi-QZP" style="IBUITableViewCellStyleDefault" id="CZq-LE-UQg">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CZq-LE-UQg" id="T1L-zR-1Vj">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NdX-Mi-QZP">
+                                                    <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -69,22 +89,85 @@
                     <navigationItem key="navigationItem" title="Neurolog" id="s0P-BU-K1n">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZrI-wD-SU6">
                             <connections>
-                                <segue destination="hxT-Hq-w5N" kind="show" identifier="CreateRecordSegue" id="tLv-Ij-Cbk"/>
+                                <segue destination="hxT-Hq-w5N" kind="show" identifier="NLCreateRecordSegue" id="tLv-Ij-Cbk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="segmented" destination="Ma3-dl-PPw" id="i1K-qd-gxU"/>
                         <outlet property="table" destination="ogP-Qb-NzV" id="st6-Ze-MrJ"/>
+                        <segue destination="847-G6-Xl7" kind="show" identifier="NLDetailSegue" id="utc-tK-LMe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="54.5" y="338.5"/>
         </scene>
+        <!--Detail RecordsVC-->
+        <scene sceneID="8Eu-N4-Zh8">
+            <objects>
+                <viewController id="847-G6-Xl7" customClass="NLDetailRecordsVC" customModule="Neurolog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Btg-F8-mlb"/>
+                        <viewControllerLayoutGuide type="bottom" id="JWm-1j-df1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KhR-KX-GxN">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6iP-wk-Q09">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="recordcell" textLabel="ToV-AN-dqs" detailTextLabel="zIB-he-cIF" style="IBUITableViewCellStyleSubtitle" id="B1L-3P-YAU">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B1L-3P-YAU" id="BF2-IE-2Dv">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ToV-AN-dqs">
+                                                    <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zIB-he-cIF">
+                                                    <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6iP-wk-Q09" firstAttribute="top" secondItem="Btg-F8-mlb" secondAttribute="bottom" id="EOS-Ju-zGD"/>
+                            <constraint firstItem="JWm-1j-df1" firstAttribute="top" secondItem="6iP-wk-Q09" secondAttribute="bottom" id="GTw-Rz-QjS"/>
+                            <constraint firstItem="6iP-wk-Q09" firstAttribute="leading" secondItem="KhR-KX-GxN" secondAttribute="leading" id="MxA-eF-PQf"/>
+                            <constraint firstAttribute="trailing" secondItem="6iP-wk-Q09" secondAttribute="trailing" id="hWi-xL-WL7"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="table" destination="6iP-wk-Q09" id="klF-gg-Vt2"/>
+                        <segue destination="hxT-Hq-w5N" kind="show" identifier="NLUpdateRecordSegue" id="SfO-9m-2Wj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NT7-Tl-K0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565.5" y="746.5"/>
+        </scene>
         <!--Add Record-->
         <scene sceneID="60C-mD-iIu">
             <objects>
-                <viewController id="hxT-Hq-w5N" customClass="AddRecord" customModule="Neurolog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hxT-Hq-w5N" customClass="NLAddRecordVC" customModule="Neurolog" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="G8M-HR-kae"/>
                         <viewControllerLayoutGuide type="bottom" id="JD4-5j-Iat"/>
@@ -290,14 +373,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8z9-5u-Dek" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="573.5" y="338.5"/>
+            <point key="canvasLocation" x="1093.5" y="338.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iyO-Ut-EMp">
             <objects>
-                <navigationController id="7Cz-UZ-mwN" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Cz-UZ-mwN" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a0n-7K-Q99">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="a0n-7K-Q99">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -310,4 +394,7 @@
             <point key="canvasLocation" x="-464" y="339"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tLv-Ij-Cbk"/>
+    </inferredMetricsTieBreakers>
 </document>
