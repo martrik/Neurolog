@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '854872D477ABED1712468631'
+               BlueprintIdentifier = 'B348A328F9AEB3CA46BD0249'
                BlueprintName = 'Pods-Neurolog'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_Neurolog.framework'>

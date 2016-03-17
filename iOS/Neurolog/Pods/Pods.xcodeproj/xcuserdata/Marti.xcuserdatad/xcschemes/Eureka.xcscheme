@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '59CE7A9D3161A581791CE208'
-               BlueprintName = 'ActionSheetPicker-3.0'
+               BlueprintIdentifier = 'A53BF0B3D76592FEEB924C6D'
+               BlueprintName = 'Eureka'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'ActionSheetPicker_3_0.framework'>
+               BuildableName = 'Eureka.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

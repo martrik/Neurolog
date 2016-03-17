@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPopoverPresentationControllerDelegate {
     
     @IBOutlet weak var segmented: UISegmentedControl!
     @IBOutlet weak var table: UITableView!
@@ -52,11 +52,10 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
         
         let elem = data[indexPath.row]
-        
         if elem is Record {
             let record: Record = elem as! Record
-            cell.textLabel?.text = record.disease + " in " + record.facility
-            cell.detailTextLabel?.text = record.date + " at " + record.time
+            cell.textLabel?.text = record.facility + " at " + record.location
+            //cell.detailTextLabel?.text = record.date + " at " + record.time
         }
         else if elem is String {
             cell.textLabel?.text = elem as? String
@@ -70,10 +69,9 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
         switch segmented.selectedSegmentIndex {
         case 0:
-            self.performSegueWithIdentifier("NLCreateRecordSegue", sender: self)
+            self.performSegueWithIdentifier("NLDetailSegue", sender: data[selectedRow])
             break;
         case 1, 2:
-            self.performSegueWithIdentifier("NLDetailSegue", sender: self)
             break;
         default:
             break;
@@ -106,30 +104,33 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         self.table.reloadData()
     }
     
+    @IBAction func didTapAdd(sender: AnyObject) {
+        self.performSegueWithIdentifier("NLAddRecordSegue", sender: self)
+    }
     
-    // MARK: - Navigation
+    // MARK: Navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "NLCreateRecordSegue" {
-            if selectedRow != -1 {
-                let dest = segue.destinationViewController as! NLAddRecordVC
-                dest.editingRecord = self.data[selectedRow] as? Record
-                selectedRow = -1
+        if let addRecord = segue.destinationViewController as? NLAddRecordVC {
+            addRecord.didDismissWithRecord = { (record) -> Void in
+                self.performSegueWithIdentifier("NLDetailSegue", sender: record)
             }
+            let recordPC = addRecord.popoverPresentationController
+            recordPC?.delegate = self
         }
         if segue.identifier == "NLDetailSegue" {
-            let dest = segue.destinationViewController as! NLDetailRecordsVC
-            
-            switch self.segmented.selectedSegmentIndex {
-            case 1:
-                break
-            case 2:
-                dest.records = NLRecordsDataManager.sharedInstance.getRecordsWithFacility(data[selectedRow] as! String)
-                break
-            default:
-                break
-            }
+            let dest = segue.destinationViewController as! NLDetailRecordVC
+            dest.record = sender as! Record           
         }
+    }
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.FullScreen
+    }
+    
+    func presentationController(controller: UIPresentationController, viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {
+        let navController = UINavigationController(rootViewController: controller.presentedViewController)
+        return navController
     }
     
     override func didReceiveMemoryWarning() {

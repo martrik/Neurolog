@@ -7,135 +7,102 @@
 //
 
 import UIKit
-import ActionSheetPicker_3_0
+import Eureka
 
-class NLAddRecordVC: UIViewController, UITextFieldDelegate {
+class NLAddRecordVC: FormViewController, UITextFieldDelegate {
 
     internal var editingRecord: Record? = nil
-    @IBOutlet weak var dateField: UITextField!
-    @IBOutlet weak var timeField: UITextField!
-    @IBOutlet weak var facilityField: UITextField!
-    @IBOutlet weak var portfolioField: UITextField!
-    @IBOutlet weak var diseaseField: UITextField!
     var datePicker: DatePickerDialog!
-    
+    var didDismissWithRecord:((Record)->Void)?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.automaticallyAdjustsScrollViewInsets = false
-        
-        // Text fields
-        self.dateField.delegate = self
-        self.timeField.delegate = self
-        self.facilityField.delegate = self
-        self.portfolioField.delegate = self
-        self.diseaseField.delegate = self
-        enableDiseasesField(false)
+        form  +++=
+            
+            Section(footer: "Tap on save to store this Record")
+
+            <<< DateRow("date") {
+                $0.value = NSDate();
+                $0.title = "Date:"
+            }
+            <<< TextRow("location") {
+                $0.title =  "Location:"
+                if let location = editingRecord?.location {
+                    $0.value = location
+                }
+            }
+            <<< AlertRow<String>("facility") {
+                $0.title = "Facility:"
+                $0.options = NLSelectionDataManger.sharedInstance.getFacilities()
+                if let facility = editingRecord?.facility {
+                    $0.value = facility
+                } else {
+                    $0.value = NLSelectionDataManger.sharedInstance.getFacilities().first
+                }
+            }
+            <<< SwitchRow("supervisorswitch") {
+                $0.title = "Do you have a supervisor?"
+                if let _ = editingRecord?.supervisor {
+                    $0.value = true
+                } else {
+                    $0.value = false
+                }
+            }
+            <<< NameRow("supervisorname") {
+                $0.title = "Name:"
+                $0.hidden = "$supervisorswitch == false"
+                
+                if let supervisor = editingRecord?.supervisor {
+                    $0.value = supervisor
+                } else {
+                    $0.value = ""
+                }
+            }
         
         // Is editing
-        if let record = self.editingRecord {
-            self.dateField.text = record.date
-            self.timeField.text = record.time
-            self.facilityField.text = record.facility
-            self.portfolioField.text = record.portfolio
-            self.diseaseField.text = record.disease
-            enableDiseasesField(true)
-            
+        if let _ = self.editingRecord {
             self.title = "Update record"
         }
     }
     
-    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
-        if (textField == dateField) {
-            DatePickerDialog().show("Select the date:", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: .Date) {
-                (date) -> Void in
-                let dateFormatter = NSDateFormatter()
-                dateFormatter.locale = NSLocale.currentLocale()
-                dateFormatter.dateStyle = .FullStyle
-                
-                self.dateField.text = "\(dateFormatter.stringFromDate(date))"
-            }
-        }
-        else if (textField == timeField) {
-            DatePickerDialog().show("Select the time:", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: .Time) {
-                (time) -> Void in
-                
-                let timeFormatter = NSDateFormatter()
-                timeFormatter.locale = NSLocale.currentLocale()
-                timeFormatter.timeStyle = .MediumStyle
-
-                self.timeField.text = "\(timeFormatter.stringFromDate(time))"
-            }
-        }
-        else {
-            var rows = [String]()
-            
-            switch textField {
-            case facilityField:
-                rows = NLSelectionDataManger.sharedInstance.getFacilities()
-            case portfolioField:
-                rows = NLSelectionDataManger.sharedInstance.getPortfolioTopics()
-            case diseaseField:
-                rows = NLSelectionDataManger.sharedInstance.getDiseaseForPortfolio(portfolioField.text!)
-            default:
-                break
-            }
-            
-            ActionSheetStringPicker.showPickerWithTitle("Select:", rows: rows, initialSelection: 0, doneBlock: { (actionSheet:ActionSheetStringPicker!, index: Int, selected: AnyObject!) -> Void in
-                    textField.text = selected as! String!
-                if textField == self.portfolioField {
-                    self.enableDiseasesField(true)
-                }
-                }, cancelBlock: nil, origin: textField)
-            
-        }
-        return false;
-    }
     
-    func enableDiseasesField(state: Bool) {
-        diseaseField.alpha = state ? 1 : 0.6
-        diseaseField.enabled = state
-    }
-
     // MARK: - Save
     
     @IBAction func didTapSave(sender: AnyObject) {
-        let info = [dateField.text!, timeField.text!, facilityField.text!, portfolioField.text!,diseaseField.text!]
-        
+        var savedRecord = Record()
         if let record = editingRecord {
-            NLRecordsDataManager.sharedInstance.updateRecord(record, info: info, signed: false, supervisor: nil)
+            NLRecordsDataManager.sharedInstance.updateRecord(record, info: form.values())
+            savedRecord = record
         } else {
-            NLRecordsDataManager.sharedInstance.saveRecordWith(info, signed: false, supervisor: nil)
+            savedRecord = NLRecordsDataManager.sharedInstance.saveRecordWith(form.values())
         }
         
-        if self.editingRecord == nil {
-            self.noticeSuccess("Saved!")
-        } else {
-            self.noticeSuccess("Updated!")
+        if let completion = didDismissWithRecord {
+            completion(savedRecord)
         }
-        
-        let dispatchTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(0.7 * Double(NSEC_PER_SEC)))
-        dispatch_after(dispatchTime, dispatch_get_main_queue(), {
-            self.clearAllNotice()
-        })
-        
-        self.navigationController?.popViewControllerAnimated(true)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func didTapDismiss(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "NLRecordDetailSegue" {
+            let dest = segue.destinationViewController as! NLDetailRecordVC
+            dest.record = sender as! Record
+        }
     }
-    */
+    
 
 }

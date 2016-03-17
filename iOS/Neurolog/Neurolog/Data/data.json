@@ -1,32 +1,29 @@
 {
-    "Facility" : ["Wards", "Clinic", "Hospital"],
+    "Facility" : ["Out patient clinic", "Stroke on call", "Neurology on call", "Ward referral"],
     "Portfolio" : {
-    "Major Topics within Neurology Curriculum": {
-        "Head Injury": [],
-        "Headache": [],
-        "Disorders of Consciousness": [],
-        "Disorders of Sleep": [],
-        "Disorders of Higher Function & Behaviour": [],
-        "Epilepsy and Loss of Consciousness": [],
         "Cerebrovascular Disease": [],
-        "Tumours of the NS, Neurological Complications of Systemic Cancer, Complications of Treatment of Cancer": [],
-        "Infections of Nervous System": [],
+        "Clinical Neurophysiology": [],
         "CSF Disorders": [],
         "Demyelination & Vasculitis": [],
-        "The Neurological Complications of Immunosuppression": [],
-        "Parkinsonism & Movement Disorders": [],
-        "Motor Neuron Disease": [],
-        "Toxic & Metabolic States": [],
-        "Disorders of the Visual System": [],
+        "Disorders of Autonomic Nervous System": [],
+        "Disorders of Consciousness": [],
         "Disorders of Cranial Nerves": [],
+        "Disorders of Higher Function & Behaviour": [],
+        "Disorders of Muscle": [],
+        "Disorders of the Visual System": [],
         "Disorders of Spine, Spinal Cord, Roots and Spinal Injury": [],
         "Disorders of Peripheral Nerve": [],
-        "Disorders of Autonomic Nervous System": [],
-        "Disorders of Muscle": [],
-        "Pain": []    
-    },
-    "Allied Topics within Neurology Curriculum": {
-        "Clinical Neurophysiology": [],
+        "Disorders of Sleep": [],
+        "Epilepsy and Loss of Consciousness": [],
+        "Head Injury": [],
+        "Headache": [],
+        "Infections of Nervous System": [],
+        "Motor Neuron Disease": [],
+        "Pain": [],
+        "Parkinsonism & Movement Disorders": [],
+        "The Neurological Complications of Immunosuppression": [],
+        "Toxic & Metabolic States": [],
+        "Tumours of the NS, Neurological Complications of Systemic Cancer, Complications of Treatment of Cancer": [],
         "Neuroendocrinology": [],
         "Neurogenetics": [],
         "Neurointensive Care": [],
@@ -39,6 +36,5 @@
         "Neurorehabilitation": [],
         "Neurosurgery": [],
         "Neurourology": []
-    }
     }
 }

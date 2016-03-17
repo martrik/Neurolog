@@ -20,8 +20,11 @@
 		4141A3F81C8CCF0100454754 /* CustomField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4141A3F71C8CCF0100454754 /* CustomField.swift */; };
 		4181B9E31C88655C00951A94 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4181B9E21C88655C00951A94 /* data.json */; };
 		419D9A451C96290000276A2F /* NLRecordsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419D9A441C96290000276A2F /* NLRecordsDataManager.swift */; };
+		41A003811C9AD0E1009A2B5F /* NLVisitCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0037F1C9AD0E1009A2B5F /* NLVisitCellTableViewCell.swift */; };
+		41A003821C9AD0E1009A2B5F /* NLVisitCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A003801C9AD0E1009A2B5F /* NLVisitCellTableViewCell.xib */; };
+		41AC4B341C9819E70094B489 /* NLAddVisitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AC4B331C9819E70094B489 /* NLAddVisitVC.swift */; };
 		41E451001C976DA400A8F1E1 /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E450FF1C976DA400A8F1E1 /* SwiftNotice.swift */; };
-		41E451021C97754300A8F1E1 /* NLDetailRecordsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E451011C97754300A8F1E1 /* NLDetailRecordsVC.swift */; };
+		41E451021C97754300A8F1E1 /* NLDetailRecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E451011C97754300A8F1E1 /* NLDetailRecordVC.swift */; };
 		5327DB3D262BF6745C8EA204 /* Pods_Neurolog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CC4B7EDFE32F56FC92006CC /* Pods_Neurolog.framework */; };
 		89F2DDBCF891AD6EAD3307D9 /* Pods_NeurologUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7513AC52A101710CEC73897C /* Pods_NeurologUITests.framework */; };
 		952126BB5D52979EE2ED5DE3 /* Pods_NeurologTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A13EC207D0B8932E09AF6A /* Pods_NeurologTests.framework */; };
@@ -78,8 +81,11 @@
 		4141A3F71C8CCF0100454754 /* CustomField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomField.swift; sourceTree = "<group>"; };
 		4181B9E21C88655C00951A94 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		419D9A441C96290000276A2F /* NLRecordsDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLRecordsDataManager.swift; sourceTree = "<group>"; };
+		41A0037F1C9AD0E1009A2B5F /* NLVisitCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLVisitCellTableViewCell.swift; sourceTree = "<group>"; };
+		41A003801C9AD0E1009A2B5F /* NLVisitCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NLVisitCellTableViewCell.xib; sourceTree = "<group>"; };
+		41AC4B331C9819E70094B489 /* NLAddVisitVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLAddVisitVC.swift; sourceTree = "<group>"; };
 		41E450FF1C976DA400A8F1E1 /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = "<group>"; };
-		41E451011C97754300A8F1E1 /* NLDetailRecordsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLDetailRecordsVC.swift; sourceTree = "<group>"; };
+		41E451011C97754300A8F1E1 /* NLDetailRecordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLDetailRecordVC.swift; sourceTree = "<group>"; };
 		5A965C382DC5126D3BDA7615 /* Pods-NeurologUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeurologUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NeurologUITests/Pods-NeurologUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		62A13EC207D0B8932E09AF6A /* Pods_NeurologTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeurologTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7B2F447C195AF21682DB36 /* Pods-NeurologTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeurologTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NeurologTests/Pods-NeurologTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -156,12 +162,10 @@
 		411D9F291C883CCB0042D058 /* Neurolog */ = {
 			isa = PBXGroup;
 			children = (
+				411D9F2A1C883CCB0042D058 /* AppDelegate.swift */,
 				4181B9E11C88600000951A94 /* Data */,
 				4141A3F41C8CC8ED00454754 /* Managers */,
-				411D9F2A1C883CCB0042D058 /* AppDelegate.swift */,
-				411D9F2C1C883CCB0042D058 /* NLMainVC.swift */,
-				41E451011C97754300A8F1E1 /* NLDetailRecordsVC.swift */,
-				411D9F581C8840380042D058 /* NLAddRecordVC.swift */,
+				41AC4B301C9819000094B489 /* ViewControllers */,
 				411D9F5A1C8846E70042D058 /* Views */,
 				411D9F2E1C883CCB0042D058 /* Main.storyboard */,
 				411D9F311C883CCB0042D058 /* Assets.xcassets */,
@@ -192,6 +196,7 @@
 		411D9F5A1C8846E70042D058 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				41A0037E1C9AD0BF009A2B5F /* Cells */,
 				41E450FF1C976DA400A8F1E1 /* SwiftNotice.swift */,
 				411D9F5B1C88471A0042D058 /* DatePickerDialog.swift */,
 				4141A3F71C8CCF0100454754 /* CustomField.swift */,
@@ -214,6 +219,26 @@
 				4181B9E21C88655C00951A94 /* data.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		41A0037E1C9AD0BF009A2B5F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				41A0037F1C9AD0E1009A2B5F /* NLVisitCellTableViewCell.swift */,
+				41A003801C9AD0E1009A2B5F /* NLVisitCellTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		41AC4B301C9819000094B489 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				411D9F2C1C883CCB0042D058 /* NLMainVC.swift */,
+				411D9F581C8840380042D058 /* NLAddRecordVC.swift */,
+				41E451011C97754300A8F1E1 /* NLDetailRecordVC.swift */,
+				41AC4B331C9819E70094B489 /* NLAddVisitVC.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		DCD7DD61AC7D9DE993A797A8 /* Frameworks */ = {
@@ -342,6 +367,7 @@
 				411D9F351C883CCB0042D058 /* LaunchScreen.storyboard in Resources */,
 				411D9F321C883CCB0042D058 /* Assets.xcassets in Resources */,
 				411D9F301C883CCB0042D058 /* Main.storyboard in Resources */,
+				41A003821C9AD0E1009A2B5F /* NLVisitCellTableViewCell.xib in Resources */,
 				4181B9E31C88655C00951A94 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,12 +516,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41E451021C97754300A8F1E1 /* NLDetailRecordsVC.swift in Sources */,
+				41A003811C9AD0E1009A2B5F /* NLVisitCellTableViewCell.swift in Sources */,
+				41E451021C97754300A8F1E1 /* NLDetailRecordVC.swift in Sources */,
 				411D9F2D1C883CCB0042D058 /* NLMainVC.swift in Sources */,
 				411D9F5C1C88471A0042D058 /* DatePickerDialog.swift in Sources */,
 				4141A3F61C8CC98F00454754 /* NLSelectionDataManger.swift in Sources */,
 				41E451001C976DA400A8F1E1 /* SwiftNotice.swift in Sources */,
 				4141A3F81C8CCF0100454754 /* CustomField.swift in Sources */,
+				41AC4B341C9819E70094B489 /* NLAddVisitVC.swift in Sources */,
 				411D9F2B1C883CCB0042D058 /* AppDelegate.swift in Sources */,
 				419D9A451C96290000276A2F /* NLRecordsDataManager.swift in Sources */,
 				411D9F591C8840380042D058 /* NLAddRecordVC.swift in Sources */,

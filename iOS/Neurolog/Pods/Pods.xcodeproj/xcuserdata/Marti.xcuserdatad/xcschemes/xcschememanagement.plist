@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ActionSheetPicker-3.0.xcscheme</key>
+		<key>Eureka.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,27 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4FBE96AEA4A5ACAFC507FF8B39B7D453</key>
+		<key>40F580A48FF2C38CCBC58A6B3C8F5505</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6153064868DF957F14AC9241817B864F</key>
+		<key>6E9D1BE276140396294A4E18327CB26F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8AE0BC48E00566437D373EB3A2B1AE58</key>
+		<key>781590EB42CECA0297D6C579629F130A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A5A455670F5A1C369323353D1156D13D</key>
+		<key>A33314D5D4774A08868CF7FCABB2AD41</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CE0A701D8A271EFE0065667D13272921</key>
+		<key>BA6BCB192FB4F64F6B8DF4CFC937C1B7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

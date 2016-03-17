@@ -7,9 +7,9 @@ use_frameworks!
 
 target 'Neurolog' do
 
-pod 'ActionSheetPicker-3.0'
-pod ‘SwiftyJSON’
-pod ‘RealmSwift’
+pod 'SwiftyJSON'
+pod 'RealmSwift'
+pod 'Eureka', '~> 1.4'
 end
 
 

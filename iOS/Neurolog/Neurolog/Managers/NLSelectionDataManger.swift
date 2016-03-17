@@ -30,18 +30,9 @@ class NLSelectionDataManger: NSObject {
             portfolios.append(key)
         }
         
+        portfolios.sortInPlace()
+        
         return portfolios
-    }
-    
-    func getDiseaseForPortfolio(topic: String) -> ([String]) {
-        var diseases = [String]()
-        
-        for (key,_):(String, JSON) in getJSONObject()!["Portfolio"][topic]{
-            diseases.append(key)
-        }
-        
-        return diseases
-        
     }
     
     

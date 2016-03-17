@@ -10,50 +10,67 @@ import UIKit
 import RealmSwift
 
 class Record: Object {
-    dynamic var date = ""
-    dynamic var time = ""
+    dynamic var date = NSDate()
+    dynamic var location = ""
     dynamic var facility = ""
-    dynamic var portfolio = ""
-    dynamic var disease = ""
-    dynamic var signed = false
     dynamic var supervisor: String? = nil
+    let visits = List<Visit>()
     
+}
+
+class Visit: Object {
+    dynamic var time = NSDate()
+    dynamic var topic = ""
+    dynamic var sex = ""
+    dynamic var age = 1
 }
 
 class NLRecordsDataManager: NSObject {
     static let sharedInstance = NLRecordsDataManager()
     
-    func saveRecordWith(info: [String], signed: Bool, supervisor: String?) {
+    // MARK: Records
+    
+    func saveRecordWith(info: [String : Any?]) -> (Record) {
         let realm = try! Realm()
         
         let newRecord = Record()
-        newRecord.date = info[0]
-        newRecord.time = info[1]
-        newRecord.facility = info[2]
-        newRecord.portfolio = info[3]
-        newRecord.disease = info[4]
-        newRecord.signed = signed
         
-        if (signed) {
-            newRecord.supervisor = supervisor!
+        if let date = info["date"] {
+            newRecord.date = date as! NSDate
+        }
+        if let location = info["location"] {
+            newRecord.location = location as! String
+        }
+        if let facility = info["facility"] {
+            newRecord.facility = facility as! String
+        }
+        if let supervisor = info["supervisor"] {
+            newRecord.supervisor = supervisor as? String
         }
         
         try! realm.write {
             realm.add(newRecord)
         }
+        
+        return newRecord
     }
     
-    func updateRecord(record: Record, info: [String], signed: Bool, supervisor: String?) {
+    func updateRecord(record: Record, info: [String : Any?]) {
         let realm = try! Realm()
         
         try! realm.write {
-            record.date = info[0]
-            record.time = info[1]
-            record.facility = info[2]
-            record.portfolio = info[3]
-            record.disease = info[4]
-            record.signed = signed
-            record.supervisor = supervisor
+            if let date = info["date"] {
+                record.date = date as! NSDate
+            }
+            if let location = info["location"] {
+                record.location = location as! String
+            }
+            if let facility = info["facility"] {
+                record.facility = facility as! String
+            }
+            if let supervisor = info["supervisor"] {
+                record.supervisor = supervisor as? String
+            }
         }
     }
     
@@ -71,11 +88,42 @@ class NLRecordsDataManager: NSObject {
         return Array(facilityRecords)
     }
     
-    func getRecordsWithDisease(disease: String) -> ([Record]) {
+    func getRecordsWithSupervisor(disease: String) -> ([Record]) {
         let realm = try! Realm()
-        let facilityRecords = realm.objects(Record).filter("disease = \(disease)")
+        let supervisorRecords = realm.objects(Record).filter("supervisor = \(disease)")
         
-        return Array(facilityRecords)
+        return Array(supervisorRecords)
     }
+    
+    // MARK: - Visits
+    
+    func saveVisitInRecord(record: Record, info: [String: Any?]) {
+        let realm = try! Realm()
+        
+        let newVisit = Visit()
+
+        if let time = info["time"] {
+            newVisit.time = time as! NSDate
+        }
+        if let disease = info["disease"] {
+            newVisit.topic = disease as! String
+        }
+        if let age = info["age"] {
+            newVisit.age = Int(age as! String)!
+        }
+        if let sex = info["sex"] {
+            newVisit.sex = sex as! String!
+        }
+        
+        try! realm.write {
+           record.visits.append(newVisit)
+        }
+    }
+    
+    /*func getStatsForDisease() -> (Dictionary<String, Int>) {
+        let realm = try! Realm()
+        let 
+        
+    }*/
 
 }

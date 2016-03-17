@@ -1,5 +1,5 @@
 PODS:
-  - ActionSheetPicker-3.0 (2.0.5)
+  - Eureka (1.4.1)
   - Realm (0.98.4):
     - Realm/Headers (= 0.98.4)
   - Realm/Headers (0.98.4)
@@ -8,12 +8,12 @@ PODS:
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
-  - ActionSheetPicker-3.0
+  - Eureka (~> 1.4)
   - RealmSwift
   - SwiftyJSON
 
 SPEC CHECKSUMS:
-  ActionSheetPicker-3.0: 8312778b6815578e6a86d630fbcf31dc94c534e7
+  Eureka: 2f1921d3162491921d2fef3b516bc4ef93a05122
   Realm: 7745674cb1b7cb2a84a655bfd420b86efdaad36e
   RealmSwift: 18742f4f13f98117aeec53b92058918ac93bf38f
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
