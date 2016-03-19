@@ -21,7 +21,7 @@
                                 <rect key="frame" x="83" y="15" width="209" height="29"/>
                                 <segments>
                                     <segment title="All"/>
-                                    <segment title="Facility"/>
+                                    <segment title="Setting"/>
                                     <segment title="Summary"/>
                                 </segments>
                                 <connections>
@@ -116,8 +116,8 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Supervised by:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLk-t7-GkV">
-                                        <rect key="frame" x="20" y="91.5" width="117" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Supervisor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLk-t7-GkV">
+                                        <rect key="frame" x="20" y="91.5" width="90" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -141,17 +141,46 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lno-az-MYP">
+                                        <rect key="frame" x="126" y="87" width="70" height="30"/>
+                                        <color key="backgroundColor" red="0.043137254901960784" green="0.8666666666666667" blue="0.023529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="3I6-dj-ZhH"/>
+                                        </constraints>
+                                        <state key="normal" title="Approve">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapApprove:" destination="847-G6-Xl7" eventType="touchUpInside" id="L0L-01-gSx"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signedBadge" translatesAutoresizingMaskIntoConstraints="NO" id="GDX-25-PoG">
+                                        <rect key="frame" x="126" y="89.5" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="DPN-K3-HXD"/>
+                                            <constraint firstAttribute="width" constant="25" id="Mxz-kW-TpW"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="GDX-25-PoG" firstAttribute="leading" secondItem="lno-az-MYP" secondAttribute="leading" id="10e-lH-Zrn"/>
                                     <constraint firstItem="NuM-P6-86l" firstAttribute="leading" secondItem="EKT-QM-DhG" secondAttribute="leading" id="2Tj-nN-gTK"/>
                                     <constraint firstAttribute="bottom" secondItem="7Rd-qy-3Pv" secondAttribute="bottom" id="7j3-NW-v0d"/>
+                                    <constraint firstItem="GDX-25-PoG" firstAttribute="centerY" secondItem="lno-az-MYP" secondAttribute="centerY" id="DfJ-6Q-F5G"/>
                                     <constraint firstItem="X9e-rG-KmS" firstAttribute="leading" secondItem="EKT-QM-DhG" secondAttribute="leading" id="NBN-N0-Cnm"/>
                                     <constraint firstAttribute="height" constant="125" id="Zcs-OG-qsL"/>
                                     <constraint firstItem="7Rd-qy-3Pv" firstAttribute="leading" secondItem="VAu-fh-hQw" secondAttribute="leading" id="aDy-4y-CVd"/>
+                                    <constraint firstItem="lno-az-MYP" firstAttribute="leading" secondItem="iLk-t7-GkV" secondAttribute="trailing" constant="16" id="bbP-u5-7sQ"/>
                                     <constraint firstItem="NuM-P6-86l" firstAttribute="top" secondItem="EKT-QM-DhG" secondAttribute="bottom" constant="5" id="ix2-a2-sth"/>
                                     <constraint firstItem="iLk-t7-GkV" firstAttribute="leading" secondItem="X9e-rG-KmS" secondAttribute="leading" id="kmu-Or-jOQ"/>
                                     <constraint firstAttribute="trailing" secondItem="7Rd-qy-3Pv" secondAttribute="trailing" id="lNZ-Ab-65Z"/>
+                                    <constraint firstItem="lno-az-MYP" firstAttribute="centerY" secondItem="iLk-t7-GkV" secondAttribute="centerY" id="nOo-rz-Ahu"/>
                                     <constraint firstItem="X9e-rG-KmS" firstAttribute="top" secondItem="NuM-P6-86l" secondAttribute="bottom" constant="5" id="rOc-a6-Std"/>
                                     <constraint firstItem="iLk-t7-GkV" firstAttribute="top" secondItem="X9e-rG-KmS" secondAttribute="bottom" constant="5" id="ra3-rW-1Hr"/>
                                     <constraint firstItem="EKT-QM-DhG" firstAttribute="leading" secondItem="VAu-fh-hQw" secondAttribute="leading" constant="20" id="sn2-bl-aOu"/>
@@ -189,9 +218,11 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="approveButton" destination="lno-az-MYP" id="6xx-0f-EUI"/>
                         <outlet property="dateLabel" destination="X9e-rG-KmS" id="s4a-ct-FNw"/>
                         <outlet property="locationLabel" destination="NuM-P6-86l" id="eYH-uM-Z0H"/>
                         <outlet property="settingLabel" destination="EKT-QM-DhG" id="n12-id-gsa"/>
+                        <outlet property="signedBadge" destination="GDX-25-PoG" id="C56-Ma-DLW"/>
                         <outlet property="supervisorLabel" destination="iLk-t7-GkV" id="3Ie-9q-ZdV"/>
                         <outlet property="table" destination="6iP-wk-Q09" id="klF-gg-Vt2"/>
                     </connections>
@@ -279,4 +310,7 @@
             <point key="canvasLocation" x="-1512.5" y="154.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="signedBadge" width="25" height="25"/>
+    </resources>
 </document>

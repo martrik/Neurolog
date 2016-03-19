@@ -77,7 +77,6 @@ class NLAddRecordVC: FormViewController, UITextFieldDelegate {
         } else {
             savedRecord = NLRecordsDataManager.sharedInstance.saveRecordWith(form.values())
         }
-        
         if let completion = didDismissWithRecord {
             completion(savedRecord)
         }

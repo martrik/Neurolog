@@ -87,11 +87,15 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Neurolog/Eureka.framework"
   install_framework "Pods-Neurolog/Realm.framework"
   install_framework "Pods-Neurolog/RealmSwift.framework"
+  install_framework "Pods-Neurolog/Signature.framework"
+  install_framework "Pods-Neurolog/SimpleAlert.framework"
   install_framework "Pods-Neurolog/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Neurolog/Eureka.framework"
   install_framework "Pods-Neurolog/Realm.framework"
   install_framework "Pods-Neurolog/RealmSwift.framework"
+  install_framework "Pods-Neurolog/Signature.framework"
+  install_framework "Pods-Neurolog/SimpleAlert.framework"
   install_framework "Pods-Neurolog/SwiftyJSON.framework"
 fi

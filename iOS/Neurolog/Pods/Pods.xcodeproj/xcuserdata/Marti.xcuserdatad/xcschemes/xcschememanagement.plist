@@ -24,6 +24,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Signature.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SimpleAlert.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0B3EEDBF3AE6322CE0E3E47F39D17881</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>40F580A48FF2C38CCBC58A6B3C8F5505</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6E9D1BE276140396294A4E18327CB26F</key>
+		<key>77778B9B27AD3E927776682D4AEFFE6C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>781590EB42CECA0297D6C579629F130A</key>
+		<key>782706E6EFAB165F20B246684BB5DEB3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A33314D5D4774A08868CF7FCABB2AD41</key>
+		<key>A3CCA6B46C52764CE80B540E0EAC0D9C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BA6BCB192FB4F64F6B8DF4CFC937C1B7</key>
+		<key>B777C3330B354E5E99DD41D7A2D706D1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE938C811C1C85023C0D4752538E725D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

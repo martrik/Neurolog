@@ -21,6 +21,9 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         
         table.delegate = self
         table.dataSource = self
+        table.rowHeight = UITableViewAutomaticDimension
+        table.estimatedRowHeight = 60
+        table.registerNib(UINib(nibName: "NLRecordCell", bundle: nil), forCellReuseIdentifier: "NLRecordCell")
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -37,25 +40,19 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell: UITableViewCell!
-        
-        switch self.segmented.selectedSegmentIndex {
-        case 0:
-            cell = tableView.dequeueReusableCellWithIdentifier("recordcell", forIndexPath: indexPath)
-            break;
-        case 1, 2:
-            cell = tableView.dequeueReusableCellWithIdentifier("detailcell", forIndexPath: indexPath)
-            break;
-        default:
-            break;
-            
-        }
+        let cell = tableView.dequeueReusableCellWithIdentifier("NLRecordCell", forIndexPath: indexPath) as! NLRecordCell
         
         let elem = data[indexPath.row]
         if elem is Record {
             let record: Record = elem as! Record
-            cell.textLabel?.text = record.facility + " at " + record.location
-            //cell.detailTextLabel?.text = record.date + " at " + record.time
+            cell.settingLabel.text = record.facility
+            cell.locationLabel.text = record.location
+            let timeFormatter = NSDateFormatter()
+            timeFormatter.locale = NSLocale.currentLocale()
+            timeFormatter.dateStyle = .ShortStyle
+            cell.dateLabel.text  = timeFormatter.stringFromDate(record.date)
+            cell.visitsLabel.text = String(record.visits.count)
+            cell.setSigned(record.signed)
         }
         else if elem is String {
             cell.textLabel?.text = elem as? String

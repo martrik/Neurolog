@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NLVisitCellTableViewCell: UITableViewCell {
+class NLVisitCell: UITableViewCell {
 
     @IBOutlet weak var disease: UILabel!
     @IBOutlet weak var info: UILabel!

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SimpleAlert
 
 class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -14,6 +15,8 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var supervisorLabel: UILabel!
+    @IBOutlet weak var approveButton: UIButton!
+    @IBOutlet weak var signedBadge: UIImageView!
     
     @IBOutlet weak var table: UITableView!
     internal var record = Record()
@@ -26,26 +29,48 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
         table.dataSource = self
         table.rowHeight = UITableViewAutomaticDimension
         table.estimatedRowHeight = 60
-        table.registerNib(UINib(nibName: "NLVisitCellTableViewCell", bundle: nil), forCellReuseIdentifier: "NLVisitCell")
+        table.registerNib(UINib(nibName: "NLVisitCell", bundle: nil), forCellReuseIdentifier: "NLVisitCell")
         
-        // Fill top labels 
+        loadUI()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.table.reloadData()
+        
+        self.updateApproveButton()
+    }
+    
+    func loadUI() {
+        // Fill top labels
         settingLabel.text = "Setting: " + record.facility
         locationLabel.text = "Location: " + record.location
         let timeFormatter = NSDateFormatter()
         timeFormatter.dateStyle = .MediumStyle
         dateLabel.text = "Date: " + timeFormatter.stringFromDate(record.date)
+        
         if let supervisor = record.supervisor {
             supervisorLabel.text = "Supervisor: " + supervisor
         } else {
             supervisorLabel.text = "Supervisor: none"
         }
-        
     }
     
-    override func viewDidAppear(animated: Bool) {
-        print(record)
-        self.table.reloadData()
+    func updateApproveButton() {
+        if (record.supervisor != nil && !record.signed) {
+            approveButton.hidden = false
+            signedBadge.hidden = true
+        }
+        else {
+            approveButton.hidden = true
+            signedBadge.hidden = true
+
+            if record.signed {
+                signedBadge.hidden = false
+            }
+        }
     }
+    
+    // MARK: Table Delegate
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -56,7 +81,7 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("NLVisitCell", forIndexPath: indexPath) as! NLVisitCellTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("NLVisitCell", forIndexPath: indexPath) as! NLVisitCell
         
         let visit = record.visits[indexPath.row]
         cell.disease.text = visit.topic
@@ -79,8 +104,26 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: Approve supervisor
+    
+    @IBAction func didTapApprove(sender: AnyObject) {
+        let viewController = SignatureVC()
+        let alert = SimpleAlert.Controller(view: viewController.view, style: .ActionSheet)
+        
+        alert.addAction(SimpleAlert.Action(title: "Cancel", style: .Destructive) { action in
+        })
+        
+        alert.addAction(SimpleAlert.Action(title: "I approve these visits", style: .OK) { action in
+            if viewController.signatureView?.hasSignature == true {
+                NLRecordsDataManager.sharedInstance.approveRecord(self.record, signed: true)
+                self.updateApproveButton()
+            }
+        })
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
 
-    // MARK: - Navigation
+    // MARK: Navigation
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "NLUpdateRecordSegue" {

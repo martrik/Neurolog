@@ -14,6 +14,7 @@ class Record: Object {
     dynamic var location = ""
     dynamic var facility = ""
     dynamic var supervisor: String? = nil
+    dynamic var signed = false
     let visits = List<Visit>()
     
 }
@@ -44,7 +45,7 @@ class NLRecordsDataManager: NSObject {
         if let facility = info["facility"] {
             newRecord.facility = facility as! String
         }
-        if let supervisor = info["supervisor"] {
+        if let supervisor = info["supervisorname"] {
             newRecord.supervisor = supervisor as? String
         }
         
@@ -71,6 +72,14 @@ class NLRecordsDataManager: NSObject {
             if let supervisor = info["supervisor"] {
                 record.supervisor = supervisor as? String
             }
+        }
+    }
+    
+    func approveRecord(record: Record, signed: Bool) {
+        let realm = try! Realm()
+        
+        try! realm.write {
+            record.signed = signed
         }
     }
     
