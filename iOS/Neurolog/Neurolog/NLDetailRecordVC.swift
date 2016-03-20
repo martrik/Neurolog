@@ -8,6 +8,7 @@
 
 import UIKit
 import SimpleAlert
+import Agrume
 
 class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -55,20 +56,6 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
         }
     }
     
-    func updateApproveButton() {
-        if (record.supervisor != nil && !record.signed) {
-            approveButton.hidden = false
-            signedBadge.hidden = true
-        }
-        else {
-            approveButton.hidden = true
-            signedBadge.hidden = true
-
-            if record.signed {
-                signedBadge.hidden = false
-            }
-        }
-    }
     
     // MARK: Table Delegate
 
@@ -107,20 +94,45 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
     // MARK: Approve supervisor
     
     @IBAction func didTapApprove(sender: AnyObject) {
-        let viewController = SignatureVC()
-        let alert = SimpleAlert.Controller(view: viewController.view, style: .ActionSheet)
-        
-        alert.addAction(SimpleAlert.Action(title: "Cancel", style: .Destructive) { action in
-        })
-        
-        alert.addAction(SimpleAlert.Action(title: "I approve these visits", style: .OK) { action in
-            if viewController.signatureView?.hasSignature == true {
-                NLRecordsDataManager.sharedInstance.approveRecord(self.record, signed: true)
-                self.updateApproveButton()
-            }
-        })
-        
-        self.presentViewController(alert, animated: true, completion: nil)
+        if record.signaturePath == nil {
+            let viewController = SignatureVC()
+            let alert = SimpleAlert.Controller(view: viewController.view, style: .ActionSheet)
+            viewController.setExplainLabel(record.supervisor!)
+
+            alert.addAction(SimpleAlert.Action(title: "Cancel", style: .Destructive) { action in
+            })
+            
+            // Save image
+            alert.addAction(SimpleAlert.Action(title: "I approve these visits", style: .OK) { action in
+                if viewController.signatureView?.hasSignature == true {
+                    let imageData = NSData(data: UIImageJPEGRepresentation(viewController.getSignature(), 0.8)!)
+
+                    let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+                    let writePath = documentsURL.URLByAppendingPathComponent("signature-\(self.record.supervisor!).jpg")
+                    imageData.writeToURL(writePath, atomically: true)
+                  
+                    NLRecordsDataManager.sharedInstance.approveRecord(self.record, signaturePath: String(writePath))
+                    self.updateApproveButton()
+                }
+            })
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+        } else {
+            let url = NSURL(string: record.signaturePath!)
+            let agrume = Agrume(imageURL: url!)
+            agrume.showFrom(self)
+            
+        }
+    }
+    
+    func updateApproveButton() {
+        if (record.supervisor != nil && record.signaturePath != nil) {
+            approveButton.backgroundColor = UIColor.clearColor()
+            approveButton.setImage(UIImage(named: "signedBadge"), forState: .Normal)
+            approveButton.frame = CGRectMake(approveButton.frame.origin.x, approveButton.frame.origin.y, 25, 25)
+        } else if (record.supervisor == nil) {
+            approveButton.hidden = true
+        }
     }
 
     // MARK: Navigation

@@ -84,6 +84,7 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Neurolog/Agrume.framework"
   install_framework "Pods-Neurolog/Eureka.framework"
   install_framework "Pods-Neurolog/Realm.framework"
   install_framework "Pods-Neurolog/RealmSwift.framework"
@@ -92,6 +93,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Neurolog/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Neurolog/Agrume.framework"
   install_framework "Pods-Neurolog/Eureka.framework"
   install_framework "Pods-Neurolog/Realm.framework"
   install_framework "Pods-Neurolog/RealmSwift.framework"

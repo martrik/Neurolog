@@ -10,8 +10,14 @@ import UIKit
 
 class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPopoverPresentationControllerDelegate {
     
+    @IBOutlet weak var leftNavBarButton: UIBarButtonItem!
+    @IBOutlet weak var rightNavBarButton: UIBarButtonItem!
+    
     @IBOutlet weak var segmented: UISegmentedControl!
     @IBOutlet weak var table: UITableView!
+    
+    var selectingRows = false
+    var selectedRows = [Int]()
     
     var data = [AnyObject]()
     var selectedRow = -1
@@ -46,13 +52,20 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         if elem is Record {
             let record: Record = elem as! Record
             cell.settingLabel.text = record.facility
+            cell.updateSettingLabelColor()
             cell.locationLabel.text = record.location
+            
             let timeFormatter = NSDateFormatter()
             timeFormatter.locale = NSLocale.currentLocale()
             timeFormatter.dateStyle = .ShortStyle
             cell.dateLabel.text  = timeFormatter.stringFromDate(record.date)
+            
             cell.visitsLabel.text = String(record.visits.count)
-            cell.setSigned(record.signed)
+            cell.setSigned(record.signaturePath != nil)
+            
+            cell.selectionStyle = .None
+            cell.tintColor = UIColor.appRed()
+            cell.accessoryType = (selectedRows.contains(indexPath.row)  ? .Checkmark : .None)
         }
         else if elem is String {
             cell.textLabel?.text = elem as? String
@@ -63,19 +76,68 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         selectedRow = indexPath.row
-
-        switch segmented.selectedSegmentIndex {
-        case 0:
-            self.performSegueWithIdentifier("NLDetailSegue", sender: data[selectedRow])
-            break;
-        case 1, 2:
-            break;
-        default:
-            break;
+        
+        if selectingRows {
+            tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark
+            selectedRows.append(selectedRow)
+        } else {
+            switch segmented.selectedSegmentIndex {
+            case 0:
+                self.performSegueWithIdentifier("NLDetailSegue", sender: data[selectedRow])
+                break;
+            case 1, 2:
+                break;
+            default:
+                break;
+            }
         }
     }
+    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        if selectingRows {
+            tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .None
+            if let index = selectedRows.indexOf(indexPath.row) {
+                selectedRows.removeAtIndex(index)
+            }
+        }
+    }
+    
+    // MARK: Share records
 
-    // MARK: - Selector
+    @IBAction func didTapLeftNavBarButton(sender: AnyObject) {
+        if selectingRows {
+            leftNavBarButton.title = "Share"
+            leftNavBarButton.tintColor = UIColor.appLightBlue()
+            table.allowsMultipleSelection = false
+            
+            rightNavBarButton.title = "New record"
+
+            // Uncheck all cells
+            selectAllRows(false)
+        } else {
+            leftNavBarButton.title = "Cancel"
+            leftNavBarButton.tintColor = UIColor.appRed()
+            table.allowsMultipleSelection = true
+            
+            rightNavBarButton.title = "Select all"
+        }
+        
+        selectingRows = !selectingRows
+    }
+    
+    func selectAllRows(state: Bool) {
+        for var i = 0; i < table.numberOfRowsInSection(0); i++ {
+            if state {
+                selectedRows.append(i)
+            } else {
+                if let index = selectedRows.indexOf(i) {
+                    selectedRows.removeAtIndex(index)
+                }
+            }
+        }
+        table.reloadData()
+    }
+    // MARK: Selector
     
     @IBAction func segmentedValueChanged(sender: AnyObject) {
         if sender as! NSObject == segmented {
@@ -92,7 +154,7 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
             //data = SelectionDataManger.sharedInstance.ge
             break;
         case 2:
-            data = NLSelectionDataManger.sharedInstance.getFacilities()
+            data = NLSelectionDataManger.sharedInstance.getClinicalSettings()
             break;
         default:
             break;
@@ -102,7 +164,11 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     }
     
     @IBAction func didTapAdd(sender: AnyObject) {
-        self.performSegueWithIdentifier("NLAddRecordSegue", sender: self)
+        if selectingRows {
+            selectAllRows(true)
+        } else {
+            self.performSegueWithIdentifier("NLAddRecordSegue", sender: self)
+        }
     }
     
     // MARK: Navigation

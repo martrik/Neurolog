@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Agrume.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Eureka.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,7 +47,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0B3EEDBF3AE6322CE0E3E47F39D17881</key>
+		<key>0B9E202D55FEC7CADBF70B6B8C25892E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0BBBB1E2EE92749650A65FEBF1A2833C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3A88E0FE0C906B57E293ADABD2D7809C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,27 +67,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>77778B9B27AD3E927776682D4AEFFE6C</key>
+		<key>6B53F81360DCE6CBED01D820D51717E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>782706E6EFAB165F20B246684BB5DEB3</key>
+		<key>D1426E46902A1D4E27B3AB527ECCFB99</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A3CCA6B46C52764CE80B540E0EAC0D9C</key>
+		<key>DAE22C49F5FBB91BFA5E1A79141BEA7C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B777C3330B354E5E99DD41D7A2D706D1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FE938C811C1C85023C0D4752538E725D</key>
+		<key>DC5603C80E9BA0452C0CC81E8B9968F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

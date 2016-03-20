@@ -19,7 +19,31 @@ class NLRecordCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        self.visitsLabel.backgroundColor = UIColor.appLightBlue()
         self.visitsLabel.layer.cornerRadius = 15
+    }
+    
+    func updateSettingLabelColor() {
+        var labelColor = UIColor.appDarkBlue()
+
+        switch NLSelectionDataManger.sharedInstance.getClinicalSettings().indexOf(settingLabel.text!)! {
+        case 0:
+            labelColor = UIColor.appOrange()
+            break
+        case 1:
+            labelColor = UIColor.appGreen()
+            break
+        case 2:
+            labelColor = UIColor.appDarkBlue()
+            break
+        case 3:
+            labelColor = UIColor.appBrown()
+            break
+        default:
+            break
+        }
+        
+        settingLabel.textColor = labelColor
     }
     
     func setSigned(signed: Bool) {
@@ -32,8 +56,6 @@ class NLRecordCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

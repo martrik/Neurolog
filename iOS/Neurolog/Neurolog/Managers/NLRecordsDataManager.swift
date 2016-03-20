@@ -14,7 +14,7 @@ class Record: Object {
     dynamic var location = ""
     dynamic var facility = ""
     dynamic var supervisor: String? = nil
-    dynamic var signed = false
+    dynamic var signaturePath: String? = nil
     let visits = List<Visit>()
     
 }
@@ -75,11 +75,11 @@ class NLRecordsDataManager: NSObject {
         }
     }
     
-    func approveRecord(record: Record, signed: Bool) {
+    func approveRecord(record: Record, signaturePath: String) {
         let realm = try! Realm()
         
         try! realm.write {
-            record.signed = signed
+            record.signaturePath = signaturePath
         }
     }
     

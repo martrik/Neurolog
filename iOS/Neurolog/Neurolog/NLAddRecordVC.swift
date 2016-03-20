@@ -26,19 +26,19 @@ class NLAddRecordVC: FormViewController, UITextFieldDelegate {
                 $0.value = NSDate();
                 $0.title = "Date:"
             }
-            <<< TextRow("location") {
+            <<< NameRow("location") {
                 $0.title =  "Location:"
                 if let location = editingRecord?.location {
                     $0.value = location
                 }
             }
             <<< AlertRow<String>("facility") {
-                $0.title = "Facility:"
-                $0.options = NLSelectionDataManger.sharedInstance.getFacilities()
+                $0.title = "Setting:"
+                $0.options = NLSelectionDataManger.sharedInstance.getClinicalSettings()
                 if let facility = editingRecord?.facility {
                     $0.value = facility
                 } else {
-                    $0.value = NLSelectionDataManger.sharedInstance.getFacilities().first
+                    $0.value = NLSelectionDataManger.sharedInstance.getClinicalSettings().first
                 }
             }
             <<< SwitchRow("supervisorswitch") {
@@ -70,17 +70,31 @@ class NLAddRecordVC: FormViewController, UITextFieldDelegate {
     // MARK: - Save
     
     @IBAction func didTapSave(sender: AnyObject) {
-        var savedRecord = Record()
-        if let record = editingRecord {
-            NLRecordsDataManager.sharedInstance.updateRecord(record, info: form.values())
-            savedRecord = record
+        print(!(form.values()["supervisorswitch"]! as! Bool == true))
+        print(form.values()["supervisorname"]!)
+        if form.values()["location"]! != nil && (!(form.values()["supervisorswitch"]! as! Bool == true) || form.values()["supervisorname"]! as! String != "") {
+
+            var savedRecord = Record()
+            if let record = editingRecord {
+                NLRecordsDataManager.sharedInstance.updateRecord(record, info: form.values())
+                savedRecord = record
+            } else {
+                savedRecord = NLRecordsDataManager.sharedInstance.saveRecordWith(form.values())
+            }
+            
+            if let completion = didDismissWithRecord {
+                completion(savedRecord)
+            }
+            self.noticeSuccess("Saved!")
+            self.dismissViewControllerAnimated(true, completion: nil)
         } else {
-            savedRecord = NLRecordsDataManager.sharedInstance.saveRecordWith(form.values())
+            self.noticeSuccess("Missing info")
         }
-        if let completion = didDismissWithRecord {
-            completion(savedRecord)
-        }
-        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        let dispatchTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(0.7 * Double(NSEC_PER_SEC)))
+        dispatch_after(dispatchTime, dispatch_get_main_queue(),{
+            self.clearAllNotice()
+        })
     }
     
     @IBAction func didTapDismiss(sender: AnyObject) {

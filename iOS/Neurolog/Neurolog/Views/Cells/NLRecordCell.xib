@@ -48,7 +48,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signedBadge" translatesAutoresizingMaskIntoConstraints="NO" id="WgQ-El-nsX">
-                        <rect key="frame" x="135" y="6" width="25" height="25"/>
+                        <rect key="frame" x="137" y="6" width="25" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="25" id="J2J-Ji-Kej"/>
                             <constraint firstAttribute="height" constant="25" id="k82-BT-69n"/>
@@ -69,7 +69,7 @@
                     <constraint firstItem="WgQ-El-nsX" firstAttribute="leading" secondItem="jwW-qT-l4P" secondAttribute="trailing" constant="10" id="UxN-zF-MAb"/>
                     <constraint firstItem="pcd-c6-cX1" firstAttribute="top" secondItem="jwW-qT-l4P" secondAttribute="bottom" constant="3" id="em3-LB-BGJ"/>
                     <constraint firstItem="jwW-qT-l4P" firstAttribute="leading" secondItem="m7M-es-UzX" secondAttribute="leading" id="h2Z-LT-gSx"/>
-                    <constraint firstItem="WgQ-El-nsX" firstAttribute="leading" secondItem="m7M-es-UzX" secondAttribute="trailing" constant="8" id="laz-j8-KC0"/>
+                    <constraint firstItem="WgQ-El-nsX" firstAttribute="leading" secondItem="m7M-es-UzX" secondAttribute="trailing" constant="10" id="laz-j8-KC0"/>
                     <constraint firstItem="WgQ-El-nsX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="mif-Yg-PDQ"/>
                     <constraint firstItem="m7M-es-UzX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="oLS-5j-HDE"/>
                     <constraint firstAttribute="topMargin" secondItem="m7M-es-UzX" secondAttribute="top" id="rbk-1D-AKe"/>

@@ -50,24 +50,19 @@ class NLAddVisitVC: FormViewController {
     }
 
     @IBAction func didTapSave(sender: AnyObject) {
-        let dispatchTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(0.7 * Double(NSEC_PER_SEC)))
-
-        if form.values()["disease"]! != nil && form.values()["age"]! != nil && form.values()["sex"]! != nil{
+        if form.values()["disease"]! != nil && form.values()["age"]! != nil && form.values()["sex"]! != nil {
             NLRecordsDataManager.sharedInstance.saveVisitInRecord(record!, info: form.values())
             self.noticeSuccess("Saved!")
-            dispatch_after(dispatchTime, dispatch_get_main_queue(),{
-                self.clearAllNotice()
-            })
             self.navigationController?.popViewControllerAnimated(true)
         } else {
-            self.noticeInfo("Info missing")
-            dispatch_after(dispatchTime, dispatch_get_main_queue(),{
-                self.clearAllNotice()
-            })
-
+            self.noticeInfo("Missing info")
         }
         
-          }
+        let dispatchTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(0.7 * Double(NSEC_PER_SEC)))
+        dispatch_after(dispatchTime, dispatch_get_main_queue(),{
+            self.clearAllNotice()
+        })
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
