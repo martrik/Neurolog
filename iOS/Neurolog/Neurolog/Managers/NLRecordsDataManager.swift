@@ -12,7 +12,7 @@ import RealmSwift
 class Record: Object {
     dynamic var date = NSDate()
     dynamic var location = ""
-    dynamic var facility = ""
+    dynamic var setting = ""
     dynamic var supervisor: String? = nil
     dynamic var signaturePath: String? = nil
     let visits = List<Visit>()
@@ -43,7 +43,7 @@ class NLRecordsDataManager: NSObject {
             newRecord.location = location as! String
         }
         if let facility = info["facility"] {
-            newRecord.facility = facility as! String
+            newRecord.setting = facility as! String
         }
         if let supervisor = info["supervisorname"] {
             newRecord.supervisor = supervisor as? String
@@ -67,7 +67,7 @@ class NLRecordsDataManager: NSObject {
                 record.location = location as! String
             }
             if let facility = info["facility"] {
-                record.facility = facility as! String
+                record.setting = facility as! String
             }
             if let supervisor = info["supervisor"] {
                 record.supervisor = supervisor as? String
@@ -83,28 +83,28 @@ class NLRecordsDataManager: NSObject {
         }
     }
     
-    func getAllRecords() -> ([Record]) {
+    func allRecords() -> ([Record]) {
         let realm = try! Realm()
-        let allRecords = realm.objects(Record)
+        let allRecords = realm.objects(Record).sorted("date", ascending: false)
         
         return Array(allRecords)
     }
     
-    func getRecordsWithFacility(facility: String) -> ([Record]) {
+    func recordsWithFacility(facility: String) -> ([Record]) {
         let realm = try! Realm()
         let facilityRecords = realm.objects(Record).filter("facility = '\(facility)'")
         
         return Array(facilityRecords)
     }
     
-    func getRecordsWithSupervisor(disease: String) -> ([Record]) {
+    func recordsWithSupervisor(supervisor: String) -> ([Record]) {
         let realm = try! Realm()
-        let supervisorRecords = realm.objects(Record).filter("supervisor = \(disease)")
+        let supervisorRecords = realm.objects(Record).filter("supervisor = '\(supervisor)'")
         
         return Array(supervisorRecords)
     }
     
-    // MARK: - Visits
+    // MARK: Visits
     
     func saveVisitInRecord(record: Record, info: [String: Any?]) {
         let realm = try! Realm()
@@ -127,6 +127,39 @@ class NLRecordsDataManager: NSObject {
         try! realm.write {
            record.visits.append(newVisit)
         }
+    }
+    
+    // MARK: CSV generator
+    
+    func generateCSVWithRecords(records: [Record]) -> NSData {
+        let mailString = NSMutableString()
+        let timeFormatter = NSDateFormatter()
+        timeFormatter.locale = NSLocale.currentLocale()
+        
+        for record in records {
+            mailString.appendString("Date, Setting, Location, Supervisor\n")
+            
+            timeFormatter.dateStyle = .MediumStyle
+            timeFormatter.timeStyle = .NoStyle
+            let string = "\(timeFormatter.stringFromDate(record.date)), \(record.setting), \(record.location), " + (record.supervisor != nil ? record.supervisor!  : "none") + "\n"
+            mailString.appendString(string)
+            
+            mailString.appendString("Time, Disease, Age, Sex\n")
+
+            timeFormatter.dateStyle = .NoStyle
+            timeFormatter.timeStyle = .ShortStyle
+            
+            for visit in record.visits {
+                mailString.appendString("\(timeFormatter.stringFromDate(visit.time)), \(visit.topic), \(visit.age), \(visit.sex)\n")
+            }
+            
+            mailString.appendString(" \n")
+        }
+        
+        // Converting it to NSData.
+        let data = mailString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+        
+        return data!
     }
     
     /*func getStatsForDisease() -> (Dictionary<String, Int>) {

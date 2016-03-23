@@ -1,6 +1,9 @@
 PODS:
-  - Agrume (2.0.4)
-  - Eureka (1.4.1)
+  - Agrume (2.0.5)
+  - Charts (2.2.3):
+    - Charts/Core (= 2.2.3)
+  - Charts/Core (2.2.3)
+  - Eureka (1.5.0)
   - Realm (0.98.5):
     - Realm/Headers (= 0.98.5)
   - Realm/Headers (0.98.5)
@@ -12,6 +15,7 @@ PODS:
 
 DEPENDENCIES:
   - Agrume (from `https://github.com/JanGorman/Agrume.git`)
+  - Charts
   - Eureka (~> 1.4)
   - RealmSwift
   - Signature
@@ -24,12 +28,13 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Agrume:
-    :commit: 78c2876f6d76cf706f55e42a1ca23154c67d174b
+    :commit: 87706d3b39015a590c1df4ed41990d3710cc5842
     :git: https://github.com/JanGorman/Agrume.git
 
 SPEC CHECKSUMS:
-  Agrume: 166fb17264340f63c18953fc6fc900c249da87bf
-  Eureka: 2f1921d3162491921d2fef3b516bc4ef93a05122
+  Agrume: e8d5b7af205a334eb6a79e0084231ef7f6255b19
+  Charts: f54267bb3f0f0e74520c6f248517cf5074dfd6fc
+  Eureka: 2fb37bb50569c62ee3284689d5b7aca694b040e0
   Realm: db08379969e45cea2edd1c3c0a090fe9e22d2d2f
   RealmSwift: cb11ad1c35e15dc982f2dbf5afe2a3124193a358
   Signature: b0f9e9240f7e4f7825a2a8c33cad81ac209c1a7a

@@ -34,12 +34,12 @@ class NLAddVisitVC: FormViewController {
             })
             <<< PushRow<String>("disease") { (row : PushRow<String>) -> Void in
                 row.title = "Disease:"
-                row.options = NLSelectionDataManger.sharedInstance.getPortfolioTopics()
+                row.options = NLSelectionDataManger.sharedInstance.portfolioTopics()
                 
             }
             <<< PushRow<String>("age") { (row : PushRow<String>) -> Void in
                 row.title = "Age:"
-                let ages: [Int] = Array(1...120)
+                let ages: [Int] = Array(1...110)
                 let stringAges = ages.map { String($0) }
                 row.options = stringAges
             }

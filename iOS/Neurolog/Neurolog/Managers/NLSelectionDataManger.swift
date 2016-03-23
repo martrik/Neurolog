@@ -13,7 +13,7 @@ import SwiftyJSON
 class NLSelectionDataManger: NSObject {
     static let sharedInstance = NLSelectionDataManger()
     
-    func getClinicalSettings() -> ([String]) {
+    func clinicalSettings() -> ([String]) {
         var facilities = [String]()
         
         for (_,subJson):(String, JSON) in getJSONObject()!["Setting"] {
@@ -23,7 +23,7 @@ class NLSelectionDataManger: NSObject {
         return facilities
     }
     
-    func getPortfolioTopics() -> ([String]) {
+    func portfolioTopics() -> ([String]) {
         var portfolios = [String]()
         
         for (key,_):(String, JSON) in getJSONObject()!["Portfolio"] {

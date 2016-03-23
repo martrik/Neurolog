@@ -15,9 +15,7 @@
 		411D9F401C883CCB0042D058 /* NeurologTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411D9F3F1C883CCB0042D058 /* NeurologTests.swift */; };
 		411D9F4B1C883CCB0042D058 /* NeurologUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411D9F4A1C883CCB0042D058 /* NeurologUITests.swift */; };
 		411D9F591C8840380042D058 /* NLAddRecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411D9F581C8840380042D058 /* NLAddRecordVC.swift */; };
-		411D9F5C1C88471A0042D058 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411D9F5B1C88471A0042D058 /* DatePickerDialog.swift */; };
 		4141A3F61C8CC98F00454754 /* NLSelectionDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4141A3F51C8CC98F00454754 /* NLSelectionDataManger.swift */; };
-		4141A3F81C8CCF0100454754 /* CustomField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4141A3F71C8CCF0100454754 /* CustomField.swift */; };
 		4146E8631C9D560900254848 /* NLRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146E8611C9D560900254848 /* NLRecordCell.swift */; };
 		4146E8641C9D560900254848 /* NLRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4146E8621C9D560900254848 /* NLRecordCell.xib */; };
 		4146E86B1C9D680000254848 /* SignatureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146E8691C9D680000254848 /* SignatureVC.swift */; };
@@ -27,6 +25,8 @@
 		41A003821C9AD0E1009A2B5F /* NLVisitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A003801C9AD0E1009A2B5F /* NLVisitCell.xib */; };
 		41A7C58D1C9DE2E400837429 /* NLColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7C58C1C9DE2E400837429 /* NLColorExtension.swift */; };
 		41AC4B341C9819E70094B489 /* NLAddVisitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AC4B331C9819E70094B489 /* NLAddVisitVC.swift */; };
+		41CC6C2C1C9F449F00A5D17C /* NLStatsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC6C2B1C9F449F00A5D17C /* NLStatsManager.swift */; };
+		41CC6C311C9F480900A5D17C /* NLStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC6C301C9F480900A5D17C /* NLStatsView.swift */; };
 		41D914B81C9D70AB003AFE0D /* SignatureVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D914B71C9D70AB003AFE0D /* SignatureVC.xib */; };
 		41E451001C976DA400A8F1E1 /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E450FF1C976DA400A8F1E1 /* SwiftNotice.swift */; };
 		41E451021C97754300A8F1E1 /* NLDetailRecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E451011C97754300A8F1E1 /* NLDetailRecordVC.swift */; };
@@ -81,9 +81,7 @@
 		411D9F4A1C883CCB0042D058 /* NeurologUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeurologUITests.swift; sourceTree = "<group>"; };
 		411D9F4C1C883CCB0042D058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		411D9F581C8840380042D058 /* NLAddRecordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLAddRecordVC.swift; sourceTree = "<group>"; };
-		411D9F5B1C88471A0042D058 /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
 		4141A3F51C8CC98F00454754 /* NLSelectionDataManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLSelectionDataManger.swift; sourceTree = "<group>"; };
-		4141A3F71C8CCF0100454754 /* CustomField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomField.swift; sourceTree = "<group>"; };
 		4146E8611C9D560900254848 /* NLRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLRecordCell.swift; sourceTree = "<group>"; };
 		4146E8621C9D560900254848 /* NLRecordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NLRecordCell.xib; sourceTree = "<group>"; };
 		4146E8691C9D680000254848 /* SignatureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignatureVC.swift; sourceTree = "<group>"; };
@@ -93,6 +91,8 @@
 		41A003801C9AD0E1009A2B5F /* NLVisitCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NLVisitCell.xib; sourceTree = "<group>"; };
 		41A7C58C1C9DE2E400837429 /* NLColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLColorExtension.swift; sourceTree = "<group>"; };
 		41AC4B331C9819E70094B489 /* NLAddVisitVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLAddVisitVC.swift; sourceTree = "<group>"; };
+		41CC6C2B1C9F449F00A5D17C /* NLStatsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLStatsManager.swift; sourceTree = "<group>"; };
+		41CC6C301C9F480900A5D17C /* NLStatsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLStatsView.swift; sourceTree = "<group>"; };
 		41D914B61C9D6E0E003AFE0D /* Neurolog-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Neurolog-Bridging-Header.h"; sourceTree = "<group>"; };
 		41D914B71C9D70AB003AFE0D /* SignatureVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignatureVC.xib; sourceTree = "<group>"; };
 		41E450FF1C976DA400A8F1E1 /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = "<group>"; };
@@ -209,11 +209,10 @@
 		411D9F5A1C8846E70042D058 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				41CC6C2D1C9F47D600A5D17C /* Statistics */,
 				4146E8681C9D67EA00254848 /* Signature */,
 				41A0037E1C9AD0BF009A2B5F /* Cells */,
 				41E450FF1C976DA400A8F1E1 /* SwiftNotice.swift */,
-				411D9F5B1C88471A0042D058 /* DatePickerDialog.swift */,
-				4141A3F71C8CCF0100454754 /* CustomField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,6 +222,7 @@
 			children = (
 				4141A3F51C8CC98F00454754 /* NLSelectionDataManger.swift */,
 				419D9A441C96290000276A2F /* NLRecordsDataManager.swift */,
+				41CC6C2B1C9F449F00A5D17C /* NLStatsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -296,6 +296,14 @@
 				41AC4B331C9819E70094B489 /* NLAddVisitVC.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		41CC6C2D1C9F47D600A5D17C /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				41CC6C301C9F480900A5D17C /* NLStatsView.swift */,
+			);
+			name = Statistics;
 			sourceTree = "<group>";
 		};
 		DCD7DD61AC7D9DE993A797A8 /* Frameworks */ = {
@@ -579,15 +587,15 @@
 				41A7C58D1C9DE2E400837429 /* NLColorExtension.swift in Sources */,
 				41E451021C97754300A8F1E1 /* NLDetailRecordVC.swift in Sources */,
 				411D9F2D1C883CCB0042D058 /* NLMainVC.swift in Sources */,
-				411D9F5C1C88471A0042D058 /* DatePickerDialog.swift in Sources */,
 				4141A3F61C8CC98F00454754 /* NLSelectionDataManger.swift in Sources */,
 				41E451001C976DA400A8F1E1 /* SwiftNotice.swift in Sources */,
+				41CC6C2C1C9F449F00A5D17C /* NLStatsManager.swift in Sources */,
 				4146E86B1C9D680000254848 /* SignatureVC.swift in Sources */,
 				4146E8631C9D560900254848 /* NLRecordCell.swift in Sources */,
-				4141A3F81C8CCF0100454754 /* CustomField.swift in Sources */,
 				41AC4B341C9819E70094B489 /* NLAddVisitVC.swift in Sources */,
 				411D9F2B1C883CCB0042D058 /* AppDelegate.swift in Sources */,
 				419D9A451C96290000276A2F /* NLRecordsDataManager.swift in Sources */,
+				41CC6C311C9F480900A5D17C /* NLStatsView.swift in Sources */,
 				411D9F591C8840380042D058 /* NLAddRecordVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -736,6 +744,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Neurolog/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.martiserra.Neurolog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -752,6 +761,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Neurolog/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.martiserra.Neurolog;
 				PRODUCT_NAME = "$(TARGET_NAME)";

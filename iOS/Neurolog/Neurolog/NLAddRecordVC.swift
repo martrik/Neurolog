@@ -12,7 +12,6 @@ import Eureka
 class NLAddRecordVC: FormViewController, UITextFieldDelegate {
 
     internal var editingRecord: Record? = nil
-    var datePicker: DatePickerDialog!
     var didDismissWithRecord:((Record)->Void)?
 
     override func viewDidLoad() {
@@ -34,11 +33,11 @@ class NLAddRecordVC: FormViewController, UITextFieldDelegate {
             }
             <<< AlertRow<String>("facility") {
                 $0.title = "Setting:"
-                $0.options = NLSelectionDataManger.sharedInstance.getClinicalSettings()
-                if let facility = editingRecord?.facility {
+                $0.options = NLSelectionDataManger.sharedInstance.clinicalSettings()
+                if let facility = editingRecord?.setting {
                     $0.value = facility
                 } else {
-                    $0.value = NLSelectionDataManger.sharedInstance.getClinicalSettings().first
+                    $0.value = NLSelectionDataManger.sharedInstance.clinicalSettings().first
                 }
             }
             <<< SwitchRow("supervisorswitch") {
@@ -70,8 +69,6 @@ class NLAddRecordVC: FormViewController, UITextFieldDelegate {
     // MARK: - Save
     
     @IBAction func didTapSave(sender: AnyObject) {
-        print(!(form.values()["supervisorswitch"]! as! Bool == true))
-        print(form.values()["supervisorname"]!)
         if form.values()["location"]! != nil && (!(form.values()["supervisorswitch"]! as! Bool == true) || form.values()["supervisorname"]! as! String != "") {
 
             var savedRecord = Record()

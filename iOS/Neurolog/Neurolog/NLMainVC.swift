@@ -7,14 +7,19 @@
 //
 
 import UIKit
+import MessageUI
 
-class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPopoverPresentationControllerDelegate {
+class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPopoverPresentationControllerDelegate, MFMailComposeViewControllerDelegate {
     
     @IBOutlet weak var leftNavBarButton: UIBarButtonItem!
     @IBOutlet weak var rightNavBarButton: UIBarButtonItem!
     
     @IBOutlet weak var segmented: UISegmentedControl!
     @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var summaryView: NLStatsView!
+    
+    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var shareButtonBottom: NSLayoutConstraint!
     
     var selectingRows = false
     var selectedRows = [Int]()
@@ -24,7 +29,7 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         table.delegate = self
         table.dataSource = self
         table.rowHeight = UITableViewAutomaticDimension
@@ -51,7 +56,7 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         let elem = data[indexPath.row]
         if elem is Record {
             let record: Record = elem as! Record
-            cell.settingLabel.text = record.facility
+            cell.settingLabel.text = record.setting
             cell.updateSettingLabelColor()
             cell.locationLabel.text = record.location
             
@@ -78,8 +83,7 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         selectedRow = indexPath.row
         
         if selectingRows {
-            tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark
-            selectedRows.append(selectedRow)
+            selectedRowShare(indexPath)
         } else {
             switch segmented.selectedSegmentIndex {
             case 0:
@@ -95,23 +99,166 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         if selectingRows {
-            tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .None
-            if let index = selectedRows.indexOf(indexPath.row) {
-                selectedRows.removeAtIndex(index)
-            }
+            selectedRowShare(indexPath)
         }
     }
     
-    // MARK: Share records
-
+    // MARK: Sharing
+    
+    func selectedRowShare(indexPath: NSIndexPath) {
+        if let index = selectedRows.indexOf(indexPath.row) {
+            table.cellForRowAtIndexPath(indexPath)?.accessoryType = .None
+            selectedRows.removeAtIndex(index)
+        } else {
+            selectedRows.append(indexPath.row)
+            table.cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark
+        }
+        
+        updateShareButton()
+    }
+    
+    func selectAllRows(state: Bool) {
+        for i in 0 ..< table.numberOfRowsInSection(0) {
+            if state {
+                if selectedRows.indexOf(i) == nil {
+                    selectedRows.append(i)
+                }
+            } else {
+                if let index = selectedRows.indexOf(i) {
+                    selectedRows.removeAtIndex(index)
+                }
+            }
+        }
+        table.reloadData()
+        updateShareButton()
+    }
+    
+    func toggleShareButton(state: Bool) {
+        shareButtonBottom.constant = (state ? 0 : -CGRectGetHeight(shareButton.frame))
+        
+        UIView.animateWithDuration(0.3) { () -> Void in
+            self.shareButton.alpha = (state ? 1 : 0)
+            self.shareButton.layoutIfNeeded()
+        }
+        
+        updateShareButton()
+    }
+    
+    func updateShareButton() {
+        if selectedRows.count == 0 {
+            shareButton.setTitle("Select the records you want to share", forState: UIControlState.Normal)
+        } else {
+            shareButton.setTitle("Share this \(selectedRows.count) record" + (selectedRows.count == 1 ? "" : "s"), forState: UIControlState.Normal)
+        }
+    }
+    
+    @IBAction func didTapShareRecordsButton(sender: AnyObject) {
+        if selectedRows.count > 0 {
+                        
+            // Unwrapping the optional.
+            var records = [Record]()
+            
+            for i in selectedRows {
+                records.append(data[i] as! Record)
+            }
+            
+            let csv = NLRecordsDataManager.sharedInstance.generateCSVWithRecords(records)
+            
+            func configuredMailComposeViewController() -> MFMailComposeViewController {
+                let emailController = MFMailComposeViewController()
+                emailController.mailComposeDelegate = self
+                emailController.setSubject("CSV File")
+                emailController.setMessageBody("", isHTML: false)
+                
+                // Attaching the .CSV file to the email.
+                emailController.addAttachmentData(csv, mimeType: "text/csv", fileName: "Sample.csv")
+                
+                return emailController
+            }
+            
+            let emailViewController = configuredMailComposeViewController()
+            if MFMailComposeViewController.canSendMail() {
+                self.presentViewController(emailViewController, animated: true, completion: nil)
+            }
+            
+        }
+    }
+    
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
+        
+        if result == MFMailComposeResultSent {
+            noticeSuccess("Sent!")
+            changeNavButtonsState()
+        } else if result == MFMailComposeResultFailed {
+            noticeError("Failed...")
+        }
+        
+        let dispatchTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(0.7 * Double(NSEC_PER_SEC)))
+        dispatch_after(dispatchTime, dispatch_get_main_queue(),{
+            self.clearAllNotice()
+        })
+    }
+    
+    
+    // MARK: Selector
+    
+    @IBAction func segmentedValueChanged(sender: AnyObject) {
+        if sender as! NSObject == segmented {
+            self.loadDataAccordingSegmented()
+        }
+        
+        print(NLStatsManager.sharedInstance.statsForClinicalSettings())
+    }
+    
+    func loadDataAccordingSegmented() {
+        switch segmented.selectedSegmentIndex {
+        case 0:
+            data = NLRecordsDataManager.sharedInstance.allRecords()
+            switchToSummaryView(false)
+            break;
+        case 1:
+            switchToSummaryView(true)
+            break;
+        default:
+            break;
+            
+        }
+        self.table.reloadData()
+    }
+    
+    func switchToSummaryView(state: Bool) {
+        table.hidden = state
+        summaryView.hidden = !state
+        
+        if state {
+            summaryView.displayGraphs()
+        }
+    }
+    
+    // MARK: Navigation bar buttons
+    
+    @IBAction func didTapAdd(sender: AnyObject) {
+        if selectingRows {
+            selectAllRows(true)
+        } else {
+            self.performSegueWithIdentifier("NLAddRecordSegue", sender: self)
+        }
+    }
+    
+    
     @IBAction func didTapLeftNavBarButton(sender: AnyObject) {
+        changeNavButtonsState()
+    }
+    
+    func changeNavButtonsState() {
         if selectingRows {
             leftNavBarButton.title = "Share"
             leftNavBarButton.tintColor = UIColor.appLightBlue()
             table.allowsMultipleSelection = false
             
             rightNavBarButton.title = "New record"
-
+            
             // Uncheck all cells
             selectAllRows(false)
         } else {
@@ -121,55 +268,10 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
             
             rightNavBarButton.title = "Select all"
         }
-        
+        toggleShareButton(!selectingRows)
         selectingRows = !selectingRows
     }
-    
-    func selectAllRows(state: Bool) {
-        for var i = 0; i < table.numberOfRowsInSection(0); i++ {
-            if state {
-                selectedRows.append(i)
-            } else {
-                if let index = selectedRows.indexOf(i) {
-                    selectedRows.removeAtIndex(index)
-                }
-            }
-        }
-        table.reloadData()
-    }
-    // MARK: Selector
-    
-    @IBAction func segmentedValueChanged(sender: AnyObject) {
-        if sender as! NSObject == segmented {
-            self.loadDataAccordingSegmented()
-        }
-    }
-    
-    func loadDataAccordingSegmented() {
-        switch segmented.selectedSegmentIndex {
-        case 0:
-            data = NLRecordsDataManager.sharedInstance.getAllRecords()
-            break;
-        case 1:
-            //data = SelectionDataManger.sharedInstance.ge
-            break;
-        case 2:
-            data = NLSelectionDataManger.sharedInstance.getClinicalSettings()
-            break;
-        default:
-            break;
-            
-        }
-        self.table.reloadData()
-    }
-    
-    @IBAction func didTapAdd(sender: AnyObject) {
-        if selectingRows {
-            selectAllRows(true)
-        } else {
-            self.performSegueWithIdentifier("NLAddRecordSegue", sender: self)
-        }
-    }
+
     
     // MARK: Navigation
     

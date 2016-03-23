@@ -26,7 +26,7 @@ class NLRecordCell: UITableViewCell {
     func updateSettingLabelColor() {
         var labelColor = UIColor.appDarkBlue()
 
-        switch NLSelectionDataManger.sharedInstance.getClinicalSettings().indexOf(settingLabel.text!)! {
+        switch NLSelectionDataManger.sharedInstance.clinicalSettings().indexOf(settingLabel.text!)! {
         case 0:
             labelColor = UIColor.appOrange()
             break

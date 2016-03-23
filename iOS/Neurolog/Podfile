@@ -13,6 +13,7 @@ pod 'Eureka', '~> 1.4’
 pod 'SimpleAlert'
 pod 'Signature'
 pod 'Agrume', :git => 'https://github.com/JanGorman/Agrume.git'
+pod 'Charts'
 end
 
 

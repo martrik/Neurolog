@@ -43,7 +43,7 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
     
     func loadUI() {
         // Fill top labels
-        settingLabel.text = "Setting: " + record.facility
+        settingLabel.text = "Setting: " + record.setting
         locationLabel.text = "Location: " + record.location
         let timeFormatter = NSDateFormatter()
         timeFormatter.dateStyle = .MediumStyle

@@ -17,17 +17,43 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ma3-dl-PPw">
-                                <rect key="frame" x="83" y="15" width="209" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ma3-dl-PPw">
+                                <rect key="frame" x="115" y="15" width="145" height="29"/>
                                 <segments>
                                     <segment title="All"/>
-                                    <segment title="Setting"/>
                                     <segment title="Summary"/>
                                 </segments>
                                 <connections>
                                     <action selector="segmentedValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="1E4-Cc-Phe"/>
                                 </connections>
                             </segmentedControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diI-aK-abo">
+                                <rect key="frame" x="-0.5" y="58" width="375" height="545"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIN-tf-zo4" customClass="NLStatsView" customModule="Neurolog" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="545"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="TIN-tf-zo4" firstAttribute="leading" secondItem="diI-aK-abo" secondAttribute="leading" id="8FZ-On-lkO"/>
+                                    <constraint firstAttribute="bottom" secondItem="TIN-tf-zo4" secondAttribute="bottom" id="ID9-jD-YPK"/>
+                                    <constraint firstAttribute="trailing" secondItem="TIN-tf-zo4" secondAttribute="trailing" id="Ikx-Uo-X8s"/>
+                                    <constraint firstItem="TIN-tf-zo4" firstAttribute="top" secondItem="diI-aK-abo" secondAttribute="top" id="b5L-GM-ePR"/>
+                                    <constraint firstItem="TIN-tf-zo4" firstAttribute="leading" secondItem="diI-aK-abo" secondAttribute="leading" id="cWm-IQ-z7A"/>
+                                    <constraint firstItem="TIN-tf-zo4" firstAttribute="top" secondItem="diI-aK-abo" secondAttribute="top" id="mgt-8m-1my"/>
+                                    <constraint firstAttribute="bottom" secondItem="TIN-tf-zo4" secondAttribute="bottom" id="mtC-6W-R4p"/>
+                                    <constraint firstAttribute="trailing" secondItem="TIN-tf-zo4" secondAttribute="trailing" id="v0z-8n-Wuq"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cWm-IQ-z7A"/>
+                                        <exclude reference="mgt-8m-1my"/>
+                                        <exclude reference="mtC-6W-R4p"/>
+                                        <exclude reference="v0z-8n-Wuq"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ogP-Qb-NzV">
                                 <rect key="frame" x="0.0" y="58" width="375" height="545"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -58,15 +84,42 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLb-gW-QQc">
+                                <rect key="frame" x="0.0" y="603" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.044841360230000002" green="0.54912814610000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ata-iS-O8f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Select the records you want to share">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="0.97825863489999998" green="0.94580078125" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapShareRecordsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ic8-Ac-03O"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gLb-gW-QQc" secondAttribute="trailing" id="1y2-F3-ZsP"/>
+                            <constraint firstItem="diI-aK-abo" firstAttribute="width" secondItem="ogP-Qb-NzV" secondAttribute="width" id="A5O-1d-lg8"/>
                             <constraint firstItem="Ma3-dl-PPw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AWo-wh-wBC"/>
+                            <constraint firstItem="TIN-tf-zo4" firstAttribute="width" secondItem="ogP-Qb-NzV" secondAttribute="width" id="B8y-Hz-oJH"/>
+                            <constraint firstItem="diI-aK-abo" firstAttribute="centerY" secondItem="ogP-Qb-NzV" secondAttribute="centerY" id="Drg-hb-KcV"/>
                             <constraint firstAttribute="trailing" secondItem="ogP-Qb-NzV" secondAttribute="trailing" id="EuM-7c-tvG"/>
                             <constraint firstItem="ogP-Qb-NzV" firstAttribute="top" secondItem="Ma3-dl-PPw" secondAttribute="bottom" constant="15" id="LU2-D1-qx8"/>
                             <constraint firstItem="ogP-Qb-NzV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aPJ-Hd-cNM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gLb-gW-QQc" secondAttribute="bottom" constant="-50" id="bPt-Pl-JRE"/>
+                            <constraint firstItem="diI-aK-abo" firstAttribute="centerX" secondItem="ogP-Qb-NzV" secondAttribute="centerX" id="ejq-dk-m0H"/>
                             <constraint firstItem="Ma3-dl-PPw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="fTt-25-oLz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ogP-Qb-NzV" secondAttribute="bottom" id="iCO-sD-kc8"/>
+                            <constraint firstItem="TIN-tf-zo4" firstAttribute="height" secondItem="ogP-Qb-NzV" secondAttribute="height" priority="250" id="ob9-iZ-cnP"/>
+                            <constraint firstItem="diI-aK-abo" firstAttribute="height" secondItem="ogP-Qb-NzV" secondAttribute="height" id="ohE-Am-O3G"/>
+                            <constraint firstItem="gLb-gW-QQc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vFc-dK-YZm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Neurolog" id="s0P-BU-K1n">
@@ -85,6 +138,9 @@
                         <outlet property="leftNavBarButton" destination="uTx-5N-M7R" id="dIt-jD-M95"/>
                         <outlet property="rightNavBarButton" destination="ZrI-wD-SU6" id="O7t-eU-Rzu"/>
                         <outlet property="segmented" destination="Ma3-dl-PPw" id="i1K-qd-gxU"/>
+                        <outlet property="shareButton" destination="gLb-gW-QQc" id="ufu-NO-NX7"/>
+                        <outlet property="shareButtonBottom" destination="bPt-Pl-JRE" id="5Oa-rJ-Dbl"/>
+                        <outlet property="summaryView" destination="TIN-tf-zo4" id="mQt-UO-ADc"/>
                         <outlet property="table" destination="ogP-Qb-NzV" id="st6-Ze-MrJ"/>
                         <segue destination="847-G6-Xl7" kind="show" identifier="NLDetailSegue" id="utc-tK-LMe"/>
                         <segue destination="hxT-Hq-w5N" kind="popoverPresentation" identifier="NLAddRecordSegue" popoverAnchorView="8bC-Xf-vdC" id="GXa-d7-RMs">

@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Charts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Eureka.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,27 +52,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0B9E202D55FEC7CADBF70B6B8C25892E</key>
+		<key>0824161792AE47D5E32DEC50C4F55763</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0BBBB1E2EE92749650A65FEBF1A2833C</key>
+		<key>16E34E01DE618764ADC265A02ACC25D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3A88E0FE0C906B57E293ADABD2D7809C</key>
+		<key>7E82EF3158DC7672612EFE46DB8E4C8F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>40F580A48FF2C38CCBC58A6B3C8F5505</key>
+		<key>8D6C378C6A97974CC1AC3444D29F059F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6B53F81360DCE6CBED01D820D51717E7</key>
+		<key>C0955F51C38B11AD156A325B6B0FEF2C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C6828C2508515BC0428D6BDAA1292DC9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CBEE587F6BFD4E6B852F2E0991345CBF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,12 +92,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DAE22C49F5FBB91BFA5E1A79141BEA7C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DC5603C80E9BA0452C0CC81E8B9968F3</key>
+		<key>D9D85FF30412FE6A53A1E3F090089C14</key>
 		<dict>
 			<key>primary</key>
 			<true/>
