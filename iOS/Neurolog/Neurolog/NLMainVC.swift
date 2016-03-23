@@ -103,6 +103,15 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         }
     }
     
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let shareRowAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Share", handler:{action, indexpath in
+            let record = self.data[indexPath.row] as! Record
+            self.shareRecords([record])
+        });
+        shareRowAction.backgroundColor = UIColor.appLightBlue()
+        
+        return [shareRowAction];
+    }
     // MARK: Sharing
     
     func selectedRowShare(indexPath: NSIndexPath) {
@@ -162,25 +171,28 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
                 records.append(data[i] as! Record)
             }
             
-            let csv = NLRecordsDataManager.sharedInstance.generateCSVWithRecords(records)
+            shareRecords(records)
+        }
+    }
+    
+    func shareRecords(records: [Record]) {
+        let csv = NLRecordsDataManager.sharedInstance.generateCSVWithRecords(records)
+        
+        func configuredMailComposeViewController() -> MFMailComposeViewController {
+            let emailController = MFMailComposeViewController()
+            emailController.mailComposeDelegate = self
+            emailController.setSubject("Shared records")
+            emailController.setMessageBody("", isHTML: false)
             
-            func configuredMailComposeViewController() -> MFMailComposeViewController {
-                let emailController = MFMailComposeViewController()
-                emailController.mailComposeDelegate = self
-                emailController.setSubject("CSV File")
-                emailController.setMessageBody("", isHTML: false)
-                
-                // Attaching the .CSV file to the email.
-                emailController.addAttachmentData(csv, mimeType: "text/csv", fileName: "Sample.csv")
-                
-                return emailController
-            }
+            // Attaching the .CSV file to the email.
+            emailController.addAttachmentData(csv, mimeType: "text/csv", fileName: "Records.csv")
             
-            let emailViewController = configuredMailComposeViewController()
-            if MFMailComposeViewController.canSendMail() {
-                self.presentViewController(emailViewController, animated: true, completion: nil)
-            }
-            
+            return emailController
+        }
+        
+        let emailViewController = configuredMailComposeViewController()
+        if MFMailComposeViewController.canSendMail() {
+            self.presentViewController(emailViewController, animated: true, completion: nil)
         }
     }
     

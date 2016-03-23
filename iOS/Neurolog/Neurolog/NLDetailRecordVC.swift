@@ -43,17 +43,31 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
     
     func loadUI() {
         // Fill top labels
-        settingLabel.text = "Setting: " + record.setting
-        locationLabel.text = "Location: " + record.location
+        setAttributed(settingLabel, title: "Setting: ", text: record.setting)
+        setAttributed(locationLabel, title: "Location: ", text: record.location)
         let timeFormatter = NSDateFormatter()
         timeFormatter.dateStyle = .MediumStyle
-        dateLabel.text = "Date: " + timeFormatter.stringFromDate(record.date)
+        setAttributed(dateLabel, title: "Date: ", text: timeFormatter.stringFromDate(record.date))
         
         if let supervisor = record.supervisor {
-            supervisorLabel.text = "Supervisor: " + supervisor
+            setAttributed(supervisorLabel, title: "Supervisor: ", text: supervisor)
         } else {
-            supervisorLabel.text = "Supervisor: none"
+            setAttributed(supervisorLabel, title: "Supervisor: ", text: "none")
         }
+    }
+    
+    func setAttributed(label: UILabel!, title: String, text: String) {
+        var titleAttrib = [String : NSObject]()
+        titleAttrib[NSFontAttributeName] = UIFont.systemFontOfSize(19, weight: UIFontWeightRegular)
+        titleAttrib[NSForegroundColorAttributeName] = UIColor.blackColor()
+        
+        var textAttrib = [String : NSObject]()
+        textAttrib[NSFontAttributeName] = UIFont.systemFontOfSize(16, weight: UIFontWeightLight)
+        textAttrib[NSForegroundColorAttributeName] = UIColor.blackColor()
+        
+        let title = NSMutableAttributedString(string: title, attributes: titleAttrib)
+        title.appendAttributedString(NSAttributedString(string: text, attributes: textAttrib))
+        label.attributedText = title
     }
     
     
