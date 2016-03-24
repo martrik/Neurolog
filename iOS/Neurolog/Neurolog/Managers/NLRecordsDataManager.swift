@@ -69,9 +69,20 @@ class NLRecordsDataManager: NSObject {
             if let facility = info["facility"] {
                 record.setting = facility as! String
             }
-            if let supervisor = info["supervisor"] {
+            if let supervisor = info["supervisorname"] {
+                if supervisor as? String != record.supervisor {
+                    record.signaturePath = nil
+                }
                 record.supervisor = supervisor as? String
             }
+        }
+    }
+    
+    func deleteVisitFromRecord(visit: Visit, record: Record) {
+        let realm = try! Realm()
+        
+        try! realm.write {
+            record.visits.removeAtIndex(record.visits.indexOf(visit)!)
         }
     }
     

@@ -22,8 +22,13 @@ class NLAddRecordVC: FormViewController, UITextFieldDelegate {
             Section(footer: "Tap on save to store this Record")
 
             <<< DateRow("date") {
-                $0.value = NSDate();
                 $0.title = "Date:"
+
+                if let date = editingRecord?.date {
+                    $0.value = date
+                } else {
+                    $0.value = NSDate();
+                }                
             }
             <<< NameRow("location") {
                 $0.title =  "Location:"

@@ -41,4 +41,8 @@ extension UIColor {
         return UIColor(red: 255/255.0, green: 66/255.0, blue: 0/255.0, alpha: 1.0)
     }
     
+    class func appNeonGreen() -> UIColor {
+        return UIColor(red: 11/255.0, green: 221/255.0, blue: 6/255.0, alpha: 1.0)
+    }
+    
 }

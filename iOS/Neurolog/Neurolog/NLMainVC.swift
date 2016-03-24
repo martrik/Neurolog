@@ -112,6 +112,8 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         
         return [shareRowAction];
     }
+    
+    
     // MARK: Sharing
     
     func selectedRowShare(indexPath: NSIndexPath) {

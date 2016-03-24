@@ -10,14 +10,13 @@ import UIKit
 import SimpleAlert
 import Agrume
 
-class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPopoverPresentationControllerDelegate {
     
     @IBOutlet weak var settingLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var supervisorLabel: UILabel!
     @IBOutlet weak var approveButton: UIButton!
-    @IBOutlet weak var signedBadge: UIImageView!
     
     @IBOutlet weak var table: UITableView!
     internal var record = Record()
@@ -37,8 +36,6 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
     
     override func viewWillAppear(animated: Bool) {
         self.table.reloadData()
-        
-        self.updateApproveButton()
     }
     
     func loadUI() {
@@ -54,6 +51,8 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
         } else {
             setAttributed(supervisorLabel, title: "Supervisor: ", text: "none")
         }
+        
+        self.updateApproveButton()
     }
     
     func setAttributed(label: UILabel!, title: String, text: String) {
@@ -99,12 +98,17 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         table.deselectRowAtIndexPath(indexPath, animated: true)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let shareRowAction = UITableViewRowAction(style: UITableViewRowActionStyle.Destructive, title: "Delete", handler:{action, indexpath in
+            NLRecordsDataManager.sharedInstance.deleteVisitFromRecord(self.record.visits[indexPath.row], record: self.record)
+            self.table.reloadData()
+        });
+        
+        return [shareRowAction];
     }
     
+
     // MARK: Approve supervisor
     
     @IBAction func didTapApprove(sender: AnyObject) {
@@ -122,28 +126,37 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
                     let imageData = NSData(data: UIImageJPEGRepresentation(viewController.getSignature(), 0.8)!)
 
                     let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
-                    let writePath = documentsURL.URLByAppendingPathComponent("signature-\(self.record.supervisor!).jpg")
+                    let writePath = documentsURL.URLByAppendingPathComponent("signature-\(self.record.supervisor!)-\(NSDate()).jpg")
                     imageData.writeToURL(writePath, atomically: true)
                   
                     NLRecordsDataManager.sharedInstance.approveRecord(self.record, signaturePath: String(writePath))
+                    
                     self.updateApproveButton()
                 }
             })
-            
+
             self.presentViewController(alert, animated: true, completion: nil)
         } else {
             let url = NSURL(string: record.signaturePath!)
             let agrume = Agrume(imageURL: url!)
             agrume.showFrom(self)
-            
         }
     }
     
     func updateApproveButton() {
-        if (record.supervisor != nil && record.signaturePath != nil) {
-            approveButton.backgroundColor = UIColor.clearColor()
-            approveButton.setImage(UIImage(named: "signedBadge"), forState: .Normal)
-            approveButton.frame = CGRectMake(approveButton.frame.origin.x, approveButton.frame.origin.y, 25, 25)
+        if (record.supervisor != nil) {
+            if record.signaturePath != nil {
+                approveButton.backgroundColor = UIColor.clearColor()
+                approveButton.setImage(UIImage(named: "signedBadge"), forState: .Normal)
+                approveButton.frame = CGRectMake(approveButton.frame.origin.x, approveButton.frame.origin.y, 25, 25)
+            } else {
+                approveButton.backgroundColor = UIColor.appNeonGreen()
+                approveButton.setImage(nil, forState: .Normal)
+                approveButton.setTitle("Approve", forState: UIControlState.Normal)
+                approveButton.frame = CGRectMake(approveButton.frame.origin.x, approveButton.frame.origin.y, 70, 30)
+                approveButton.titleLabel?.sizeToFit()
+            }
+            approveButton.center = CGPointMake(approveButton.center.x, supervisorLabel.center.y)
         } else if (record.supervisor == nil) {
             approveButton.hidden = true
         }
@@ -152,14 +165,35 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
     // MARK: Navigation
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "NLUpdateRecordSegue" {
-            let dest = segue.destinationViewController as! NLAddRecordVC
-            dest.editingRecord = record
+        if let addRecord = segue.destinationViewController as? NLAddRecordVC {
+            addRecord.editingRecord = self.record
+            addRecord.didDismissWithRecord = { (record) -> Void in
+                self.record = record
+                self.loadUI()
+            }
+            let recordPC = addRecord.popoverPresentationController
+            recordPC?.delegate = self
         }
         if segue.identifier == "NLAddVisitSegue" {
             let dest = segue.destinationViewController as! NLAddVisitVC
             dest.record = record
         }
     }
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.FullScreen
+    }
+    
+    func presentationController(controller: UIPresentationController, viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {
+        let navController = UINavigationController(rootViewController: controller.presentedViewController)
+        return navController
+    }
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
 
 }
