@@ -1,5 +1,5 @@
 {
-    "Setting" : ["Out patient clinic", "Stroke on call", "Neurology on call", "Ward referral"],
+    "Setting" : ["Neurology on call", "Out patient clinic", "Stroke on call", "Teaching", "Ward referral"],
     "Portfolio" : {
         "Cerebrovascular Disease": [],
         "Clinical Neurophysiology": [],

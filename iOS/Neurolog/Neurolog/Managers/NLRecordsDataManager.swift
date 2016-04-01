@@ -9,14 +9,18 @@
 import UIKit
 import RealmSwift
 
+class RealmString: Object {
+    dynamic var stringValue = ""
+}
+
 class Record: Object {
     dynamic var date = NSDate()
     dynamic var location = ""
     dynamic var setting = ""
     dynamic var supervisor: String? = nil
     dynamic var signaturePath: String? = nil
+    var teachingInfo = List<RealmString>()
     let visits = List<Visit>()
-    
 }
 
 class Visit: Object {
@@ -32,22 +36,10 @@ class NLRecordsDataManager: NSObject {
     // MARK: Records
     
     func saveRecordWith(info: [String : Any?]) -> (Record) {
+        var newRecord = Record()
+        addPropertiesToRecord(&newRecord, info: info)
+        
         let realm = try! Realm()
-        
-        let newRecord = Record()
-        
-        if let date = info["date"] {
-            newRecord.date = date as! NSDate
-        }
-        if let location = info["location"] {
-            newRecord.location = location as! String
-        }
-        if let facility = info["facility"] {
-            newRecord.setting = facility as! String
-        }
-        if let supervisor = info["supervisorname"] {
-            newRecord.supervisor = supervisor as? String
-        }
         
         try! realm.write {
             realm.add(newRecord)
@@ -58,25 +50,44 @@ class NLRecordsDataManager: NSObject {
     
     func updateRecord(record: Record, info: [String : Any?]) {
         let realm = try! Realm()
+        var updateRecord = record
         
         try! realm.write {
-            if let date = info["date"] {
-                record.date = date as! NSDate
-            }
-            if let location = info["location"] {
-                record.location = location as! String
-            }
-            if let facility = info["facility"] {
-                record.setting = facility as! String
-            }
-            if let supervisor = info["supervisorname"] {
-                if supervisor as? String != record.supervisor {
-                    record.signaturePath = nil
-                }
-                record.supervisor = supervisor as? String
-            }
+            addPropertiesToRecord(&updateRecord, info: info)
         }
     }
+    
+    func addPropertiesToRecord(inout record: Record, info: [String : Any?]) -> (Record) {
+        if let date = info["date"] {
+            record.date = date as! NSDate
+        }
+        if let location = info["location"] {
+            record.location = location as! String
+        }
+        if let setting = info["setting"] {
+            record.setting = setting as! String
+            
+            if record.setting == "Teaching" {
+                let titleStr = RealmString()
+                let topicStr = RealmString()
+                titleStr.stringValue = info["teachingtitle"] as! String
+                topicStr.stringValue = info["teachingtopic"] as! String
+                record.teachingInfo = List([titleStr, topicStr])
+            } else {
+                record.teachingInfo = List()
+            }
+        }
+        
+        if let supervisor = info["supervisorname"] {
+            if supervisor as? String != record.supervisor {
+                record.signaturePath = nil
+            }
+            record.supervisor = supervisor as? String
+        }
+    
+        return record
+    }
+    
     
     func deleteVisitFromRecord(visit: Visit, record: Record) {
         let realm = try! Realm()
@@ -101,11 +112,11 @@ class NLRecordsDataManager: NSObject {
         return Array(allRecords)
     }
     
-    func recordsWithFacility(facility: String) -> ([Record]) {
+    func recordsWithSetting(setting: String) -> ([Record]) {
         let realm = try! Realm()
-        let facilityRecords = realm.objects(Record).filter("facility = '\(facility)'")
+        let settingRecords = realm.objects(Record).filter("setting = '\(setting)'")
         
-        return Array(facilityRecords)
+        return Array(settingRecords)
     }
     
     func recordsWithSupervisor(supervisor: String) -> ([Record]) {

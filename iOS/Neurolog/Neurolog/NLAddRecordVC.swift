@@ -17,7 +17,7 @@ class NLAddRecordVC: FormViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        form  +++=
+        form +++=
             
             Section(footer: "Tap on save to store this Record")
 
@@ -36,13 +36,46 @@ class NLAddRecordVC: FormViewController, UITextFieldDelegate {
                     $0.value = location
                 }
             }
-            <<< AlertRow<String>("facility") {
+            <<< AlertRow<String>("setting") {
                 $0.title = "Setting:"
                 $0.options = NLSelectionDataManger.sharedInstance.clinicalSettings()
-                if let facility = editingRecord?.setting {
-                    $0.value = facility
+                if let setting = editingRecord?.setting {
+                    $0.value = setting
                 } else {
                     $0.value = NLSelectionDataManger.sharedInstance.clinicalSettings().first
+                }
+            }
+            <<< TextRow("teachingtitle") {
+                $0.title = "Title:"
+                
+                $0.hidden = Condition.Function(["setting"]) { form in
+                    if let r1 : AlertRow<String> = form.rowByTag("setting") as? AlertRow<String>{
+                        return r1.value != "Teaching"
+                    }
+                    return true
+                }
+                
+                if editingRecord?.teachingInfo.count == 2 {
+                    $0.value = editingRecord?.teachingInfo[0].stringValue
+                } else {
+                    $0.value = ""
+                }
+            }
+            <<< PushRow<String>("teachingtopic") {
+                $0.title = "Topic:"
+                $0.options = NLSelectionDataManger.sharedInstance.portfolioTopics()
+                
+                $0.hidden = Condition.Function(["setting"]) { form in
+                    if let r1 : AlertRow<String> = form.rowByTag("setting") as? AlertRow<String>{
+                        return r1.value != "Teaching"
+                    }
+                    return true
+                }
+                
+                if editingRecord?.teachingInfo.count == 2 {
+                    $0.value = editingRecord?.teachingInfo[1].stringValue
+                } else {
+                    $0.value = ""
                 }
             }
             <<< SwitchRow("supervisorswitch") {
@@ -74,7 +107,7 @@ class NLAddRecordVC: FormViewController, UITextFieldDelegate {
     // MARK: - Save
     
     @IBAction func didTapSave(sender: AnyObject) {
-        if form.values()["location"]! != nil && (!(form.values()["supervisorswitch"]! as! Bool == true) || form.values()["supervisorname"]! as! String != "") {
+        if form.values()["location"]! != nil && (!(form.values()["supervisorswitch"]! as! Bool == true) || form.values()["supervisorname"]! != nil) && checkTeachingFilled() {
 
             var savedRecord = Record()
             if let record = editingRecord {
@@ -97,6 +130,18 @@ class NLAddRecordVC: FormViewController, UITextFieldDelegate {
         dispatch_after(dispatchTime, dispatch_get_main_queue(),{
             self.clearAllNotice()
         })
+    }
+    
+    func checkTeachingFilled() -> Bool {
+        if form.values()["setting"] as! String == "Teaching" {
+            if ((form.values()["teachingtitle"]! as! String != "") && (form.values()["teachingtopic"]! as! String != "")) {
+                return true
+            } else {
+                return false
+            }
+        }
+        
+        return true
     }
     
     @IBAction func didTapDismiss(sender: AnyObject) {

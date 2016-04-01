@@ -39,6 +39,9 @@ class NLRecordCell: UITableViewCell {
         case 3:
             labelColor = UIColor.appBrown()
             break
+        case 4:
+            labelColor = UIColor.appViolet()
+            break
         default:
             break
         }
@@ -53,9 +56,41 @@ class NLRecordCell: UITableViewCell {
             signedBadge.image = nil
         }
     }
+    
+    func setRecord(record: Record) {
+        settingLabel.text = record.setting
+        updateSettingLabelColor()
+        
+        locationLabel.text = record.location
+        
+        let timeFormatter = NSDateFormatter()
+        timeFormatter.locale = NSLocale.currentLocale()
+        timeFormatter.dateStyle = .ShortStyle
+        dateLabel.text  = timeFormatter.stringFromDate(record.date)
+        
+        visitsLabel.text = String(record.visits.count)
+        setSigned(record.signaturePath != nil)
+        
+        visitsLabel.hidden = record.setting == "Teaching"
+    }
 
     override func setSelected(selected: Bool, animated: Bool) {
+        let color = visitsLabel.backgroundColor;
+
         super.setSelected(selected, animated: animated)
+        
+        if selected {
+            visitsLabel.backgroundColor = color
+        }
+    }
+    
+    override func setHighlighted(highlighted: Bool, animated: Bool) {
+        let color = self.visitsLabel.backgroundColor;
+        super.setHighlighted(highlighted, animated: animated)
+        
+        if(highlighted) {
+            visitsLabel.backgroundColor = color
+        }
     }
     
 }

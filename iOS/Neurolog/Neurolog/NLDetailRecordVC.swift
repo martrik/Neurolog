@@ -12,6 +12,7 @@ import Agrume
 
 class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPopoverPresentationControllerDelegate {
     
+    @IBOutlet weak var addNavBarButton: UIBarButtonItem!
     @IBOutlet weak var settingLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -40,8 +41,14 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
     
     func loadUI() {
         // Fill top labels
-        setAttributed(settingLabel, title: "Setting: ", text: record.setting)
+        if record.setting == "Teaching" {
+            setAttributed(settingLabel, title: "Setting: ", text: record.setting + ", " + record.teachingInfo[0].stringValue)
+        } else {
+            setAttributed(settingLabel, title: "Setting: ", text: record.setting)
+        }
+        
         setAttributed(locationLabel, title: "Location: ", text: record.location)
+        
         let timeFormatter = NSDateFormatter()
         timeFormatter.dateStyle = .MediumStyle
         setAttributed(dateLabel, title: "Date: ", text: timeFormatter.stringFromDate(record.date))
@@ -52,7 +59,8 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
             setAttributed(supervisorLabel, title: "Supervisor: ", text: "none")
         }
         
-        self.updateApproveButton()
+        updateApproveButton()
+        addNavBarButton.enabled = record.setting != "Teaching"
     }
     
     func setAttributed(label: UILabel!, title: String, text: String) {

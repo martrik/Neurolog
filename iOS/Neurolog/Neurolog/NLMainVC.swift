@@ -56,19 +56,8 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         let elem = data[indexPath.row]
         if elem is Record {
             let record: Record = elem as! Record
-            cell.settingLabel.text = record.setting
-            cell.updateSettingLabelColor()
-            cell.locationLabel.text = record.location
-            
-            let timeFormatter = NSDateFormatter()
-            timeFormatter.locale = NSLocale.currentLocale()
-            timeFormatter.dateStyle = .ShortStyle
-            cell.dateLabel.text  = timeFormatter.stringFromDate(record.date)
-            
-            cell.visitsLabel.text = String(record.visits.count)
-            cell.setSigned(record.signaturePath != nil)
-            
-            cell.selectionStyle = .None
+            cell.setRecord(record)
+            cell.selectionStyle = .Gray
             cell.tintColor = UIColor.appRed()
             cell.accessoryType = (selectedRows.contains(indexPath.row)  ? .Checkmark : .None)
         }
@@ -81,13 +70,16 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         selectedRow = indexPath.row
-        
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+
         if selectingRows {
             selectedRowShare(indexPath)
         } else {
             switch segmented.selectedSegmentIndex {
             case 0:
-                self.performSegueWithIdentifier("NLDetailSegue", sender: data[selectedRow])
+                if let record = data[selectedRow] as? Record {
+                    self.performSegueWithIdentifier("NLDetailSegue", sender: data[selectedRow])
+                }
                 break;
             case 1, 2:
                 break;
@@ -95,12 +87,7 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
                 break;
             }
         }
-    }
-    
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        if selectingRows {
-            selectedRowShare(indexPath)
-        }
+        
     }
     
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {

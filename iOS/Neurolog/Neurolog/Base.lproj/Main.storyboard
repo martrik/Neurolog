@@ -307,6 +307,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="addNavBarButton" destination="Jn0-75-dog" id="2iL-sW-BYQ"/>
                         <outlet property="approveButton" destination="lno-az-MYP" id="6xx-0f-EUI"/>
                         <outlet property="dateLabel" destination="X9e-rG-KmS" id="s4a-ct-FNw"/>
                         <outlet property="locationLabel" destination="NuM-P6-86l" id="eYH-uM-Z0H"/>
