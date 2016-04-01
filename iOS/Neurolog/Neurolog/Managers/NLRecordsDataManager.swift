@@ -134,7 +134,13 @@ class NLRecordsDataManager: NSObject {
         let newVisit = Visit()
 
         if let time = info["time"] {
-            newVisit.time = time as! NSDate
+            let cal = NSCalendar.currentCalendar()
+            var hour = 0
+            var minute = 0
+            cal.getHour(&hour, minute: &minute, second: nil, nanosecond: nil, fromDate: time as! NSDate)
+            let newDate: NSDate = cal.dateBySettingHour(hour, minute: minute, second: 0, ofDate: record.date, options: NSCalendarOptions())!
+            
+            newVisit.time = newDate
         }
         if let disease = info["disease"] {
             newVisit.topic = disease as! String
@@ -153,36 +159,75 @@ class NLRecordsDataManager: NSObject {
     
     // MARK: CSV generator
     
-    func generateCSVWithRecords(records: [Record]) -> NSData {
+    func generateCSVWithRecord(record: Record) -> NSData {
         let mailString = NSMutableString()
         let timeFormatter = NSDateFormatter()
         timeFormatter.locale = NSLocale.currentLocale()
         
-        for record in records {
-            mailString.appendString("Date, Setting, Location, Supervisor\n")
-            
-            timeFormatter.dateStyle = .MediumStyle
-            timeFormatter.timeStyle = .NoStyle
-            let string = "\(timeFormatter.stringFromDate(record.date)), \(record.setting), \(record.location), " + (record.supervisor != nil ? record.supervisor!  : "none") + "\n"
-            mailString.appendString(string)
-            
-            mailString.appendString("Time, Disease, Age, Sex\n")
+        mailString.appendString("Date, Setting, Location, Supervisor\n")
+        
+        timeFormatter.dateStyle = .MediumStyle
+        timeFormatter.timeStyle = .NoStyle
+        let string = "\(timeFormatter.stringFromDate(record.date)), \(record.setting), \(record.location), " + (record.supervisor != nil ? record.supervisor!  : "none") + "\n"
+        mailString.appendString(string)
+        
+        mailString.appendString("Time, Disease, Age, Sex\n")
 
-            timeFormatter.dateStyle = .NoStyle
-            timeFormatter.timeStyle = .ShortStyle
-            
-            for visit in record.visits {
-                mailString.appendString("\(timeFormatter.stringFromDate(visit.time)), \(visit.topic), \(visit.age), \(visit.sex)\n")
-            }
-            
-            mailString.appendString(" \n")
+        timeFormatter.dateStyle = .NoStyle
+        timeFormatter.timeStyle = .ShortStyle
+        
+        for visit in record.visits {
+            mailString.appendString("\(timeFormatter.stringFromDate(visit.time)), \(visit.topic), \(visit.age), \(visit.sex)\n")
         }
+        
+        mailString.appendString(" \n")
+        
         
         // Converting it to NSData.
         let data = mailString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
         
         return data!
     }
+    
+    func generateGeneralCSVWithRange(fromDate: NSDate, toDate: NSDate, teaching: Bool) -> NSData {
+        let mailString = NSMutableString()
+        let timeFormatter = NSDateFormatter()
+        timeFormatter.locale = NSLocale.currentLocale()
+        
+        mailString.appendString("Cases statistics\n")
+        mailString.appendString("Disease, Cases visited\n")
+        
+        var stats = NLStatsManager.sharedInstance.statsForTopics(fromDate, to: toDate)
+        var i = 0
+        for topic in  stats.0 {
+            mailString.appendString("\(topic), \(stats.1[i])\n")
+            i += 1
+        }
+        
+        if teaching {
+            mailString.appendString(" \n")
+            mailString.appendString("Teaching statistics\n")
+            mailString.appendString("Disease, Teachings attended\n")
+            
+            let stats = NLStatsManager.sharedInstance.statsForTeaching(fromDate, to: toDate)
+            for (topic, count) in stats {
+                mailString.appendString("\(topic), \(count)\n")
+            }
+        }
+        
+        mailString.appendString(" \n")
+        
+        // Converting it to NSData
+        let data = mailString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+        
+        return data!
+    }
+    
+    /*func generateDetailedCSVWithRange(from: NSDate, to: NSDate, teaching: Bool) -> NSData {
+        
+        
+    }*/
+
     
     /*func getStatsForDisease() -> (Dictionary<String, Int>) {
         let realm = try! Realm()

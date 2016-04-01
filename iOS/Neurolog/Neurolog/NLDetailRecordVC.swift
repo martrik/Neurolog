@@ -18,7 +18,7 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var supervisorLabel: UILabel!
     @IBOutlet weak var approveButton: UIButton!
-    
+    @IBOutlet weak var bigApproveButtonHeight: NSLayoutConstraint!
     @IBOutlet weak var table: UITableView!
     internal var record = Record()
     
@@ -59,7 +59,7 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
             setAttributed(supervisorLabel, title: "Supervisor: ", text: "none")
         }
         
-        updateApproveButton()
+        updateApproveButton(false)
         addNavBarButton.enabled = record.setting != "Teaching"
     }
     
@@ -139,7 +139,7 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
                   
                     NLRecordsDataManager.sharedInstance.approveRecord(self.record, signaturePath: String(writePath))
                     
-                    self.updateApproveButton()
+                    self.updateApproveButton(true)
                 }
             })
 
@@ -151,23 +151,29 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
         }
     }
     
-    func updateApproveButton() {
+    func updateApproveButton(animated: Bool) {
         if (record.supervisor != nil) {
             if record.signaturePath != nil {
                 approveButton.backgroundColor = UIColor.clearColor()
                 approveButton.setImage(UIImage(named: "signedBadge"), forState: .Normal)
                 approveButton.frame = CGRectMake(approveButton.frame.origin.x, approveButton.frame.origin.y, 25, 25)
+                bigApproveButtonHeight.constant = 0
             } else {
                 approveButton.backgroundColor = UIColor.appNeonGreen()
                 approveButton.setImage(nil, forState: .Normal)
                 approveButton.setTitle("Approve", forState: UIControlState.Normal)
                 approveButton.frame = CGRectMake(approveButton.frame.origin.x, approveButton.frame.origin.y, 70, 30)
                 approveButton.titleLabel?.sizeToFit()
+                bigApproveButtonHeight.constant = 50
             }
             approveButton.center = CGPointMake(approveButton.center.x, supervisorLabel.center.y)
         } else if (record.supervisor == nil) {
             approveButton.hidden = true
+            bigApproveButtonHeight.constant = 0
         }
+        UIView.animateWithDuration(animated ? 0.3 : 0, animations: {
+            self.view.layoutIfNeeded()
+        })
     }
 
     // MARK: Navigation

@@ -25,13 +25,7 @@ class NLAddVisitVC: FormViewController {
             <<< TimeRow("time") {
                 $0.value = NSDate();
                 $0.title = "Date:"
-            }.onChange({ (row) -> () in
-                if row.value != nil {
-                    
-                } else {
-                        
-                }
-            })
+            }
             <<< PushRow<String>("disease") { (row : PushRow<String>) -> Void in
                 row.title = "Disease:"
                 row.options = NLSelectionDataManger.sharedInstance.portfolioTopics()

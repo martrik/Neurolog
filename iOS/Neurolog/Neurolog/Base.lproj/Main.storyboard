@@ -89,28 +89,9 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLb-gW-QQc">
-                                <rect key="frame" x="0.0" y="603" width="375" height="50"/>
-                                <color key="backgroundColor" red="0.044841360230000002" green="0.54912814610000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Ata-iS-O8f"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Select the records you want to share">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" red="0.97825863489999998" green="0.94580078125" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapShareRecordsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ic8-Ac-03O"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="gLb-gW-QQc" secondAttribute="trailing" id="1y2-F3-ZsP"/>
                             <constraint firstItem="diI-aK-abo" firstAttribute="width" secondItem="ogP-Qb-NzV" secondAttribute="width" id="A5O-1d-lg8"/>
                             <constraint firstItem="Ma3-dl-PPw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AWo-wh-wBC"/>
                             <constraint firstItem="TIN-tf-zo4" firstAttribute="width" secondItem="ogP-Qb-NzV" secondAttribute="width" id="B8y-Hz-oJH"/>
@@ -118,22 +99,20 @@
                             <constraint firstAttribute="trailing" secondItem="ogP-Qb-NzV" secondAttribute="trailing" id="EuM-7c-tvG"/>
                             <constraint firstItem="ogP-Qb-NzV" firstAttribute="top" secondItem="Ma3-dl-PPw" secondAttribute="bottom" constant="15" id="LU2-D1-qx8"/>
                             <constraint firstItem="ogP-Qb-NzV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aPJ-Hd-cNM"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gLb-gW-QQc" secondAttribute="bottom" constant="-50" id="bPt-Pl-JRE"/>
                             <constraint firstItem="diI-aK-abo" firstAttribute="centerX" secondItem="ogP-Qb-NzV" secondAttribute="centerX" id="ejq-dk-m0H"/>
                             <constraint firstItem="Ma3-dl-PPw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="fTt-25-oLz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ogP-Qb-NzV" secondAttribute="bottom" id="iCO-sD-kc8"/>
                             <constraint firstItem="TIN-tf-zo4" firstAttribute="height" secondItem="ogP-Qb-NzV" secondAttribute="height" priority="250" id="ob9-iZ-cnP"/>
                             <constraint firstItem="diI-aK-abo" firstAttribute="height" secondItem="ogP-Qb-NzV" secondAttribute="height" id="ohE-Am-O3G"/>
-                            <constraint firstItem="gLb-gW-QQc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vFc-dK-YZm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Neurolog" id="s0P-BU-K1n">
-                        <barButtonItem key="leftBarButtonItem" title="Share" id="uTx-5N-M7R">
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="uTx-5N-M7R">
                             <connections>
-                                <action selector="didTapLeftNavBarButton:" destination="BYZ-38-t0r" id="xNp-Wq-ZZT"/>
+                                <segue destination="8fW-RD-oST" kind="presentation" identifier="NLSharingOptionsSegue" id="MXw-QP-4Ih"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="New record" id="ZrI-wD-SU6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZrI-wD-SU6">
                             <connections>
                                 <action selector="didTapAdd:" destination="BYZ-38-t0r" id="und-Ja-FaM"/>
                             </connections>
@@ -143,8 +122,6 @@
                         <outlet property="leftNavBarButton" destination="uTx-5N-M7R" id="dIt-jD-M95"/>
                         <outlet property="rightNavBarButton" destination="ZrI-wD-SU6" id="O7t-eU-Rzu"/>
                         <outlet property="segmented" destination="Ma3-dl-PPw" id="i1K-qd-gxU"/>
-                        <outlet property="shareButton" destination="gLb-gW-QQc" id="ufu-NO-NX7"/>
-                        <outlet property="shareButtonBottom" destination="bPt-Pl-JRE" id="5Oa-rJ-Dbl"/>
                         <outlet property="summaryView" destination="TIN-tf-zo4" id="mQt-UO-ADc"/>
                         <outlet property="table" destination="ogP-Qb-NzV" id="st6-Ze-MrJ"/>
                         <segue destination="847-G6-Xl7" kind="show" identifier="NLDetailSegue" id="utc-tK-LMe"/>
@@ -156,6 +133,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-993.5" y="154.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dqJ-jU-wV5">
+            <objects>
+                <navigationController id="8fW-RD-oST" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vpv-ZP-FbG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rWv-sG-fV7" kind="relationship" relationship="rootViewController" id="WDJ-f9-hrN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tVN-FK-7NR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1558.5" y="1033.5"/>
+        </scene>
+        <!--Sharing OptionsVC-->
+        <scene sceneID="Nxv-zg-cbx">
+            <objects>
+                <viewController id="rWv-sG-fV7" customClass="NLSharingOptionsVC" customModule="Neurolog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cTs-TU-981"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vsu-cK-dxT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LE5-4A-kSW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hBM-KD-n53">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Qpb-Ry-aH9"/>
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="995-FJ-Nkt">
+                            <connections>
+                                <action selector="didTapShare:" destination="rWv-sG-fV7" id="RUA-Fw-aA3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a49-cL-nz2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1091" y="1034"/>
         </scene>
         <!--Record-->
         <scene sceneID="8Eu-N4-Zh8">
@@ -170,7 +189,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6iP-wk-Q09">
-                                <rect key="frame" x="0.0" y="190" width="375" height="476.5"/>
+                                <rect key="frame" x="0.0" y="190" width="375" height="427"/>
                                 <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="o2A-KQ-vTj">
                                     <rect key="frame" x="0.0" y="64" width="375" height="0.0"/>
@@ -266,14 +285,32 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOG-lf-ZgQ">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.12156862745098039" green="0.85882352941176465" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="SQN-0E-G0e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Approve this record">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapApprove:" destination="847-G6-Xl7" eventType="touchUpInside" id="bQm-XJ-zdh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="GOG-lf-ZgQ" firstAttribute="centerX" secondItem="KhR-KX-GxN" secondAttribute="centerX" id="8JV-qi-6hS"/>
+                            <constraint firstItem="JWm-1j-df1" firstAttribute="top" secondItem="GOG-lf-ZgQ" secondAttribute="bottom" id="DX7-9f-AgU"/>
                             <constraint firstItem="6iP-wk-Q09" firstAttribute="top" secondItem="Btg-F8-mlb" secondAttribute="bottom" id="EOS-Ju-zGD"/>
                             <constraint firstItem="JWm-1j-df1" firstAttribute="top" secondItem="6iP-wk-Q09" secondAttribute="bottom" id="GTw-Rz-QjS"/>
                             <constraint firstItem="6iP-wk-Q09" firstAttribute="top" secondItem="VAu-fh-hQw" secondAttribute="bottom" id="HIR-Hg-5zS"/>
                             <constraint firstItem="6iP-wk-Q09" firstAttribute="leading" secondItem="KhR-KX-GxN" secondAttribute="leading" id="MxA-eF-PQf"/>
                             <constraint firstItem="6iP-wk-Q09" firstAttribute="top" secondItem="VAu-fh-hQw" secondAttribute="bottom" id="ZWe-Yn-0GX"/>
+                            <constraint firstItem="GOG-lf-ZgQ" firstAttribute="top" secondItem="6iP-wk-Q09" secondAttribute="bottom" id="Zd7-qR-hgK"/>
+                            <constraint firstItem="GOG-lf-ZgQ" firstAttribute="width" secondItem="KhR-KX-GxN" secondAttribute="width" id="gxK-Xt-BzI"/>
                             <constraint firstAttribute="trailing" secondItem="6iP-wk-Q09" secondAttribute="trailing" id="hWi-xL-WL7"/>
                             <constraint firstItem="6iP-wk-Q09" firstAttribute="top" secondItem="iLk-t7-GkV" secondAttribute="bottom" constant="15" id="l7q-Z7-FUS"/>
                             <constraint firstAttribute="trailing" secondItem="VAu-fh-hQw" secondAttribute="trailing" id="ldy-Xn-CO9"/>
@@ -284,6 +321,7 @@
                             <mask key="constraints">
                                 <exclude reference="EOS-Ju-zGD"/>
                                 <exclude reference="ZWe-Yn-0GX"/>
+                                <exclude reference="GTw-Rz-QjS"/>
                             </mask>
                         </variation>
                     </view>
@@ -309,6 +347,7 @@
                     <connections>
                         <outlet property="addNavBarButton" destination="Jn0-75-dog" id="2iL-sW-BYQ"/>
                         <outlet property="approveButton" destination="lno-az-MYP" id="6xx-0f-EUI"/>
+                        <outlet property="bigApproveButtonHeight" destination="SQN-0E-G0e" id="AQB-NS-G8c"/>
                         <outlet property="dateLabel" destination="X9e-rG-KmS" id="s4a-ct-FNw"/>
                         <outlet property="locationLabel" destination="NuM-P6-86l" id="eYH-uM-Z0H"/>
                         <outlet property="settingLabel" destination="EKT-QM-DhG" id="n12-id-gsa"/>
@@ -345,7 +384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ZO-Ds-3Rq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="39.5" y="674.5"/>
+            <point key="canvasLocation" x="23.5" y="698.5"/>
         </scene>
         <!--Add Record-->
         <scene sceneID="60C-mD-iIu">
@@ -361,7 +400,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Record" id="grj-A1-SKO">
-                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="4of-Dc-I6D">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="4of-Dc-I6D">
                             <connections>
                                 <action selector="didTapDismiss:" destination="hxT-Hq-w5N" id="PLI-tL-85r"/>
                             </connections>
@@ -400,6 +439,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dNx-3e-TeC"/>
+        <segue reference="GXa-d7-RMs"/>
     </inferredMetricsTieBreakers>
 </document>

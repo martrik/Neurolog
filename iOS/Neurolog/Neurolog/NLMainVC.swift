@@ -18,12 +18,6 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var summaryView: NLStatsView!
     
-    @IBOutlet weak var shareButton: UIButton!
-    @IBOutlet weak var shareButtonBottom: NSLayoutConstraint!
-    
-    var selectingRows = false
-    var selectedRows = [Int]()
-    
     var data = [AnyObject]()
     var selectedRow = -1
 
@@ -59,7 +53,6 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
             cell.setRecord(record)
             cell.selectionStyle = .Gray
             cell.tintColor = UIColor.appRed()
-            cell.accessoryType = (selectedRows.contains(indexPath.row)  ? .Checkmark : .None)
         }
         else if elem is String {
             cell.textLabel?.text = elem as? String
@@ -72,28 +65,21 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         selectedRow = indexPath.row
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
 
-        if selectingRows {
-            selectedRowShare(indexPath)
-        } else {
-            switch segmented.selectedSegmentIndex {
-            case 0:
-                if let record = data[selectedRow] as? Record {
-                    self.performSegueWithIdentifier("NLDetailSegue", sender: data[selectedRow])
-                }
-                break;
-            case 1, 2:
-                break;
-            default:
-                break;
-            }
+        switch segmented.selectedSegmentIndex {
+        case 0:
+            self.performSegueWithIdentifier("NLDetailSegue", sender: data[selectedRow])
+            break;
+        case 1, 2:
+            break;
+        default:
+            break;
         }
-        
     }
     
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         let shareRowAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Share", handler:{action, indexpath in
             let record = self.data[indexPath.row] as! Record
-            self.shareRecords([record])
+            self.shareRecords(record)
         });
         shareRowAction.backgroundColor = UIColor.appLightBlue()
         
@@ -103,69 +89,8 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     
     // MARK: Sharing
     
-    func selectedRowShare(indexPath: NSIndexPath) {
-        if let index = selectedRows.indexOf(indexPath.row) {
-            table.cellForRowAtIndexPath(indexPath)?.accessoryType = .None
-            selectedRows.removeAtIndex(index)
-        } else {
-            selectedRows.append(indexPath.row)
-            table.cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark
-        }
-        
-        updateShareButton()
-    }
-    
-    func selectAllRows(state: Bool) {
-        for i in 0 ..< table.numberOfRowsInSection(0) {
-            if state {
-                if selectedRows.indexOf(i) == nil {
-                    selectedRows.append(i)
-                }
-            } else {
-                if let index = selectedRows.indexOf(i) {
-                    selectedRows.removeAtIndex(index)
-                }
-            }
-        }
-        table.reloadData()
-        updateShareButton()
-    }
-    
-    func toggleShareButton(state: Bool) {
-        shareButtonBottom.constant = (state ? 0 : -CGRectGetHeight(shareButton.frame))
-        
-        UIView.animateWithDuration(0.3) { () -> Void in
-            self.shareButton.alpha = (state ? 1 : 0)
-            self.shareButton.layoutIfNeeded()
-        }
-        
-        updateShareButton()
-    }
-    
-    func updateShareButton() {
-        if selectedRows.count == 0 {
-            shareButton.setTitle("Select the records you want to share", forState: UIControlState.Normal)
-        } else {
-            shareButton.setTitle("Share this \(selectedRows.count) record" + (selectedRows.count == 1 ? "" : "s"), forState: UIControlState.Normal)
-        }
-    }
-    
-    @IBAction func didTapShareRecordsButton(sender: AnyObject) {
-        if selectedRows.count > 0 {
-                        
-            // Unwrapping the optional.
-            var records = [Record]()
-            
-            for i in selectedRows {
-                records.append(data[i] as! Record)
-            }
-            
-            shareRecords(records)
-        }
-    }
-    
-    func shareRecords(records: [Record]) {
-        let csv = NLRecordsDataManager.sharedInstance.generateCSVWithRecords(records)
+    func shareRecords(record: Record) {
+        let csv = NLRecordsDataManager.sharedInstance.generateCSVWithRecord(record)
         
         func configuredMailComposeViewController() -> MFMailComposeViewController {
             let emailController = MFMailComposeViewController()
@@ -190,7 +115,6 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         
         if result == MFMailComposeResultSent {
             noticeSuccess("Sent!")
-            changeNavButtonsState()
         } else if result == MFMailComposeResultFailed {
             noticeError("Failed...")
         }
@@ -240,37 +164,7 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     // MARK: Navigation bar buttons
     
     @IBAction func didTapAdd(sender: AnyObject) {
-        if selectingRows {
-            selectAllRows(true)
-        } else {
-            self.performSegueWithIdentifier("NLAddRecordSegue", sender: self)
-        }
-    }
-    
-    
-    @IBAction func didTapLeftNavBarButton(sender: AnyObject) {
-        changeNavButtonsState()
-    }
-    
-    func changeNavButtonsState() {
-        if selectingRows {
-            leftNavBarButton.title = "Share"
-            leftNavBarButton.tintColor = UIColor.appLightBlue()
-            table.allowsMultipleSelection = false
-            
-            rightNavBarButton.title = "New record"
-            
-            // Uncheck all cells
-            selectAllRows(false)
-        } else {
-            leftNavBarButton.title = "Cancel"
-            leftNavBarButton.tintColor = UIColor.appRed()
-            table.allowsMultipleSelection = true
-            
-            rightNavBarButton.title = "Select all"
-        }
-        toggleShareButton(!selectingRows)
-        selectingRows = !selectingRows
+      self.performSegueWithIdentifier("NLAddRecordSegue", sender: self)
     }
 
     
@@ -284,9 +178,12 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
             let recordPC = addRecord.popoverPresentationController
             recordPC?.delegate = self
         }
-        if segue.identifier == "NLDetailSegue" {
+        else if segue.identifier == "NLDetailSegue" {
             let dest = segue.destinationViewController as! NLDetailRecordVC
             dest.record = sender as! Record           
+        }
+        else if segue.identifier == "NLSharingOptionsSegue" {
+            
         }
     }
     
