@@ -23,6 +23,7 @@ class NLSelectionDataManger: NSObject {
         return facilities
     }
     
+    
     func portfolioTopics() -> ([String]) {
         var portfolios = [String]()
         

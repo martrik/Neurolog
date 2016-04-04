@@ -51,7 +51,7 @@ class NLStatsManager: NSObject {
     }
     
     
-    func statsForTeaching(from: NSDate, to: NSDate) -> (Dictionary<String, Int>){
+    func statsForTeaching(from: NSDate, to: NSDate) -> Dictionary<String, Int> {
         var result = [String : Int]()
         let realm = try! Realm()
         
@@ -62,6 +62,24 @@ class NLStatsManager: NSObject {
                 result[record.teachingInfo[1].stringValue] = result[record.teachingInfo[1].stringValue]! + 1
             } else {
                 result[record.teachingInfo[1].stringValue] = 1
+            }
+        }
+        
+        return result
+    }
+    
+    
+    func teachingByTopic(from: NSDate, to: NSDate) -> Dictionary<String, [Record]> {
+        var result = [String : [Record]]()
+        let realm = try! Realm()
+        
+        let teachingRecords = realm.objects(Record).filter("setting = 'Teaching' AND date <= %@ AND date >= %@", to, from)
+        
+        for record in teachingRecords {
+            if result[record.teachingInfo[1].stringValue] == nil {
+                result[record.teachingInfo[1].stringValue] = [record]
+            } else {
+                result[record.teachingInfo[1].stringValue]!.append(record)
             }
         }
         

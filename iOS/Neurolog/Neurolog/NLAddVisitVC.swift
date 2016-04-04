@@ -20,7 +20,7 @@ class NLAddVisitVC: FormViewController {
         
         form  +++=
             
-            Section(footer: "Tap on save to store this Visit")
+            Section(footer: "Tap on save to store this Case")
             
             <<< TimeRow("time") {
                 $0.value = NSDate();
