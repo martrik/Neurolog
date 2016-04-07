@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageUI
+import UIAlertController_Blocks
 
 class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPopoverPresentationControllerDelegate, MFMailComposeViewControllerDelegate {
     
@@ -84,11 +85,24 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         shareRowAction.backgroundColor = UIColor.appLightBlue()
         
         let deleteRow = UITableViewRowAction(style: .Destructive, title: "Delete", handler:{action, indexpath in
-            let record = self.data[indexPath.row] as! Record
-            NLRecordsDataManager.sharedInstance.deleteRecord(record)
-            self.data = NLRecordsDataManager.sharedInstance.allRecords()
-            tableView.reloadData()
-        });
+            UIAlertController.showAlertInViewController(self,
+                withTitle: "Are you sure?",
+                message: "You won't be able to recover this record and its cases.",
+                cancelButtonTitle: "Cancel",
+                destructiveButtonTitle: "Delete",
+                otherButtonTitles: [],
+                tapBlock: {(controller, action, buttonIndex) in
+                    if (buttonIndex == controller.destructiveButtonIndex) {
+                        let record = self.data[indexPath.row] as! Record
+                        NLRecordsDataManager.sharedInstance.deleteRecord(record)
+                        self.data = NLRecordsDataManager.sharedInstance.allRecords()
+                        tableView.reloadData()
+                    }
+                    else if (buttonIndex == controller.cancelButtonIndex) {
+                        self.table.setEditing(false, animated: true)
+                    }
+            })
+        })
         
         return [shareRowAction, deleteRow];
     }
@@ -139,8 +153,6 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         if sender as! NSObject == segmented {
             self.loadDataAccordingSegmented()
         }
-        
-        print(NLStatsManager.sharedInstance.statsForClinicalSettings())
     }
     
     func loadDataAccordingSegmented() {

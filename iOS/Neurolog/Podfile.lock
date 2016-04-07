@@ -1,17 +1,18 @@
 PODS:
-  - Agrume (2.0.5)
-  - Charts (2.2.3):
-    - Charts/Core (= 2.2.3)
-  - Charts/Core (2.2.3)
+  - Agrume (2.2.1)
+  - Charts (2.2.4):
+    - Charts/Core (= 2.2.4)
+  - Charts/Core (2.2.4)
   - Eureka (1.5.0)
-  - Realm (0.98.5):
-    - Realm/Headers (= 0.98.5)
-  - Realm/Headers (0.98.5)
-  - RealmSwift (0.98.5):
-    - Realm (= 0.98.5)
+  - Realm (0.98.6):
+    - Realm/Headers (= 0.98.6)
+  - Realm/Headers (0.98.6)
+  - RealmSwift (0.98.6):
+    - Realm (= 0.98.6)
   - Signature (0.2.0)
   - SimpleAlert (1.3.1)
   - SwiftyJSON (2.3.2)
+  - UIAlertController+Blocks (0.9)
 
 DEPENDENCIES:
   - Agrume (from `https://github.com/JanGorman/Agrume.git`)
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - Signature
   - SimpleAlert
   - SwiftyJSON
+  - UIAlertController+Blocks
 
 EXTERNAL SOURCES:
   Agrume:
@@ -28,17 +30,18 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Agrume:
-    :commit: 87706d3b39015a590c1df4ed41990d3710cc5842
+    :commit: 8e12188ff4d8c32ca33917f7b334cb7a51c8ad64
     :git: https://github.com/JanGorman/Agrume.git
 
 SPEC CHECKSUMS:
-  Agrume: e8d5b7af205a334eb6a79e0084231ef7f6255b19
-  Charts: f54267bb3f0f0e74520c6f248517cf5074dfd6fc
+  Agrume: b77d23085683a786cf368a1fb89aadf608216638
+  Charts: a9e735c83c6d376ade20f6612dcf0ba217394a49
   Eureka: 2fb37bb50569c62ee3284689d5b7aca694b040e0
-  Realm: db08379969e45cea2edd1c3c0a090fe9e22d2d2f
-  RealmSwift: cb11ad1c35e15dc982f2dbf5afe2a3124193a358
+  Realm: 44803f35418c5d89b27825a564247fcd190de37e
+  RealmSwift: c7239c52c83f8c43525a5269ba7be1694da33afc
   Signature: b0f9e9240f7e4f7825a2a8c33cad81ac209c1a7a
   SimpleAlert: 05215ee656e1da1428998e76a76bb153a16c7a21
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  UIAlertController+Blocks: b48c673ff60726da468b32ab21bbc7683512d45b
 
 COCOAPODS: 0.39.0

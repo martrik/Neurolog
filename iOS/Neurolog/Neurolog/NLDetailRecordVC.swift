@@ -18,8 +18,8 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var supervisorLabel: UILabel!
     @IBOutlet weak var approveButton: UIButton!
-    @IBOutlet weak var bigApproveButtonHeight: NSLayoutConstraint!
     @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var bigApproveBottom: NSLayoutConstraint!
     internal var record = Record()
     
     override func viewDidLoad() {
@@ -108,12 +108,25 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
     }
     
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        let shareRowAction = UITableViewRowAction(style: UITableViewRowActionStyle.Destructive, title: "Delete", handler:{action, indexpath in
-            NLRecordsDataManager.sharedInstance.deleteVisitFromRecord(self.record.visits[indexPath.row], record: self.record)
-            self.table.reloadData()
-        });
+        let deleteRowAction = UITableViewRowAction(style: UITableViewRowActionStyle.Destructive, title: "Delete", handler:{action, indexpath in
+            UIAlertController.showAlertInViewController(self,
+                withTitle: "Are you sure?",
+                message: "You won't be able to recover this case.",
+                cancelButtonTitle: "Cancel",
+                destructiveButtonTitle: "Delete",
+                otherButtonTitles: [],
+                tapBlock: {(controller, action, buttonIndex) in
+                    if (buttonIndex == controller.destructiveButtonIndex) {
+                        NLRecordsDataManager.sharedInstance.deleteVisitFromRecord(self.record.visits[indexPath.row], record: self.record)
+                        self.table.reloadData()
+                    }
+                    else if (buttonIndex == controller.cancelButtonIndex) {
+                        self.table.setEditing(false, animated: true)
+                    }
+            })
+        })
         
-        return [shareRowAction];
+        return [deleteRowAction];
     }
     
 
@@ -157,19 +170,16 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
                 approveButton.backgroundColor = UIColor.clearColor()
                 approveButton.setImage(UIImage(named: "signedBadge"), forState: .Normal)
                 approveButton.frame = CGRectMake(approveButton.frame.origin.x, approveButton.frame.origin.y, 25, 25)
-                bigApproveButtonHeight.constant = 0
+                bigApproveBottom.constant = -50
+                approveButton.center = CGPointMake(approveButton.center.x, supervisorLabel.center.y)
+                approveButton.hidden = false                
             } else {
-                approveButton.backgroundColor = UIColor.appNeonGreen()
-                approveButton.setImage(nil, forState: .Normal)
-                approveButton.setTitle("Approve", forState: UIControlState.Normal)
-                approveButton.frame = CGRectMake(approveButton.frame.origin.x, approveButton.frame.origin.y, 70, 30)
-                approveButton.titleLabel?.sizeToFit()
-                bigApproveButtonHeight.constant = 50
+                approveButton.hidden = true
             }
-            approveButton.center = CGPointMake(approveButton.center.x, supervisorLabel.center.y)
-        } else if (record.supervisor == nil) {
+        }
+        else {
             approveButton.hidden = true
-            bigApproveButtonHeight.constant = 0
+            bigApproveBottom.constant = -50
         }
         UIView.animateWithDuration(animated ? 0.3 : 0, animations: {
             self.view.layoutIfNeeded()

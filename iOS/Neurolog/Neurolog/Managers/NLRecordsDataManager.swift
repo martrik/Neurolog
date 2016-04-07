@@ -73,16 +73,13 @@ class NLRecordsDataManager: NSObject {
             record.setting = setting as! String
             
             if record.setting == "Teaching" {
-                print(record.teachingInfo)
                 let teaching = TeachingInfo()
                 teaching.title = info["teachingtitle"] as! String
                 teaching.topic = info["teachingtopic"] as! String
                 teaching.lecturer = info["teachinglecturer"] as! String
                 
                 let realm = try! Realm()
-                try! realm.write {
-                    realm.add(teaching)
-                }
+                realm.add(teaching)
                 
                 record.teachingInfo = teaching
             }
@@ -93,6 +90,9 @@ class NLRecordsDataManager: NSObject {
                 record.signaturePath = nil
             }
             record.supervisor = supervisor as? String
+        } else {
+            record.signaturePath = nil
+            record.supervisor = nil
         }
     
         return record

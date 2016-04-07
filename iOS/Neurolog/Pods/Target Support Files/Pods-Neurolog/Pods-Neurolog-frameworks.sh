@@ -92,6 +92,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Neurolog/Signature.framework"
   install_framework "Pods-Neurolog/SimpleAlert.framework"
   install_framework "Pods-Neurolog/SwiftyJSON.framework"
+  install_framework "Pods-Neurolog/UIAlertController_Blocks.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Neurolog/Agrume.framework"
@@ -102,4 +103,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Neurolog/Signature.framework"
   install_framework "Pods-Neurolog/SimpleAlert.framework"
   install_framework "Pods-Neurolog/SwiftyJSON.framework"
+  install_framework "Pods-Neurolog/UIAlertController_Blocks.framework"
 fi

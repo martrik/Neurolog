@@ -351,7 +351,7 @@
                     <connections>
                         <outlet property="addNavBarButton" destination="Jn0-75-dog" id="2iL-sW-BYQ"/>
                         <outlet property="approveButton" destination="lno-az-MYP" id="6xx-0f-EUI"/>
-                        <outlet property="bigApproveButtonHeight" destination="SQN-0E-G0e" id="AQB-NS-G8c"/>
+                        <outlet property="bigApproveBottom" destination="DX7-9f-AgU" id="H7b-dL-Jcf"/>
                         <outlet property="dateLabel" destination="X9e-rG-KmS" id="s4a-ct-FNw"/>
                         <outlet property="locationLabel" destination="NuM-P6-86l" id="eYH-uM-Z0H"/>
                         <outlet property="settingLabel" destination="EKT-QM-DhG" id="n12-id-gsa"/>
@@ -443,6 +443,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GXa-d7-RMs"/>
+        <segue reference="dNx-3e-TeC"/>
     </inferredMetricsTieBreakers>
 </document>
