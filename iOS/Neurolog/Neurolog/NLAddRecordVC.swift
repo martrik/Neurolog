@@ -55,8 +55,24 @@ class NLAddRecordVC: FormViewController, UITextFieldDelegate {
                     return true
                 }
                 
-                if editingRecord?.teachingInfo.count == 2 {
-                    $0.value = editingRecord?.teachingInfo[0].stringValue
+                if editingRecord?.teachingInfo != nil {
+                    $0.value = editingRecord?.teachingInfo!.title
+                } else {
+                    $0.value = ""
+                }
+            }
+            <<< NameRow("teachinglecturer") {
+                $0.title = "Lecturer:"
+                
+                $0.hidden = Condition.Function(["setting"]) { form in
+                    if let r1 : AlertRow<String> = form.rowByTag("setting") as? AlertRow<String>{
+                        return r1.value != "Teaching"
+                    }
+                    return true
+                }
+                
+                if editingRecord?.teachingInfo != nil {
+                    $0.value = editingRecord?.teachingInfo!.lecturer
                 } else {
                     $0.value = ""
                 }
@@ -72,8 +88,8 @@ class NLAddRecordVC: FormViewController, UITextFieldDelegate {
                     return true
                 }
                 
-                if editingRecord?.teachingInfo.count == 2 {
-                    $0.value = editingRecord?.teachingInfo[1].stringValue
+                if editingRecord?.teachingInfo != nil {
+                    $0.value = editingRecord?.teachingInfo!.topic
                 } else {
                     $0.value = ""
                 }
@@ -134,7 +150,7 @@ class NLAddRecordVC: FormViewController, UITextFieldDelegate {
     
     func checkTeachingFilled() -> Bool {
         if form.values()["setting"] as! String == "Teaching" {
-            if ((form.values()["teachingtitle"]! as! String != "") && (form.values()["teachingtopic"]! as! String != "")) {
+            if ((form.values()["teachingtitle"]! as! String != "") && (form.values()["teachingtopic"]! as! String != "") && (form.values()["teachinglecturer"]! as! String != "")) {
                 return true
             } else {
                 return false

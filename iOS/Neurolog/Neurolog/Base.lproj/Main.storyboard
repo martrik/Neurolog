@@ -164,7 +164,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="hBM-KD-n53">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Qpb-Ry-aH9"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Qpb-Ry-aH9">
+                            <connections>
+                                <action selector="didTapDismiss:" destination="rWv-sG-fV7" id="Guz-wi-aUl"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Share" id="995-FJ-Nkt">
                             <connections>
                                 <action selector="didTapShare:" destination="rWv-sG-fV7" id="RUA-Fw-aA3"/>

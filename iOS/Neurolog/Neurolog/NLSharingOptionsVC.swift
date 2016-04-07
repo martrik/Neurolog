@@ -77,4 +77,9 @@ class NLSharingOptionsVC: FormViewController, MFMailComposeViewControllerDelegat
             self.clearAllNotice()
         })
     }
+    
+    
+    @IBAction func didTapDismiss(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }

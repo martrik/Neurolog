@@ -9,8 +9,10 @@
 import UIKit
 import RealmSwift
 
-class RealmString: Object {
-    dynamic var stringValue = ""
+class TeachingInfo: Object {
+    dynamic var topic = ""
+    dynamic var lecturer = ""
+    dynamic var title = ""
 }
 
 class Record: Object {
@@ -19,7 +21,7 @@ class Record: Object {
     dynamic var setting = ""
     dynamic var supervisor: String? = nil
     dynamic var signaturePath: String? = nil
-    var teachingInfo = List<RealmString>()
+    dynamic var teachingInfo: TeachingInfo?
     let visits = List<Visit>()
 }
 
@@ -71,13 +73,18 @@ class NLRecordsDataManager: NSObject {
             record.setting = setting as! String
             
             if record.setting == "Teaching" {
-                let titleStr = RealmString()
-                let topicStr = RealmString()
-                titleStr.stringValue = info["teachingtitle"] as! String
-                topicStr.stringValue = info["teachingtopic"] as! String
-                record.teachingInfo = List([titleStr, topicStr])
-            } else {
-                record.teachingInfo = List()
+                print(record.teachingInfo)
+                let teaching = TeachingInfo()
+                teaching.title = info["teachingtitle"] as! String
+                teaching.topic = info["teachingtopic"] as! String
+                teaching.lecturer = info["teachinglecturer"] as! String
+                
+                let realm = try! Realm()
+                try! realm.write {
+                    realm.add(teaching)
+                }
+                
+                record.teachingInfo = teaching
             }
         }
         
@@ -89,6 +96,14 @@ class NLRecordsDataManager: NSObject {
         }
     
         return record
+    }
+    
+    func deleteRecord(record: Record) {
+        let realm = try! Realm()
+        
+        try! realm.write {
+            realm.delete(record)
+        }
     }
     
     
@@ -172,22 +187,30 @@ class NLRecordsDataManager: NSObject {
         let mailString = NSMutableString()
         let timeFormatter = NSDateFormatter()
         timeFormatter.locale = NSLocale.currentLocale()
-        
-        mailString.appendString("Date, Setting, Location, Supervisor\n")
-        
         timeFormatter.dateStyle = .MediumStyle
         timeFormatter.timeStyle = .NoStyle
-        let string = "\(timeFormatter.stringFromDate(record.date)), \(record.setting), \(record.location), " + (record.supervisor != nil ? record.supervisor!  : "none") + "\n"
-        mailString.appendString(string)
         
-        mailString.appendString("Time, Disease, Age, Sex\n")
-
-        timeFormatter.dateStyle = .NoStyle
-        timeFormatter.timeStyle = .ShortStyle
-        
-        for visit in record.visits {
-            mailString.appendString("\(timeFormatter.stringFromDate(visit.time)), \(visit.topic), \(visit.age), \(visit.sex)\n")
+        if record.teachingInfo == nil {
+            mailString.appendString("Date, Setting, Location, Supervisor\n")
+            
+            let string = "\(timeFormatter.stringFromDate(record.date)), \(record.setting), \(record.location), " + (record.supervisor != nil ? record.supervisor!  : "none") + "\n"
+            mailString.appendString(string)
+            
+            mailString.appendString("Time, Disease, Age, Sex\n")
+            
+            timeFormatter.dateStyle = .NoStyle
+            timeFormatter.timeStyle = .ShortStyle
+            
+            for visit in record.visits {
+                mailString.appendString("\(timeFormatter.stringFromDate(visit.time)), \(visit.topic), \(visit.age), \(visit.sex)\n")
+            }
+        } else {
+            mailString.appendString("Date, Setting, Location, Title, Lecturer, Topic, Supervisor\n")
+            
+            let string = "\(timeFormatter.stringFromDate(record.date)), \(record.setting), \(record.location), \(record.teachingInfo!.title), \(record.teachingInfo!.lecturer), \(record.teachingInfo!.topic), " + (record.supervisor != nil ? record.supervisor!  : "none") + "\n"
+            mailString.appendString(string)
         }
+        
         
         mailString.appendString(" \n")
         
@@ -254,9 +277,9 @@ class NLRecordsDataManager: NSObject {
             for topic in topics {
                 if teachingRecords[topic] != nil {
                     mailString.appendString("\(topic) teachings\n")
-                    mailString.appendString("Date, Title, Location, Supervisor\n")
+                    mailString.appendString("Date, Title, Lecturer, Location, Supervisor\n")
                     for record in teachingRecords[topic]! {
-                        mailString.appendString("\(dateFormatter.stringFromDate(record.date)), \(record.teachingInfo[0].stringValue), \(record.teachingInfo[1].stringValue), " + (record.supervisor != nil ? record.supervisor!  : "none") + "\n")
+                        mailString.appendString("\(dateFormatter.stringFromDate(record.date)), \(record.teachingInfo!.title), \(record.teachingInfo!.lecturer), \(record.location), " + (record.supervisor != nil ? record.supervisor!  : "none") + "\n")
                     }
                     mailString.appendString(" \n")
                 }

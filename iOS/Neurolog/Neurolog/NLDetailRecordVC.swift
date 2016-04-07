@@ -42,7 +42,7 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
     func loadUI() {
         // Fill top labels
         if record.setting == "Teaching" {
-            setAttributed(settingLabel, title: "Setting: ", text: record.setting + ", " + record.teachingInfo[0].stringValue)
+            setAttributed(settingLabel, title: "Setting: ", text: record.setting)
         } else {
             setAttributed(settingLabel, title: "Setting: ", text: record.setting)
         }

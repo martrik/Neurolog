@@ -77,13 +77,20 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     }
     
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        let shareRowAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Share", handler:{action, indexpath in
+        let shareRowAction = UITableViewRowAction(style: .Default, title: "Share", handler:{action, indexpath in
             let record = self.data[indexPath.row] as! Record
             self.shareRecords(record)
         });
         shareRowAction.backgroundColor = UIColor.appLightBlue()
         
-        return [shareRowAction];
+        let deleteRow = UITableViewRowAction(style: .Destructive, title: "Delete", handler:{action, indexpath in
+            let record = self.data[indexPath.row] as! Record
+            NLRecordsDataManager.sharedInstance.deleteRecord(record)
+            self.data = NLRecordsDataManager.sharedInstance.allRecords()
+            tableView.reloadData()
+        });
+        
+        return [shareRowAction, deleteRow];
     }
     
     
@@ -99,7 +106,7 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
             emailController.setMessageBody("", isHTML: false)
             
             // Attaching the .CSV file to the email.
-            emailController.addAttachmentData(csv, mimeType: "text/csv", fileName: "Records.csv")
+            emailController.addAttachmentData(csv, mimeType: "text/csv", fileName: "Record.csv")
             
             return emailController
         }
