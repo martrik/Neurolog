@@ -17,6 +17,7 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     
     @IBOutlet weak var segmented: UISegmentedControl!
     @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var summaryView: NLStatsView!
     
     var data = [AnyObject]()
@@ -30,6 +31,7 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         table.rowHeight = UITableViewAutomaticDimension
         table.estimatedRowHeight = 60
         table.registerNib(UINib(nibName: "NLRecordCell", bundle: nil), forCellReuseIdentifier: "NLRecordCell")
+        
     }
     
     override func viewWillAppear(animated: Bool) {

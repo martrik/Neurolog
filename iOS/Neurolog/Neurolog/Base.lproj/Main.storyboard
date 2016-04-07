@@ -27,14 +27,17 @@
                                     <action selector="segmentedValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="1E4-Cc-Phe"/>
                                 </connections>
                             </segmentedControl>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diI-aK-abo">
-                                <rect key="frame" x="-1" y="58" width="376" height="545"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diI-aK-abo">
+                                <rect key="frame" x="-0.5" y="58" width="375" height="545"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIN-tf-zo4" customClass="NLStatsView" customModule="Neurolog" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="545"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="500" id="qWb-hU-omT"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="TIN-tf-zo4" firstAttribute="leading" secondItem="diI-aK-abo" secondAttribute="leading" id="8FZ-On-lkO"/>
                                     <constraint firstAttribute="bottom" secondItem="TIN-tf-zo4" secondAttribute="bottom" id="ID9-jD-YPK"/>
@@ -105,6 +108,11 @@
                             <constraint firstItem="TIN-tf-zo4" firstAttribute="height" secondItem="ogP-Qb-NzV" secondAttribute="height" priority="250" id="ob9-iZ-cnP"/>
                             <constraint firstItem="diI-aK-abo" firstAttribute="height" secondItem="ogP-Qb-NzV" secondAttribute="height" id="ohE-Am-O3G"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ob9-iZ-cnP"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Neurolog" id="s0P-BU-K1n">
                         <barButtonItem key="leftBarButtonItem" systemItem="action" id="uTx-5N-M7R">
@@ -121,6 +129,7 @@
                     <connections>
                         <outlet property="leftNavBarButton" destination="uTx-5N-M7R" id="dIt-jD-M95"/>
                         <outlet property="rightNavBarButton" destination="ZrI-wD-SU6" id="O7t-eU-Rzu"/>
+                        <outlet property="scrollView" destination="diI-aK-abo" id="fyn-Vq-AcR"/>
                         <outlet property="segmented" destination="Ma3-dl-PPw" id="i1K-qd-gxU"/>
                         <outlet property="summaryView" destination="TIN-tf-zo4" id="mQt-UO-ADc"/>
                         <outlet property="table" destination="ogP-Qb-NzV" id="st6-Ze-MrJ"/>
@@ -150,7 +159,7 @@
             </objects>
             <point key="canvasLocation" x="-1558.5" y="1033.5"/>
         </scene>
-        <!--Sharing OptionsVC-->
+        <!--Export-->
         <scene sceneID="Nxv-zg-cbx">
             <objects>
                 <viewController id="rWv-sG-fV7" customClass="NLSharingOptionsVC" customModule="Neurolog" customModuleProvider="target" sceneMemberID="viewController">
@@ -163,7 +172,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hBM-KD-n53">
+                    <navigationItem key="navigationItem" title="Export" id="hBM-KD-n53">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="Qpb-Ry-aH9">
                             <connections>
                                 <action selector="didTapDismiss:" destination="rWv-sG-fV7" id="Guz-wi-aUl"/>
@@ -192,8 +201,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6iP-wk-Q09">
-                                <rect key="frame" x="0.0" y="190" width="375" height="427"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6iP-wk-Q09">
+                                <rect key="frame" x="0.0" y="193" width="375" height="424"/>
                                 <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="o2A-KQ-vTj">
                                     <rect key="frame" x="0.0" y="64" width="375" height="0.0"/>
@@ -202,8 +211,8 @@
                                 </view>
                                 <sections/>
                             </tableView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VAu-fh-hQw">
-                                <rect key="frame" x="0.0" y="64" width="375" height="127"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAu-fh-hQw">
+                                <rect key="frame" x="0.0" y="64" width="375" height="129"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medical setting:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKT-QM-DhG">
                                         <rect key="frame" x="20" y="15" width="340" height="21"/>
@@ -211,8 +220,8 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" misplaced="YES" text="Location: St Pancras Hospital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NuM-P6-86l">
-                                        <rect key="frame" x="20" y="40" width="230" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Location: St Pancras Hospital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NuM-P6-86l">
+                                        <rect key="frame" x="20" y="41" width="230" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="250" constant="20" id="6pH-Te-Glw"/>
                                         </constraints>
@@ -220,21 +229,21 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Rd-qy-3Pv" userLabel="Separator">
-                                        <rect key="frame" x="0.0" y="125" width="375" height="1"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Rd-qy-3Pv" userLabel="Separator">
+                                        <rect key="frame" x="0.0" y="128" width="375" height="1"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="TQq-cl-ZYr"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9e-rG-KmS">
-                                        <rect key="frame" x="20" y="66" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9e-rG-KmS">
+                                        <rect key="frame" x="20" y="67" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lno-az-MYP">
-                                        <rect key="frame" x="194" y="87" width="70" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lno-az-MYP">
+                                        <rect key="frame" x="194" y="89" width="70" height="30"/>
                                         <color key="backgroundColor" red="0.043137254901960784" green="0.8666666666666667" blue="0.023529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="3I6-dj-ZhH"/>
@@ -253,8 +262,8 @@
                                             <action selector="didTapApprove:" destination="847-G6-Xl7" eventType="touchUpInside" id="L0L-01-gSx"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" misplaced="YES" text="Supervisor: Dr Jones" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLk-t7-GkV">
-                                        <rect key="frame" x="20" y="91" width="164" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Supervisor: Dr Jones" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLk-t7-GkV">
+                                        <rect key="frame" x="20" y="93" width="164" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="250" constant="20" id="zyV-cI-qQi"/>
                                         </constraints>
@@ -363,7 +372,7 @@
             </objects>
             <point key="canvasLocation" x="-450.5" y="674.5"/>
         </scene>
-        <!--Add Case-->
+        <!--Add case-->
         <scene sceneID="Shm-d6-I73">
             <objects>
                 <viewController id="blI-DO-O8H" customClass="NLAddVisitVC" customModule="Neurolog" customModuleProvider="target" sceneMemberID="viewController">
@@ -377,7 +386,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Add Case" id="pGi-H6-hO2">
+                    <navigationItem key="navigationItem" title="Add case" id="pGi-H6-hO2">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="xkP-Qg-Kew">
                             <connections>
                                 <action selector="didTapSave:" destination="blI-DO-O8H" id="aoi-Ol-7gb"/>
@@ -390,7 +399,7 @@
             </objects>
             <point key="canvasLocation" x="23.5" y="698.5"/>
         </scene>
-        <!--Add Record-->
+        <!--Add record-->
         <scene sceneID="60C-mD-iIu">
             <objects>
                 <viewController storyboardIdentifier="NLAddRecordVC" id="hxT-Hq-w5N" customClass="NLAddRecordVC" customModule="Neurolog" customModuleProvider="target" sceneMemberID="viewController">
@@ -403,7 +412,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Record" id="grj-A1-SKO">
+                    <navigationItem key="navigationItem" title="Add record" id="grj-A1-SKO">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="4of-Dc-I6D">
                             <connections>
                                 <action selector="didTapDismiss:" destination="hxT-Hq-w5N" id="PLI-tL-85r"/>

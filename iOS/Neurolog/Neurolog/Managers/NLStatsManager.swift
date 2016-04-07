@@ -20,7 +20,7 @@ class NLStatsManager: NSObject {
         for key in settings {
             settingsCount.append(realm.objects(Record).filter("setting = '\(key)'").count)
         }
-        
+
         return (settings, settingsCount)
     }
     

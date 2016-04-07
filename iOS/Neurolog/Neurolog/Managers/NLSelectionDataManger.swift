@@ -20,7 +20,7 @@ class NLSelectionDataManger: NSObject {
             facilities.append(subJson.string!)
         }
         
-        return facilities
+        return facilities.sort()
     }
     
     

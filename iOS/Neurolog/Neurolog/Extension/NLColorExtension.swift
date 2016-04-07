@@ -45,4 +45,8 @@ extension UIColor {
         return UIColor(red: 11/255.0, green: 221/255.0, blue: 6/255.0, alpha: 1.0)
     }
     
+    class func graphColors() -> [UIColor] {
+        return [UIColor.appOrange(), UIColor.appGreen(), UIColor.appDarkBlue(), UIColor.appBrown(), UIColor.appViolet()]
+    }
+    
 }
