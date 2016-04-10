@@ -13,7 +13,7 @@ class NLStatsManager: NSObject {
     static let sharedInstance = NLStatsManager()
     
     func statsForClinicalSettings() -> ([String], [Int]) {
-        let settings = NLSelectionDataManger.sharedInstance.clinicalSettings()
+        let settings = NLSelectionManager.sharedInstance.clinicalSettings()
         var settingsCount = [Int]()
         let realm = try! Realm()
 
@@ -39,7 +39,7 @@ class NLStatsManager: NSObject {
     
     
     func statsForTopics(from: NSDate, to: NSDate) -> ([String], [Int]) {
-        let topics = NLSelectionDataManger.sharedInstance.portfolioTopics()
+        let topics = NLSelectionManager.sharedInstance.portfolioTopics()
         var topicsCount = [Int]()
         let realm = try! Realm()
         

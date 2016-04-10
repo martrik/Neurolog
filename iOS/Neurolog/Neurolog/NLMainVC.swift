@@ -96,8 +96,8 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
                 tapBlock: {(controller, action, buttonIndex) in
                     if (buttonIndex == controller.destructiveButtonIndex) {
                         let record = self.data[indexPath.row] as! Record
-                        NLRecordsDataManager.sharedInstance.deleteRecord(record)
-                        self.data = NLRecordsDataManager.sharedInstance.allRecords()
+                        NLRecordsManager.sharedInstance.deleteRecord(record)
+                        self.data = NLRecordsManager.sharedInstance.allRecords()
                         tableView.reloadData()
                     }
                     else if (buttonIndex == controller.cancelButtonIndex) {
@@ -113,7 +113,7 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     // MARK: Sharing
     
     func shareRecords(record: Record) {
-        let csv = NLRecordsDataManager.sharedInstance.generateCSVWithRecord(record)
+        let csv = NLRecordsManager.sharedInstance.generateCSVWithRecord(record)
         
         func configuredMailComposeViewController() -> MFMailComposeViewController {
             let emailController = MFMailComposeViewController()
@@ -160,7 +160,7 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     func loadDataAccordingSegmented() {
         switch segmented.selectedSegmentIndex {
         case 0:
-            data = NLRecordsDataManager.sharedInstance.allRecords()
+            data = NLRecordsManager.sharedInstance.allRecords()
             switchToSummaryView(false)
             break;
         case 1:

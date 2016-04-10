@@ -28,7 +28,7 @@ class NLAddVisitVC: FormViewController {
             }
             <<< PushRow<String>("disease") { (row : PushRow<String>) -> Void in
                 row.title = "Disease:"
-                row.options = NLSelectionDataManger.sharedInstance.portfolioTopics()
+                row.options = NLSelectionManager.sharedInstance.portfolioTopics()
                 
             }
             <<< PushRow<String>("age") { (row : PushRow<String>) -> Void in
@@ -45,7 +45,7 @@ class NLAddVisitVC: FormViewController {
 
     @IBAction func didTapSave(sender: AnyObject) {
         if form.values()["disease"]! != nil && form.values()["age"]! != nil && form.values()["sex"]! != nil {
-            NLRecordsDataManager.sharedInstance.saveVisitInRecord(record!, info: form.values())
+            NLRecordsManager.sharedInstance.saveVisitInRecord(record!, info: form.values())
             self.noticeSuccess("Saved!")
             self.navigationController?.popViewControllerAnimated(true)
         } else {

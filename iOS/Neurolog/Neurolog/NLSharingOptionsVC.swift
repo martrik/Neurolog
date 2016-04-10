@@ -44,11 +44,11 @@ class NLSharingOptionsVC: FormViewController, MFMailComposeViewControllerDelegat
         emailController.setMessageBody("", isHTML: false)
         
         // Attaching the .CSV file to the email.
-        let csv = NLRecordsDataManager.sharedInstance.generateGeneralCSVWithRange(form.values()["from"] as! NSDate, toDate: form.values()["to"] as! NSDate, teaching: form.values()["teaching"] as! Bool)
+        let csv = NLRecordsManager.sharedInstance.generateGeneralCSVWithRange(form.values()["from"] as! NSDate, toDate: form.values()["to"] as! NSDate, teaching: form.values()["teaching"] as! Bool)
         emailController.addAttachmentData(csv, mimeType: "text/csv", fileName: "GeneralStats.csv")
         
         if form.values()["detailed"] as! Bool {
-            let csv = NLRecordsDataManager.sharedInstance.generateDetailedCSVWithRange(form.values()["from"] as! NSDate, toDate: form.values()["to"] as! NSDate, teaching: form.values()["teaching"] as! Bool)
+            let csv = NLRecordsManager.sharedInstance.generateDetailedCSVWithRange(form.values()["from"] as! NSDate, toDate: form.values()["to"] as! NSDate, teaching: form.values()["teaching"] as! Bool)
             emailController.addAttachmentData(csv, mimeType: "text/csv", fileName: "DetailedStats.csv")
         }
         

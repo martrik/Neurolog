@@ -1,28 +1,33 @@
 # Uncomment this line to define a global platform for your project
 #platform :ios, '8.0'
-# Uncomment this line if you're using Swift
 
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 target 'Neurolog' do
+  pod 'SwiftyJSON'
+  pod 'RealmSwift'
+  pod 'Eureka', '~> 1.4’
+  pod 'SimpleAlert'
+  pod 'Signature'
+  pod 'Agrume', :git => 'https://github.com/JanGorman/Agrume.git'
+  pod 'Charts'
+  pod 'UIAlertController+Blocks'
+end
 
-pod 'SwiftyJSON'
-pod 'RealmSwift'
-pod 'Eureka', '~> 1.4’
-pod 'SimpleAlert'
-pod 'Signature'
-pod 'Agrume', :git => 'https://github.com/JanGorman/Agrume.git'
-pod 'Charts'
-pod 'UIAlertController+Blocks'
+
+def testing_pods
+  pod 'SwiftyJSON'
+  pod 'RealmSwift'
+  pod  'SwiftRandom'
 end
 
 
 target 'NeurologTests' do
-
+  testing_pods
 end
 
 target 'NeurologUITests' do
-
+  testing_pods
 end
 

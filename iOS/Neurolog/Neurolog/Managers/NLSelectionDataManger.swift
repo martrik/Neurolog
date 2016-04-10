@@ -10,8 +10,8 @@ import UIKit
 
 import SwiftyJSON
 
-class NLSelectionDataManger: NSObject {
-    static let sharedInstance = NLSelectionDataManger()
+class NLSelectionManager: NSObject {
+    static let sharedInstance = NLSelectionManager()
     
     func clinicalSettings() -> ([String]) {
         var facilities = [String]()

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4DFA8AAE524521FDEE6E3DB2'
+               BlueprintIdentifier = 'F7B75E2FB167F779E4DD524E'
                BlueprintName = 'UIAlertController+Blocks'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'UIAlertController_Blocks.framework'>

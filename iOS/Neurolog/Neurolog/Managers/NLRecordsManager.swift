@@ -35,23 +35,24 @@ class Visit: Object {
     }
 }
 
-class NLRecordsDataManager: NSObject {
-    static let sharedInstance = NLRecordsDataManager()
+class NLRecordsManager: NSObject {
+    static let sharedInstance = NLRecordsManager()
     
     // MARK: Records
     
     func saveRecordWith(info: [String : Any?]) -> (Record) {
         var newRecord = Record()
-        addPropertiesToRecord(&newRecord, info: info)
         
         let realm = try! Realm()
         
         try! realm.write {
+            addPropertiesToRecord(&newRecord, info: info)
             realm.add(newRecord)
         }
         
         return newRecord
     }
+    
     
     func updateRecord(record: Record, info: [String : Any?]) {
         let realm = try! Realm()
@@ -61,6 +62,7 @@ class NLRecordsDataManager: NSObject {
             addPropertiesToRecord(&updateRecord, info: info)
         }
     }
+    
     
     func addPropertiesToRecord(inout record: Record, info: [String : Any?]) -> (Record) {
         if let date = info["date"] {
@@ -97,6 +99,7 @@ class NLRecordsDataManager: NSObject {
     
         return record
     }
+    
     
     func deleteRecord(record: Record) {
         let realm = try! Realm()
@@ -151,7 +154,7 @@ class NLRecordsDataManager: NSObject {
     
     // MARK: Visits
     
-    func saveVisitInRecord(record: Record, info: [String: Any?]) {
+    func saveVisitInRecord(record: Record, info: [String: Any?]) -> Visit? {
         let realm = try! Realm()
         
         let newVisit = Visit()
@@ -178,6 +181,8 @@ class NLRecordsDataManager: NSObject {
         try! realm.write {
            record.visits.append(newVisit)
         }
+        
+        return record.visits.last
     }
     
     
@@ -259,7 +264,7 @@ class NLRecordsDataManager: NSObject {
         mailString.appendString(" \n")
 
         
-        let topics = NLSelectionDataManger.sharedInstance.portfolioTopics()
+        let topics = NLSelectionManager.sharedInstance.portfolioTopics()
         for topic in topics {
             mailString.appendString(detailedVisitsForTopic(topic, from: fromDate, to: toDate))
             mailString.appendString(" \n")

@@ -12,15 +12,15 @@
 		411D9F301C883CCB0042D058 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 411D9F2E1C883CCB0042D058 /* Main.storyboard */; };
 		411D9F321C883CCB0042D058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 411D9F311C883CCB0042D058 /* Assets.xcassets */; };
 		411D9F351C883CCB0042D058 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 411D9F331C883CCB0042D058 /* LaunchScreen.storyboard */; };
-		411D9F401C883CCB0042D058 /* NeurologTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411D9F3F1C883CCB0042D058 /* NeurologTests.swift */; };
 		411D9F4B1C883CCB0042D058 /* NeurologUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411D9F4A1C883CCB0042D058 /* NeurologUITests.swift */; };
 		411D9F591C8840380042D058 /* NLAddRecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411D9F581C8840380042D058 /* NLAddRecordVC.swift */; };
 		4141A3F61C8CC98F00454754 /* NLSelectionDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4141A3F51C8CC98F00454754 /* NLSelectionDataManger.swift */; };
 		4146E8631C9D560900254848 /* NLRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146E8611C9D560900254848 /* NLRecordCell.swift */; };
 		4146E8641C9D560900254848 /* NLRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4146E8621C9D560900254848 /* NLRecordCell.xib */; };
 		4146E86B1C9D680000254848 /* SignatureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146E8691C9D680000254848 /* SignatureVC.swift */; };
+		415E24FD1CBA68DE00E5FE3F /* NLRecordsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E24FC1CBA68DE00E5FE3F /* NLRecordsManagerTests.swift */; };
 		4181B9E31C88655C00951A94 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4181B9E21C88655C00951A94 /* data.json */; };
-		419D9A451C96290000276A2F /* NLRecordsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419D9A441C96290000276A2F /* NLRecordsDataManager.swift */; };
+		419D9A451C96290000276A2F /* NLRecordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419D9A441C96290000276A2F /* NLRecordsManager.swift */; };
 		41A003811C9AD0E1009A2B5F /* NLVisitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0037F1C9AD0E1009A2B5F /* NLVisitCell.swift */; };
 		41A003821C9AD0E1009A2B5F /* NLVisitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A003801C9AD0E1009A2B5F /* NLVisitCell.xib */; };
 		41A7C58D1C9DE2E400837429 /* NLColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7C58C1C9DE2E400837429 /* NLColorExtension.swift */; };
@@ -76,7 +76,6 @@
 		411D9F341C883CCB0042D058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		411D9F361C883CCB0042D058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		411D9F3B1C883CCB0042D058 /* NeurologTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeurologTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		411D9F3F1C883CCB0042D058 /* NeurologTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeurologTests.swift; sourceTree = "<group>"; };
 		411D9F411C883CCB0042D058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		411D9F461C883CCB0042D058 /* NeurologUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeurologUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		411D9F4A1C883CCB0042D058 /* NeurologUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeurologUITests.swift; sourceTree = "<group>"; };
@@ -86,8 +85,9 @@
 		4146E8611C9D560900254848 /* NLRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLRecordCell.swift; sourceTree = "<group>"; };
 		4146E8621C9D560900254848 /* NLRecordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NLRecordCell.xib; sourceTree = "<group>"; };
 		4146E8691C9D680000254848 /* SignatureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignatureVC.swift; sourceTree = "<group>"; };
+		415E24FC1CBA68DE00E5FE3F /* NLRecordsManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLRecordsManagerTests.swift; sourceTree = "<group>"; };
 		4181B9E21C88655C00951A94 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
-		419D9A441C96290000276A2F /* NLRecordsDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLRecordsDataManager.swift; sourceTree = "<group>"; };
+		419D9A441C96290000276A2F /* NLRecordsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLRecordsManager.swift; sourceTree = "<group>"; };
 		41A0037F1C9AD0E1009A2B5F /* NLVisitCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLVisitCell.swift; sourceTree = "<group>"; };
 		41A003801C9AD0E1009A2B5F /* NLVisitCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NLVisitCell.xib; sourceTree = "<group>"; };
 		41A7C58C1C9DE2E400837429 /* NLColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLColorExtension.swift; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 		411D9F3E1C883CCB0042D058 /* NeurologTests */ = {
 			isa = PBXGroup;
 			children = (
-				411D9F3F1C883CCB0042D058 /* NeurologTests.swift */,
+				413216461CBA9A2300A808AC /* Managers */,
 				411D9F411C883CCB0042D058 /* Info.plist */,
 			);
 			path = NeurologTests;
@@ -219,11 +219,19 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		413216461CBA9A2300A808AC /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				415E24FC1CBA68DE00E5FE3F /* NLRecordsManagerTests.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
 		4141A3F41C8CC8ED00454754 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				4141A3F51C8CC98F00454754 /* NLSelectionDataManger.swift */,
-				419D9A441C96290000276A2F /* NLRecordsDataManager.swift */,
+				419D9A441C96290000276A2F /* NLRecordsManager.swift */,
 				41CC6C2B1C9F449F00A5D17C /* NLStatsManager.swift */,
 			);
 			path = Managers;
@@ -598,7 +606,7 @@
 				4146E8631C9D560900254848 /* NLRecordCell.swift in Sources */,
 				41AC4B341C9819E70094B489 /* NLAddVisitVC.swift in Sources */,
 				411D9F2B1C883CCB0042D058 /* AppDelegate.swift in Sources */,
-				419D9A451C96290000276A2F /* NLRecordsDataManager.swift in Sources */,
+				419D9A451C96290000276A2F /* NLRecordsManager.swift in Sources */,
 				41CC6C311C9F480900A5D17C /* NLStatsView.swift in Sources */,
 				411D9F591C8840380042D058 /* NLAddRecordVC.swift in Sources */,
 			);
@@ -608,7 +616,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				411D9F401C883CCB0042D058 /* NeurologTests.swift in Sources */,
+				415E24FD1CBA68DE00E5FE3F /* NLRecordsManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

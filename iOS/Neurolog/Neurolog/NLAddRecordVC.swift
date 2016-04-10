@@ -38,11 +38,11 @@ class NLAddRecordVC: FormViewController, UITextFieldDelegate {
             }
             <<< AlertRow<String>("setting") {
                 $0.title = "Setting:"
-                $0.options = NLSelectionDataManger.sharedInstance.clinicalSettings()
+                $0.options = NLSelectionManager.sharedInstance.clinicalSettings()
                 if let setting = editingRecord?.setting {
                     $0.value = setting
                 } else {
-                    $0.value = NLSelectionDataManger.sharedInstance.clinicalSettings().first
+                    $0.value = NLSelectionManager.sharedInstance.clinicalSettings().first
                 }
             }
             <<< TextRow("teachingtitle") {
@@ -79,7 +79,7 @@ class NLAddRecordVC: FormViewController, UITextFieldDelegate {
             }
             <<< PushRow<String>("teachingtopic") {
                 $0.title = "Topic:"
-                $0.options = NLSelectionDataManger.sharedInstance.portfolioTopics()
+                $0.options = NLSelectionManager.sharedInstance.portfolioTopics()
                 
                 $0.hidden = Condition.Function(["setting"]) { form in
                     if let r1 : AlertRow<String> = form.rowByTag("setting") as? AlertRow<String>{
@@ -127,10 +127,10 @@ class NLAddRecordVC: FormViewController, UITextFieldDelegate {
 
             var savedRecord = Record()
             if let record = editingRecord {
-                NLRecordsDataManager.sharedInstance.updateRecord(record, info: form.values())
+                NLRecordsManager.sharedInstance.updateRecord(record, info: form.values())
                 savedRecord = record
             } else {
-                savedRecord = NLRecordsDataManager.sharedInstance.saveRecordWith(form.values())
+                savedRecord = NLRecordsManager.sharedInstance.saveRecordWith(form.values())
             }
             
             if let completion = didDismissWithRecord {

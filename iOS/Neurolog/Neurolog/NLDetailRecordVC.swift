@@ -117,7 +117,7 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
                 otherButtonTitles: [],
                 tapBlock: {(controller, action, buttonIndex) in
                     if (buttonIndex == controller.destructiveButtonIndex) {
-                        NLRecordsDataManager.sharedInstance.deleteVisitFromRecord(self.record.visits[indexPath.row], record: self.record)
+                        NLRecordsManager.sharedInstance.deleteVisitFromRecord(self.record.visits[indexPath.row], record: self.record)
                         self.table.reloadData()
                     }
                     else if (buttonIndex == controller.cancelButtonIndex) {
@@ -150,7 +150,7 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
                     let writePath = documentsURL.URLByAppendingPathComponent("signature-\(self.record.supervisor!)-\(NSDate()).jpg")
                     imageData.writeToURL(writePath, atomically: true)
                   
-                    NLRecordsDataManager.sharedInstance.approveRecord(self.record, signaturePath: String(writePath))
+                    NLRecordsManager.sharedInstance.approveRecord(self.record, signaturePath: String(writePath))
                     
                     self.updateApproveButton(true)
                 }
