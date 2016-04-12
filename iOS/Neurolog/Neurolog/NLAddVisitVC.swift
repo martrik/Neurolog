@@ -12,9 +12,10 @@ import Eureka
 
 class NLAddVisitVC: FormViewController {
     
-    var record: Record? = nil
-    var filledRows = 0
-    
+    var record: Record!
+    var edittingVisit: Visit?    
+    var didDismiss:(()->Void)?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,31 +24,58 @@ class NLAddVisitVC: FormViewController {
             Section(footer: "Tap on save to store this Case")
             
             <<< TimeRow("time") {
-                $0.value = NSDate();
                 $0.title = "Date:"
+                
+                if edittingVisit != nil {
+                    $0.value = edittingVisit!.time
+                } else {
+                    $0.value = NSDate();
+                }
+                    
             }
             <<< PushRow<String>("disease") { (row : PushRow<String>) -> Void in
                 row.title = "Disease:"
+                
                 row.options = NLSelectionManager.sharedInstance.portfolioTopics()
                 
+                if edittingVisit != nil {
+                    row.value = edittingVisit!.topic
+                }
             }
             <<< PushRow<String>("age") { (row : PushRow<String>) -> Void in
                 row.title = "Age:"
                 let ages: [Int] = Array(1...110)
                 let stringAges = ages.map { String($0) }
                 row.options = stringAges
+                
+                if edittingVisit != nil {
+                    row.value = String(edittingVisit!.age)
+                }
             }
             <<< ActionSheetRow<String>("sex") { (row : ActionSheetRow<String>) -> Void in
                 row.title = "Sex:"
-                row.options = ["Male", "Female"]
+                row.options = ["Female", "Male"]
+                
+                if edittingVisit != nil {
+                    row.value = edittingVisit!.sex
+                }
             }
     }
 
     @IBAction func didTapSave(sender: AnyObject) {
         if form.values()["disease"]! != nil && form.values()["age"]! != nil && form.values()["sex"]! != nil {
-            NLRecordsManager.sharedInstance.saveVisitInRecord(record!, info: form.values())
-            self.noticeSuccess("Saved!")
-            self.navigationController?.popViewControllerAnimated(true)
+            if edittingVisit != nil {
+                NLVisitsManager.sharedInstance.updateVisit(edittingVisit!, record: record, info: form.values())
+                if let completion = didDismiss {
+                    completion()
+                }
+                self.dismissViewControllerAnimated(true, completion: nil)
+            } else {
+                NLVisitsManager.sharedInstance.saveVisitInRecord(record, info: form.values())
+                self.noticeSuccess("Saved!")
+                self.navigationController?.popViewControllerAnimated(true)
+            }
+
         } else {
             self.noticeInfo("Missing info")
         }

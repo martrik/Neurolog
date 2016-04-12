@@ -123,7 +123,7 @@ class NLAddRecordVC: FormViewController, UITextFieldDelegate {
     // MARK: - Save
     
     @IBAction func didTapSave(sender: AnyObject) {
-        if form.values()["location"]! != nil && (!(form.values()["supervisorswitch"]! as! Bool == true) || form.values()["supervisorname"]! != nil) && checkTeachingFilled() {
+        if form.values()["location"]! != nil && (!(form.values()["supervisorswitch"]! as! Bool == true) || form.values()["supervisorname"] as! String != "") && checkTeachingFilled() {
 
             var savedRecord = Record()
             if let record = editingRecord {

@@ -21,18 +21,8 @@ class Record: Object {
     dynamic var setting = ""
     dynamic var supervisor: String? = nil
     dynamic var signaturePath: String? = nil
-    dynamic var teachingInfo: TeachingInfo?
+    dynamic var teachingInfo: TeachingInfo? = nil
     let visits = List<Visit>()
-}
-
-class Visit: Object {
-    dynamic var time = NSDate()
-    dynamic var topic = ""
-    dynamic var sex = ""
-    dynamic var age = 1
-    var record: Record? {
-        return linkingObjects(Record.self, forProperty: "visits").first
-    }
 }
 
 class NLRecordsManager: NSObject {
@@ -84,6 +74,8 @@ class NLRecordsManager: NSObject {
                 realm.add(teaching)
                 
                 record.teachingInfo = teaching
+            } else {
+                record.teachingInfo = nil
             }
         }
         
@@ -105,16 +97,8 @@ class NLRecordsManager: NSObject {
         let realm = try! Realm()
         
         try! realm.write {
+            realm.delete(record.visits)
             realm.delete(record)
-        }
-    }
-    
-    
-    func deleteVisitFromRecord(visit: Visit, record: Record) {
-        let realm = try! Realm()
-        
-        try! realm.write {
-            record.visits.removeAtIndex(record.visits.indexOf(visit)!)
         }
     }
     
@@ -141,181 +125,6 @@ class NLRecordsManager: NSObject {
         let settingRecords = realm.objects(Record).filter("setting = '\(setting)'")
         
         return Array(settingRecords)
-    }
-    
-    
-    func recordsWithSupervisor(supervisor: String) -> ([Record]) {
-        let realm = try! Realm()
-        let supervisorRecords = realm.objects(Record).filter("supervisor = '\(supervisor)'")
-        
-        return Array(supervisorRecords)
-    }
-    
-    
-    // MARK: Visits
-    
-    func saveVisitInRecord(record: Record, info: [String: Any?]) -> Visit? {
-        let realm = try! Realm()
-        
-        let newVisit = Visit()
-
-        if let time = info["time"] {
-            let cal = NSCalendar.currentCalendar()
-            var hour = 0
-            var minute = 0
-            cal.getHour(&hour, minute: &minute, second: nil, nanosecond: nil, fromDate: time as! NSDate)
-            let newDate: NSDate = cal.dateBySettingHour(hour, minute: minute, second: 0, ofDate: record.date, options: NSCalendarOptions())!
-            
-            newVisit.time = newDate
-        }
-        if let disease = info["disease"] {
-            newVisit.topic = disease as! String
-        }
-        if let age = info["age"] {
-            newVisit.age = Int(age as! String)!
-        }
-        if let sex = info["sex"] {
-            newVisit.sex = sex as! String!
-        }
-        
-        try! realm.write {
-           record.visits.append(newVisit)
-        }
-        
-        return record.visits.last
-    }
-    
-    
-    // MARK: CSV generator
-    
-    func generateCSVWithRecord(record: Record) -> NSData {
-        let mailString = NSMutableString()
-        let timeFormatter = NSDateFormatter()
-        timeFormatter.locale = NSLocale.currentLocale()
-        timeFormatter.dateStyle = .MediumStyle
-        timeFormatter.timeStyle = .NoStyle
-        
-        if record.teachingInfo == nil {
-            mailString.appendString("Date, Setting, Location, Supervisor\n")
-            
-            let string = "\(timeFormatter.stringFromDate(record.date)), \(record.setting), \(record.location), " + (record.supervisor != nil ? record.supervisor!  : "none") + "\n"
-            mailString.appendString(string)
-            
-            mailString.appendString("Time, Disease, Age, Sex\n")
-            
-            timeFormatter.dateStyle = .NoStyle
-            timeFormatter.timeStyle = .ShortStyle
-            
-            for visit in record.visits {
-                mailString.appendString("\(timeFormatter.stringFromDate(visit.time)), \(visit.topic), \(visit.age), \(visit.sex)\n")
-            }
-        } else {
-            mailString.appendString("Date, Setting, Location, Title, Lecturer, Topic, Supervisor\n")
-            
-            let string = "\(timeFormatter.stringFromDate(record.date)), \(record.setting), \(record.location), \(record.teachingInfo!.title), \(record.teachingInfo!.lecturer), \(record.teachingInfo!.topic), " + (record.supervisor != nil ? record.supervisor!  : "none") + "\n"
-            mailString.appendString(string)
-        }
-        
-        
-        mailString.appendString(" \n")
-        
-        // Converting it to NSData.
-        let data = mailString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
-        
-        return data!
-    }
-    
-    
-    func generateGeneralCSVWithRange(fromDate: NSDate, toDate: NSDate, teaching: Bool) -> NSData {
-        let mailString = NSMutableString()
-        let timeFormatter = NSDateFormatter()
-        timeFormatter.locale = NSLocale.currentLocale()
-        
-        var stats = NLStatsManager.sharedInstance.statsForTopics(fromDate, to: toDate)
-        var i = 0
-        for topic in  stats.0 {
-            mailString.appendString("\(topic), \(stats.1[i])\n")
-            i += 1
-        }
-        
-        if teaching {
-            mailString.appendString(" \n")
-            mailString.appendString("Teaching statistics\n")
-            mailString.appendString("Disease, Teachings attended\n")
-            
-            let stats = NLStatsManager.sharedInstance.statsForTeaching(fromDate, to: toDate)
-            for (topic, count) in stats {
-                mailString.appendString("\(topic), \(count)\n")
-            }
-        }
-        
-        mailString.appendString(" \n")
-        
-        let data = mailString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
-        
-        return data!
-    }
-    
-    
-    func generateDetailedCSVWithRange(fromDate: NSDate, toDate: NSDate, teaching: Bool) -> NSData {
-        let mailString = NSMutableString()
-        
-        mailString.appendString("Detailed statistics for all topics\n")
-        mailString.appendString(" \n")
-
-        
-        let topics = NLSelectionManager.sharedInstance.portfolioTopics()
-        for topic in topics {
-            mailString.appendString(detailedVisitsForTopic(topic, from: fromDate, to: toDate))
-            mailString.appendString(" \n")
-        }
-        
-        if teaching {
-            let teachingRecords = NLStatsManager.sharedInstance.teachingByTopic(fromDate, to: toDate)
-            
-            let dateFormatter = NSDateFormatter()
-            dateFormatter.locale = NSLocale.currentLocale()
-            dateFormatter.dateStyle = .MediumStyle
-            
-            mailString.appendString("Detailed statistics for teaching\n")
-            
-            for topic in topics {
-                if teachingRecords[topic] != nil {
-                    mailString.appendString("\(topic) teachings\n")
-                    mailString.appendString("Date, Title, Lecturer, Location, Supervisor\n")
-                    for record in teachingRecords[topic]! {
-                        mailString.appendString("\(dateFormatter.stringFromDate(record.date)), \(record.teachingInfo!.title), \(record.teachingInfo!.lecturer), \(record.location), " + (record.supervisor != nil ? record.supervisor!  : "none") + "\n")
-                    }
-                    mailString.appendString(" \n")
-                }
-            }
-        }
-        
-        let data = mailString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
-        
-        return data!
-    }
-    
-    
-    func detailedVisitsForTopic(topic: String, from: NSDate, to: NSDate) -> String {
-        let realm = try! Realm()
-        let visitsWithTopic = realm.objects(Visit).filter("topic = '\(topic)' AND time <= %@ AND time >= %@", to, from)
-        
-        let string = NSMutableString()
-        string.appendString("\(topic) cases\n")
-        string.appendString("Date, Age, Sex, Location, Supervisor\n")
-        
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.locale = NSLocale.currentLocale()
-        dateFormatter.dateStyle = .MediumStyle
-        
-        for visit in visitsWithTopic {
-            string.appendString("\(dateFormatter.stringFromDate(visit.time)), \(visit.age), \(visit.sex), \(visit.record!.location), " + (visit.record!.supervisor != nil ? visit.record!.supervisor!  : "none") + "\n")
-
-        }
-        
-        return String(string)
-    }
-    
+    }  
 
 }

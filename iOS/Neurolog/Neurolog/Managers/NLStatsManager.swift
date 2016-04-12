@@ -58,10 +58,10 @@ class NLStatsManager: NSObject {
         let objects = realm.objects(Record).filter("setting = 'Teaching' AND date <= %@ AND date >= %@", to, from)
         
         for record in objects {
-            if result[(record.teachingInfo?.topic)!] != nil {
-                result[(record.teachingInfo?.topic)!] = result[(record.teachingInfo?.topic)!]! + 1
+            if result[record.teachingInfo!.topic] != nil {
+                result[record.teachingInfo!.topic]! += 1
             } else {
-                result[(record.teachingInfo?.topic)!] = 1
+                result[record.teachingInfo!.topic] = 1
             }
         }
         

@@ -113,7 +113,7 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     // MARK: Sharing
     
     func shareRecords(record: Record) {
-        let csv = NLRecordsManager.sharedInstance.generateCSVWithRecord(record)
+        let csv = NLExportManager.sharedInstance.generateCSVWithRecord(record)
         
         func configuredMailComposeViewController() -> MFMailComposeViewController {
             let emailController = MFMailComposeViewController()

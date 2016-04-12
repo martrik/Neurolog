@@ -14,10 +14,14 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
     
     @IBOutlet weak var addNavBarButton: UIBarButtonItem!
     @IBOutlet weak var settingLabel: UILabel!
+    @IBOutlet weak var lecturerLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var topicLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var supervisorLabel: UILabel!
     @IBOutlet weak var approveButton: UIButton!
+    @IBOutlet weak var dateVerticalDistance: NSLayoutConstraint!
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var bigApproveBottom: NSLayoutConstraint!
     internal var record = Record()
@@ -41,35 +45,43 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
     
     func loadUI() {
         // Fill top labels
+        setAttributed(settingLabel, title: "Setting: ", text: record.setting, size: 19)
+
         if record.setting == "Teaching" {
-            setAttributed(settingLabel, title: "Setting: ", text: record.setting)
+            setAttributed(lecturerLabel, title: "Lecturer: ", text: record.teachingInfo!.lecturer, size: 16)
+            setAttributed(topicLabel, title: "Topic: ", text: record.teachingInfo!.topic, size: 16)
+            setAttributed(titleLabel, title: "Title: ", text: record.teachingInfo!.title, size: 16)
+            dateVerticalDistance.constant = CGRectGetMaxY(topicLabel.frame) - CGRectGetMaxY(settingLabel.frame) + 12
         } else {
-            setAttributed(settingLabel, title: "Setting: ", text: record.setting)
+            lecturerLabel.removeFromSuperview()
+            topicLabel.removeFromSuperview()
+            titleLabel.removeFromSuperview()
+            dateVerticalDistance.constant = 8
         }
         
-        setAttributed(locationLabel, title: "Location: ", text: record.location)
+        setAttributed(locationLabel, title: "Location: ", text: record.location, size: 19)
         
         let timeFormatter = NSDateFormatter()
         timeFormatter.dateStyle = .MediumStyle
-        setAttributed(dateLabel, title: "Date: ", text: timeFormatter.stringFromDate(record.date))
+        setAttributed(dateLabel, title: "Date: ", text: timeFormatter.stringFromDate(record.date), size: 19)
         
         if let supervisor = record.supervisor {
-            setAttributed(supervisorLabel, title: "Supervisor: ", text: supervisor)
+            setAttributed(supervisorLabel, title: "Supervisor: ", text: supervisor, size: 19)
         } else {
-            setAttributed(supervisorLabel, title: "Supervisor: ", text: "none")
+            setAttributed(supervisorLabel, title: "Supervisor: ", text: "none", size: 19)
         }
         
         updateApproveButton(false)
         addNavBarButton.enabled = record.setting != "Teaching"
     }
     
-    func setAttributed(label: UILabel!, title: String, text: String) {
+    func setAttributed(label: UILabel!, title: String, text: String, size: CGFloat) {
         var titleAttrib = [String : NSObject]()
-        titleAttrib[NSFontAttributeName] = UIFont.systemFontOfSize(19, weight: UIFontWeightRegular)
+        titleAttrib[NSFontAttributeName] = UIFont.systemFontOfSize(size, weight: UIFontWeightRegular)
         titleAttrib[NSForegroundColorAttributeName] = UIColor.blackColor()
         
         var textAttrib = [String : NSObject]()
-        textAttrib[NSFontAttributeName] = UIFont.systemFontOfSize(16, weight: UIFontWeightLight)
+        textAttrib[NSFontAttributeName] = UIFont.systemFontOfSize(size-3, weight: UIFontWeightLight)
         textAttrib[NSForegroundColorAttributeName] = UIColor.blackColor()
         
         let title = NSMutableAttributedString(string: title, attributes: titleAttrib)
@@ -117,7 +129,7 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
                 otherButtonTitles: [],
                 tapBlock: {(controller, action, buttonIndex) in
                     if (buttonIndex == controller.destructiveButtonIndex) {
-                        NLRecordsManager.sharedInstance.deleteVisitFromRecord(self.record.visits[indexPath.row], record: self.record)
+                        NLVisitsManager.sharedInstance.deleteVisitFromRecord(self.record.visits[indexPath.row], record: self.record)
                         self.table.reloadData()
                     }
                     else if (buttonIndex == controller.cancelButtonIndex) {
@@ -125,8 +137,11 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
                     }
             })
         })
+        let editRowAction = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "Edit", handler:{action, indexpath in
+            self.performSegueWithIdentifier("NLEditVisit", sender: self.record.visits[indexPath.row])
+        })
         
-        return [deleteRowAction];
+        return [deleteRowAction, editRowAction];
     }
     
 
@@ -198,9 +213,18 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
             let recordPC = addRecord.popoverPresentationController
             recordPC?.delegate = self
         }
-        if segue.identifier == "NLAddVisitSegue" {
+        else if segue.identifier == "NLAddVisitSegue" {
             let dest = segue.destinationViewController as! NLAddVisitVC
             dest.record = record
+        }
+        else if let editVisit = segue.destinationViewController as? NLAddVisitVC {
+            editVisit.edittingVisit = sender as? Visit
+            editVisit.record = record
+            editVisit.didDismiss = { () -> Void in
+                self.table.reloadData()
+            }
+            let visitVC = editVisit.popoverPresentationController
+            visitVC?.delegate = self
         }
     }
     

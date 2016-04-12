@@ -25,9 +25,12 @@
 		41A003821C9AD0E1009A2B5F /* NLVisitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A003801C9AD0E1009A2B5F /* NLVisitCell.xib */; };
 		41A7C58D1C9DE2E400837429 /* NLColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7C58C1C9DE2E400837429 /* NLColorExtension.swift */; };
 		41AC4B341C9819E70094B489 /* NLAddVisitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AC4B331C9819E70094B489 /* NLAddVisitVC.swift */; };
+		41C2305B1CBC0EE900A65D7D /* NLStatsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C2305A1CBC0EE900A65D7D /* NLStatsManagerTests.swift */; };
 		41CC6C2C1C9F449F00A5D17C /* NLStatsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC6C2B1C9F449F00A5D17C /* NLStatsManager.swift */; };
 		41CC6C311C9F480900A5D17C /* NLStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC6C301C9F480900A5D17C /* NLStatsView.swift */; };
 		41D914B81C9D70AB003AFE0D /* SignatureVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D914B71C9D70AB003AFE0D /* SignatureVC.xib */; };
+		41DE081D1CBD643E005CB812 /* NLVisitsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE081C1CBD643E005CB812 /* NLVisitsManager.swift */; };
+		41DE081F1CBD6549005CB812 /* NLExportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE081E1CBD6549005CB812 /* NLExportManager.swift */; };
 		41E451001C976DA400A8F1E1 /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E450FF1C976DA400A8F1E1 /* SwiftNotice.swift */; };
 		41E451021C97754300A8F1E1 /* NLDetailRecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E451011C97754300A8F1E1 /* NLDetailRecordVC.swift */; };
 		41F059181CAEDFC2008D3E4C /* NLSharingOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F059171CAEDFC2008D3E4C /* NLSharingOptionsVC.swift */; };
@@ -92,10 +95,13 @@
 		41A003801C9AD0E1009A2B5F /* NLVisitCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NLVisitCell.xib; sourceTree = "<group>"; };
 		41A7C58C1C9DE2E400837429 /* NLColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLColorExtension.swift; sourceTree = "<group>"; };
 		41AC4B331C9819E70094B489 /* NLAddVisitVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLAddVisitVC.swift; sourceTree = "<group>"; };
+		41C2305A1CBC0EE900A65D7D /* NLStatsManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLStatsManagerTests.swift; sourceTree = "<group>"; };
 		41CC6C2B1C9F449F00A5D17C /* NLStatsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLStatsManager.swift; sourceTree = "<group>"; };
 		41CC6C301C9F480900A5D17C /* NLStatsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLStatsView.swift; sourceTree = "<group>"; };
 		41D914B61C9D6E0E003AFE0D /* Neurolog-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Neurolog-Bridging-Header.h"; sourceTree = "<group>"; };
 		41D914B71C9D70AB003AFE0D /* SignatureVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignatureVC.xib; sourceTree = "<group>"; };
+		41DE081C1CBD643E005CB812 /* NLVisitsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLVisitsManager.swift; sourceTree = "<group>"; };
+		41DE081E1CBD6549005CB812 /* NLExportManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLExportManager.swift; sourceTree = "<group>"; };
 		41E450FF1C976DA400A8F1E1 /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = "<group>"; };
 		41E451011C97754300A8F1E1 /* NLDetailRecordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLDetailRecordVC.swift; sourceTree = "<group>"; };
 		41F059171CAEDFC2008D3E4C /* NLSharingOptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLSharingOptionsVC.swift; sourceTree = "<group>"; };
@@ -223,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				415E24FC1CBA68DE00E5FE3F /* NLRecordsManagerTests.swift */,
+				41C2305A1CBC0EE900A65D7D /* NLStatsManagerTests.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -232,7 +239,9 @@
 			children = (
 				4141A3F51C8CC98F00454754 /* NLSelectionDataManger.swift */,
 				419D9A441C96290000276A2F /* NLRecordsManager.swift */,
+				41DE081C1CBD643E005CB812 /* NLVisitsManager.swift */,
 				41CC6C2B1C9F449F00A5D17C /* NLStatsManager.swift */,
+				41DE081E1CBD6549005CB812 /* NLExportManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -600,7 +609,9 @@
 				41E451021C97754300A8F1E1 /* NLDetailRecordVC.swift in Sources */,
 				411D9F2D1C883CCB0042D058 /* NLMainVC.swift in Sources */,
 				4141A3F61C8CC98F00454754 /* NLSelectionDataManger.swift in Sources */,
+				41DE081F1CBD6549005CB812 /* NLExportManager.swift in Sources */,
 				41E451001C976DA400A8F1E1 /* SwiftNotice.swift in Sources */,
+				41DE081D1CBD643E005CB812 /* NLVisitsManager.swift in Sources */,
 				41CC6C2C1C9F449F00A5D17C /* NLStatsManager.swift in Sources */,
 				4146E86B1C9D680000254848 /* SignatureVC.swift in Sources */,
 				4146E8631C9D560900254848 /* NLRecordCell.swift in Sources */,
@@ -617,6 +628,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				415E24FD1CBA68DE00E5FE3F /* NLRecordsManagerTests.swift in Sources */,
+				41C2305B1CBC0EE900A65D7D /* NLStatsManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
