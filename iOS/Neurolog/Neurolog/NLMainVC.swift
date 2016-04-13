@@ -32,6 +32,9 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         table.estimatedRowHeight = 60
         table.registerNib(UINib(nibName: "NLRecordCell", bundle: nil), forCellReuseIdentifier: "NLRecordCell")
         
+        
+        print(NLStatsManager.sharedInstance.statsForTopics(NSDate(timeIntervalSince1970: 1), to: NSDate()))
+        
     }
     
     override func viewWillAppear(animated: Bool) {

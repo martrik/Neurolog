@@ -13,7 +13,8 @@ import SwiftRandom
 
 class NLRecordsManagerTests: XCTestCase {
     let manager = NLRecordsManager.sharedInstance
-
+    let visitsManager = NLVisitsManager.sharedInstance
+    
     override func setUp() {
         super.setUp()
     }
@@ -87,7 +88,7 @@ class NLRecordsManagerTests: XCTestCase {
             "sex" : Randoms.randomFakeGender()
         ]
         
-        let visit = manager.saveVisitInRecord(savedRecord, info: info)!
+        let visit = visitsManager.saveVisitInRecord(savedRecord, info: info)!
         
         XCTAssertEqual(visit.topic, info["disease"] as? String)
         XCTAssertEqual(String(visit.age), info["age"] as? String)
