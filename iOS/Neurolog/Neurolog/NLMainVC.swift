@@ -25,16 +25,12 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
         table.delegate = self
         table.dataSource = self
         table.rowHeight = UITableViewAutomaticDimension
         table.estimatedRowHeight = 60
         table.registerNib(UINib(nibName: "NLRecordCell", bundle: nil), forCellReuseIdentifier: "NLRecordCell")
-        
-        
-        print(NLStatsManager.sharedInstance.statsForTopics(NSDate(timeIntervalSince1970: 1), to: NSDate()))
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -101,7 +97,7 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
                         let record = self.data[indexPath.row] as! Record
                         NLRecordsManager.sharedInstance.deleteRecord(record)
                         self.data = NLRecordsManager.sharedInstance.allRecords()
-                        tableView.reloadData()
+                        self.table.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
                     }
                     else if (buttonIndex == controller.cancelButtonIndex) {
                         self.table.setEditing(false, animated: true)

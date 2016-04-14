@@ -20,7 +20,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch-screen" translatesAutoresizingMaskIntoConstraints="NO" id="oR0-2n-GaA">
                                 <rect key="frame" x="0.0" y="-2" width="640" height="1138"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="oR0-2n-GaA" secondAttribute="height" multiplier="1:1.778" id="muY-IX-9Gh"/>
+                                    <constraint firstAttribute="width" secondItem="oR0-2n-GaA" secondAttribute="height" multiplier="1:1.78" id="muY-IX-9Gh"/>
                                 </constraints>
                             </imageView>
                         </subviews>

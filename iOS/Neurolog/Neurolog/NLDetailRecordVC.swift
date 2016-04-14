@@ -109,7 +109,7 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
         
         let timeFormatter = NSDateFormatter()
         timeFormatter.locale = NSLocale.currentLocale()
-        timeFormatter.timeStyle = .MediumStyle
+        timeFormatter.timeStyle = .ShortStyle
         cell.time.text = timeFormatter.stringFromDate(visit.time)
     
         return cell
@@ -130,7 +130,7 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
                 tapBlock: {(controller, action, buttonIndex) in
                     if (buttonIndex == controller.destructiveButtonIndex) {
                         NLVisitsManager.sharedInstance.deleteVisitFromRecord(self.record.visits[indexPath.row], record: self.record)
-                        self.table.reloadData()
+                        self.table.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
                     }
                     else if (buttonIndex == controller.cancelButtonIndex) {
                         self.table.setEditing(false, animated: true)
@@ -190,9 +190,9 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
                 approveButton.hidden = false                
             } else {
                 approveButton.hidden = true
+                bigApproveBottom.constant = 0
             }
-        }
-        else {
+        } else {
             approveButton.hidden = true
             bigApproveBottom.constant = -50
         }

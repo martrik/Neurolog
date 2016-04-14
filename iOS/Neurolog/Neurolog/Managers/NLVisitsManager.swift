@@ -71,6 +71,7 @@ class NLVisitsManager: NSObject {
         
         try! realm.write {
             record.visits.removeAtIndex(record.visits.indexOf(visit)!)
+            realm.delete(visit)
         }
     }
 }

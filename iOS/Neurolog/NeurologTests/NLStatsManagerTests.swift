@@ -43,7 +43,6 @@ class NLStatsManagerTests: XCTestCase {
             count += num
         }
         
-        
         XCTAssertEqual(count, realm.objects(Visit).count)
     }
     

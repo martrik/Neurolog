@@ -413,6 +413,7 @@
 				TargetAttributes = {
 					411D9F261C883CCB0042D058 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = L3S27993CC;
 					};
 					411D9F3A1C883CCB0042D058 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -763,6 +764,7 @@
 			baseConfigurationReference = C6DB1DC0701425B780C5DBAD /* Pods-Neurolog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -780,6 +782,7 @@
 			baseConfigurationReference = 315F85B3F6F2C7CE72A32804 /* Pods-Neurolog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
