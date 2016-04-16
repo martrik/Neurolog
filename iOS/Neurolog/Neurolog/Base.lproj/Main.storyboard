@@ -402,6 +402,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Add case" id="pGi-H6-hO2">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="HnM-98-ccN">
+                            <connections>
+                                <action selector="didTapCancel:" destination="blI-DO-O8H" id="kC1-wL-XXW"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="xkP-Qg-Kew">
                             <connections>
                                 <action selector="didTapSave:" destination="blI-DO-O8H" id="aoi-Ol-7gb"/>

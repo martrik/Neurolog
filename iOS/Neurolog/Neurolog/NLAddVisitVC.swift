@@ -67,6 +67,7 @@ class NLAddVisitVC: FormViewController {
             if edittingVisit != nil {
                 NLVisitsManager.sharedInstance.updateVisit(edittingVisit!, record: record, info: form.values())
                 if let completion = didDismiss {
+                    self.noticeSuccess("Updated!")
                     completion()
                 }
                 self.dismissViewControllerAnimated(true, completion: nil)
@@ -91,6 +92,9 @@ class NLAddVisitVC: FormViewController {
     }
     
 
+    @IBAction func didTapCancel(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 
