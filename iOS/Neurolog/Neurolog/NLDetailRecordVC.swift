@@ -117,6 +117,7 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         table.deselectRowAtIndexPath(indexPath, animated: true)
+        self.performSegueWithIdentifier("NLEditVisit", sender: self.record.visits[indexPath.row])
     }
     
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
@@ -137,13 +138,10 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
                     }
             })
         })
-        let editRowAction = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "Edit", handler:{action, indexpath in
-            self.performSegueWithIdentifier("NLEditVisit", sender: self.record.visits[indexPath.row])
-        })
-        
-        return [deleteRowAction, editRowAction];
-    }
     
+        return [deleteRowAction];
+    }
+
 
     // MARK: Approve supervisor
     
