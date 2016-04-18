@@ -5,18 +5,10 @@ import java.util.Date;
 import io.realm.RealmObject;
 
 public class Case extends RealmObject {
-    private Date date;
+    private Date time;
     private String disease;
     private int age;
     private String gender;
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
 
     public String getDisease() {
         return disease;
@@ -40,5 +32,13 @@ public class Case extends RealmObject {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public Date getTime() {
+        return time;
+    }
+
+    public void setTime(Date time) {
+        this.time = time;
     }
 }

@@ -184,6 +184,7 @@ public class AddFragment extends Fragment implements OnFormRowValueChangedListen
 
             realm.beginTransaction();
             Record record = new Record();
+            if (editCheck) record = OptionDialogFragment.record;
 
             if (validate("dateDialog", validateFail, realm)) return super.onOptionsItemSelected(item);
             record.setDate((Date) mChangesMap.get("dateDialog").getValue());
@@ -212,11 +213,10 @@ public class AddFragment extends Fragment implements OnFormRowValueChangedListen
             }
 
             realm.copyToRealm(record);
-            if (editCheck) OptionDialogFragment.record.removeFromRealm();
-            editCheck = false;
             realm.commitTransaction();
 
             mChangesMap.clear();
+            editCheck = false;
 
             Intent i = new Intent(getActivity(), MainActivity.class);
             startActivity(i);

@@ -16,7 +16,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
+
+import com.github.mikephil.charting.charts.HorizontalBarChart;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.utils.ColorTemplate;
+import com.google.gson.Gson;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
@@ -81,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_all, container, false);
-            TextView textView;
             switch (getArguments().getInt(ARG_SECTION_NUMBER)) {
                 case 1:
                     rootView = inflater.inflate(R.layout.fragment_all, container, false);
@@ -98,8 +109,51 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case 2:
                     rootView = inflater.inflate(R.layout.fragment_sum, container, false);
-                    textView = (TextView) rootView.findViewById(R.id.section_label);
-                    textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+                    
+                    //setting chart
+                    HorizontalBarChart settingChart = (HorizontalBarChart) rootView.findViewById(R.id.settingChart);
+                    ArrayList<BarEntry> entries = new ArrayList<>();
+                    ArrayList<String> labels = new ArrayList<>();
+
+                    try (InputStream input = getActivity().getAssets().open("data.json")) {
+                        BufferedReader in = new BufferedReader(new InputStreamReader(input));
+                        Gson gson = new Gson();
+                        Response response = gson.fromJson(in, Response.class);
+                        for (int i = 0; i < response.getSetting().size(); i++) {
+                            int total = realm.where(Record.class).contains("setting", response.getSetting().get(i)).findAll().size();
+                            entries.add(new BarEntry(total, i));
+                            labels.add(response.getSetting().get(i));
+                        }
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+
+                    BarDataSet dataset = new BarDataSet(entries, "Number of records per setting");
+                    BarData data = new BarData(labels, dataset);
+                    settingChart.setData(data);
+                    settingChart.setDrawGridBackground(false);
+                    settingChart.setDrawValueAboveBar(false);
+                    settingChart.setPinchZoom(true);
+                    settingChart.setDescription("");
+                    dataset.setColors(ColorTemplate.COLORFUL_COLORS);
+                    
+                    //age chart
+                    HorizontalBarChart ageChart = (HorizontalBarChart) rootView.findViewById(R.id.ageChart);
+                    entries = new ArrayList<>();
+                    labels = new ArrayList<>();
+                    for (int i = 0; i <= 110; i+=10) {
+                        int total = realm.where(Case.class).between("age", i, i + 9).findAll().size();
+                        entries.add(new BarEntry(total, i / 10));
+                        labels.add(Integer.toString(i));
+                    }
+
+                    BarDataSet agedataset = new BarDataSet(entries, "Number of cases per age range");
+                    BarData agedata = new BarData(labels, agedataset);
+                    ageChart.setData(agedata);
+                    ageChart.setDrawGridBackground(false);
+                    ageChart.setDrawValueAboveBar(false);
+                    ageChart.setPinchZoom(true);
+                    ageChart.setDescription("");
                     break;
             }
             return rootView;

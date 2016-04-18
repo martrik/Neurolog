@@ -7,14 +7,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 
+import com.quemb.qmbform.descriptor.Value;
+
+import java.util.HashMap;
+
 import io.realm.Realm;
 
-public class OptionDialogFragment extends DialogFragment {
-    public static Record record;
-
-    public void setRecord(Record record) {
-        this.record = record;
-    }
+public class CaseDialogFragment extends DialogFragment { //change for cases, then add listener to RecordActivity
+    public static Case newCase;
+    public static HashMap<String, Value<?>> editMap;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -25,7 +26,14 @@ public class OptionDialogFragment extends DialogFragment {
                         switch (which) {
                             case 0:
                                 //Edit
-                                startActivity(new Intent(getActivity(), RecordActivity.class));
+                                editMap = new HashMap<>();
+                                editMap.put("time", new Value<>(newCase.getTime()));
+                                editMap.put("disease", new Value<>(newCase.getDisease()));
+                                editMap.put("age", new Value<>(newCase.getAge()));
+                                editMap.put("gender", new Value<>(newCase.getGender()));
+
+                                CaseFragment.editCheck = true;
+                                startActivity(new Intent(getActivity(), CaseActivity.class));
                                 break;
                             case 1:
                                 //Share
@@ -34,12 +42,11 @@ public class OptionDialogFragment extends DialogFragment {
                                 //Delete
                                 Realm realm = MainActivity.realm;
                                 realm.beginTransaction();
-                                for (Case removeCase : record.getCases())
-                                    removeCase.removeFromRealm();
-                                record.removeFromRealm();
+                                OptionDialogFragment.record.getCases().remove(newCase);
+                                newCase.removeFromRealm();
                                 realm.commitTransaction();
                                 dialog.dismiss();
-                                Intent i = new Intent(getActivity(), MainActivity.class);
+                                Intent i = new Intent(getActivity(), RecordActivity.class);
                                 startActivity(i);
                                 break;
                             case 3:
@@ -51,5 +58,4 @@ public class OptionDialogFragment extends DialogFragment {
                 });
         return builder.create();
     }
-
 }

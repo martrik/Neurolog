@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.quemb.qmbform.descriptor.Value;
@@ -47,6 +49,18 @@ public class RecordActivity extends AppCompatActivity {
             TextView supervisorDisplay = (TextView) findViewById(R.id.supervisorDisplay);
             supervisorDisplay.setText("Supervisor: " + record.getName());
         }
+
+        //Listview stuff here
+        ListView caseList = (ListView) findViewById(R.id.caseList);
+        caseList.setAdapter(new CaseListAdapter(this, R.layout.case_list, OptionDialogFragment.record.getCases()));
+        caseList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                CaseDialogFragment option = new CaseDialogFragment();
+                CaseDialogFragment.newCase = record.getCases().get(position);
+                option.show(getFragmentManager(), "options");
+            }
+        });
     }
 
     @Override

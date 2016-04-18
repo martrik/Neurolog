@@ -1,6 +1,9 @@
 package uk.ac.ucl.zcabrdc.neurolog;
 
+import java.util.ArrayList;
 import java.util.Date;
+
+import io.realm.RealmList;
 import io.realm.RealmObject;
 
 public class Record extends RealmObject {
@@ -12,6 +15,7 @@ public class Record extends RealmObject {
     private String topic = null;
     private Boolean supervisor;
     private String name = null;
+    private RealmList<Case> cases;
 
     public Date getDate() {
         return date;
@@ -75,5 +79,13 @@ public class Record extends RealmObject {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public RealmList<Case> getCases() {
+        return cases;
+    }
+
+    public void setCases(RealmList<Case> cases) {
+        this.cases = cases;
     }
 }
