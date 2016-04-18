@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="uk.ac.ucl.zcabrdc.neurolog.MainActivity">
+    <item
+        android:id="@+id/action_addCase"
+        android:icon="@drawable/ic_add_white_24dp"
+        android:title="@string/action_add"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_edit"
+        android:icon="@drawable/ic_mode_edit_white_24dp"
+        android:title="@string/action_edit"
+        app:showAsAction="ifRoom"/>
+</menu>

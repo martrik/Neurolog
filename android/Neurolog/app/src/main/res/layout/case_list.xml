@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/topicText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dip"
+        android:textColor="#040404"
+        android:typeface="sans"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/patientText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dip"
+        android:layout_below="@id/topicText"
+        android:textColor="#343434"
+        android:textSize="12sp"
+        android:layout_marginTop="1dip" />
+
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dip"
+        android:layout_below="@id/patientText"
+        android:textColor="#343434"
+        android:textSize="12sp"
+        android:layout_marginTop="1dip" />
+
+</RelativeLayout>

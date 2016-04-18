@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="form_cell_background">#FFFFFF</color>
+    <color name="form_cell_disabled">#777777</color>
+    <color name="greenColor">#ff55a14d</color>
+    <color name="redColor">#ffa13b3a</color>
+    <color name="section_cell_background">#FFFFFFFF</color>
+    <color name="section_cell_text">#000000</color>
+    <color name="transparentColor">#00000000</color>
+    <declare-styleable name="Cell"><attr format="color" name="qmbFromSectionBackgroundColor"/><attr format="color" name="qmbFromRowBackgroundColor"/><attr format="color" name="qmbFromRowDividerColor"/><attr format="color" name="qmbFromRowTitleColor"/></declare-styleable>
+    <declare-styleable name="SegmentedGroup"><attr format="dimension" name="sc_corner_radius"/><attr format="dimension" name="sc_border_width"/><attr format="color" name="sc_tint_color"/><attr format="color" name="sc_checked_text_color"/></declare-styleable>
+    <dimen name="cell_padding">10dp</dimen>
+    <dimen name="cell_textView_padding">15dp</dimen>
+    <dimen name="section_padding">6dp</dimen>
+    <string name="app_name">QMBForm</string>
+    <string name="cancel_button_text">Cancel</string>
+    <string name="cm_label">cm</string>
+    <string name="done_button_text">Done</string>
+    <string name="feet_label">feet</string>
+    <string name="height_picker_dialog_title">Select your height</string>
+    <string name="inches_label">inches</string>
+    <string name="msg_check_form">Please check your entries</string>
+    <string name="msg_no_entries">No entries are made</string>
+    <string name="msg_x_is_required">is a required field</string>
+    <string name="nonpositive_number_error">must be greater than zero</string>
+    <string name="test_error"/>
+    <string name="title_no_entries">No entries</string>
+    <string name="validation_invalid_email">is not a valid email</string>
+    <string name="validation_is_required">is required</string>
+</resources>

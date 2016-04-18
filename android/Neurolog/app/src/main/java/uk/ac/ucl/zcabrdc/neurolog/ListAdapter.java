@@ -1,0 +1,42 @@
+package uk.ac.ucl.zcabrdc.neurolog;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
+
+import java.text.SimpleDateFormat;
+
+import io.realm.RealmResults;
+
+public class ListAdapter extends ArrayAdapter<Record> {
+    private int resource;
+    private LayoutInflater inflater;
+    private Context context;
+    public ListAdapter(Context ctx, int resourceId, RealmResults<Record> objects) {
+        super(ctx, resourceId, objects);
+        resource = resourceId;
+        inflater = LayoutInflater.from( ctx );
+        context = ctx;
+    }
+
+    @Override
+    public View getView ( int position, View convertView, ViewGroup parent ) {
+        convertView =  inflater.inflate(resource, null);
+        Record record = getItem(position);
+
+        TextView settingText = (TextView) convertView.findViewById(R.id.settingText);
+        settingText.setText(record.getSetting());
+
+        TextView locationText = (TextView) convertView.findViewById(R.id.locationText);
+        locationText.setText(record.getLocation());
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        TextView dateText = (TextView) convertView.findViewById(R.id.dateText);
+        dateText.setText(dateFormat.format(record.getDate()));
+
+        return convertView;
+    }
+}

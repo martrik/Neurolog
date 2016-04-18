@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\debug\\layout-v11\\abc_screen_content_include.xml",
+        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout-v11\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\debug\\layout-v11\\abc_screen_content_include.xml",
+        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout-v11\\abc_screen_content_include.xml"
+    }
+]

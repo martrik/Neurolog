@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingBottom="45dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="70dp"
+    tools:context="uk.ac.ucl.zcabrdc.neurolog.RecordActivity">
+
+    <TextView
+        android:id="@+id/settingDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dip"
+        android:textColor="#040404"
+        android:typeface="sans"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/dateDisplay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dip"
+        android:layout_below="@id/settingDisplay"
+        android:textColor="#343434"
+        android:textSize="12sp"
+        android:layout_marginTop="1dip" />
+
+    <TextView
+        android:id="@+id/locationDisplay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dip"
+        android:layout_below="@id/dateDisplay"
+        android:textColor="#343434"
+        android:textSize="12sp"
+        android:layout_marginTop="1dip" />
+
+    <TextView
+        android:id="@+id/supervisorDisplay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dip"
+        android:layout_below="@id/locationDisplay"
+        android:textColor="#343434"
+        android:textSize="12sp"
+        android:layout_marginTop="1dip" />
+
+    <ListView
+        android:id="@+id/caseList"
+        android:layout_below="@id/supervisorDisplay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    </ListView>
+
+</LinearLayout>

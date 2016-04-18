@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Neurolog</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_add">Add</string>
+    <string name="action_export">Export</string>
+    <string name="action_edit">Edit</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_add">Add Record</string>
+    <string name="action_save">Save</string>
+    <string name="lb_title">Title</string>
+    <string name="section_general">General</string>
+    <string name="lb_description">Description</string>
+    <string name="section_date">Date</string>
+    <string name="lb_date">Date</string>
+    <string name="lb_date_dialog">Date Dialog</string>
+    <string name="lb_date_inline">Date Inline</string>
+    <string name="section_boolean">Boolean</string>
+    <string name="lb_boolean_check">Check</string>
+    <string name="lb_multi_value">Multiple Value</string>
+    <string name="section_multiValue">Multiple Value</string>
+    <string name="lb_add_new_tag">Add new tag</string>
+    <string name="options">Pick an option.</string>
+    <string-array name="option_array">
+        <item>Edit</item>
+        <item>Share</item>
+        <item>Delete</item>
+        <item>Cancel</item>
+    </string-array>
+    <string name="title_activity_record">Record</string>
+    <string name="title_activity_case">Add Case</string>
+</resources>
