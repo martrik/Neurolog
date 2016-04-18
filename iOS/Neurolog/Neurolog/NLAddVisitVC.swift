@@ -24,7 +24,7 @@ class NLAddVisitVC: FormViewController {
             Section(footer: "Tap on save to store this Case")
             
             <<< TimeRow("time") {
-                $0.title = "Date:"
+                $0.title = "Time:"
                 
                 if edittingVisit != nil {
                     $0.value = edittingVisit!.time
