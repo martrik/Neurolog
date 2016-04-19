@@ -7,6 +7,13 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.github.mikephil.charting.data.BarEntry;
+import com.google.gson.Gson;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 
 import io.realm.RealmResults;
@@ -27,7 +34,9 @@ public class ListAdapter extends ArrayAdapter<Record> {
         convertView =  inflater.inflate(resource, null);
         Record record = getItem(position);
 
+        int index = MainActivity.response.getSetting().indexOf(record.getSetting());
         TextView settingText = (TextView) convertView.findViewById(R.id.settingText);
+        settingText.setTextColor(MainActivity.colours[index]);
         settingText.setText(record.getSetting());
 
         TextView locationText = (TextView) convertView.findViewById(R.id.locationText);

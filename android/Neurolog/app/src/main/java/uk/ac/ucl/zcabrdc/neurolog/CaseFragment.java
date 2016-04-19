@@ -46,7 +46,7 @@ public class CaseFragment extends Fragment implements OnFormRowValueChangedListe
     private FormManager mFormManager;
     private RowDescriptor pickerDescriptor;
     private Toast toast = null;
-    public static String TAG = "AddFragment";
+    public static String TAG = "CaseFragment";
     public static boolean editCheck = false;
 
     public static CaseFragment newInstance() {

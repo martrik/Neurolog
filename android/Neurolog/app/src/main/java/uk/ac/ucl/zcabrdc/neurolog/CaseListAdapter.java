@@ -1,6 +1,7 @@
 package uk.ac.ucl.zcabrdc.neurolog;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +29,7 @@ public class CaseListAdapter extends ArrayAdapter<Case> {
         Case curCase = getItem(position);
 
         TextView topicText = (TextView) convertView.findViewById(R.id.topicText);
+        topicText.setTextColor(Color.argb(255,22,38,191));
         topicText.setText(curCase.getDisease());
 
         TextView patientText = (TextView) convertView.findViewById(R.id.patientText);

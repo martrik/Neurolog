@@ -1,6 +1,7 @@
 package uk.ac.ucl.zcabrdc.neurolog;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -35,6 +36,8 @@ import io.realm.RealmConfiguration;
 
 public class MainActivity extends AppCompatActivity {
     public static Realm realm;
+    public static int[] colours;
+    public static Response response;
     private static Object fragmentManager;
 
     @Override
@@ -57,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
 
         RealmConfiguration realmConfig = new RealmConfiguration.Builder(this).build();
         realm = Realm.getInstance(realmConfig);
+
+        colours = new int[] {Color.argb(255,253,158,8), Color.argb(255,7,158,0), Color.argb(255,22,38,191), Color.argb(255,188,133,0), Color.argb(255,112,8,253)};
     }
 
     @Override
@@ -72,7 +77,9 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(this, AddActivity.class);
                 startActivity(i);
                 return true;
-
+            case R.id.action_export:
+                startActivity(new Intent(this, ExportActivity.class));
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -118,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
                     try (InputStream input = getActivity().getAssets().open("data.json")) {
                         BufferedReader in = new BufferedReader(new InputStreamReader(input));
                         Gson gson = new Gson();
-                        Response response = gson.fromJson(in, Response.class);
+                        response = gson.fromJson(in, Response.class);
                         for (int i = 0; i < response.getSetting().size(); i++) {
                             int total = realm.where(Record.class).contains("setting", response.getSetting().get(i)).findAll().size();
                             entries.add(new BarEntry(total, i));
@@ -135,8 +142,8 @@ public class MainActivity extends AppCompatActivity {
                     settingChart.setDrawValueAboveBar(false);
                     settingChart.setPinchZoom(true);
                     settingChart.setDescription("");
-                    dataset.setColors(ColorTemplate.COLORFUL_COLORS);
-                    
+                    dataset.setColors(MainActivity.colours);
+
                     //age chart
                     HorizontalBarChart ageChart = (HorizontalBarChart) rootView.findViewById(R.id.ageChart);
                     entries = new ArrayList<>();
