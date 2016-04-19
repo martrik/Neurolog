@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Users\Collins\Documents\Neurolog\android\Neurolog\lib\QMBForm\src\main\assets"/></dataSet><dataSet config="release"><source path="C:\Users\Collins\Documents\Neurolog\android\Neurolog\lib\QMBForm\src\release\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/assets"/></dataSet><dataSet config="release"><source path="/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/release/assets"/></dataSet></merger>

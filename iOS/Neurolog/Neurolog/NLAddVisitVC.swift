@@ -60,6 +60,10 @@ class NLAddVisitVC: FormViewController {
                     row.value = edittingVisit!.sex
                 }
             }
+        
+        if edittingVisit != nil {
+            self.title = "Editting case"
+        }
     }
 
     @IBAction func didTapSave(sender: AnyObject) {

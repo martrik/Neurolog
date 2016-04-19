@@ -1,394 +1,590 @@
 [
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_mode_bar.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_mode_bar.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/detail_text_vertical_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/detail_text_vertical_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_search_view.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_search_view.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/abc_simple_dropdown_hint.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_simple_dropdown_hint.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\section_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\section_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/text_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/text_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\section_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\section_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/abc_action_bar_up_container.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_action_bar_up_container.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\button_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\button_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_mode_bar.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_list_menu_item_checkbox.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_checkbox.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\section_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\section_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_simple_dropdown_hint.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_simple_dropdown_hint.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_search_view.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_search_view.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\detail_text_inline_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\detail_text_inline_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\section_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\section_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_bar_up_container.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_bar_up_container.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\button_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\button_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_mode_close_item_material.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_mode_close_item_material.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\spinner_inline_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\spinner_inline_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\detail_text_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\detail_text_inline_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\text_picker_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\text_picker_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_simple_dropdown_hint.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_simple_dropdown_hint.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\edit_text_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\edit_text_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_bar_up_container.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\detail_html_text_vertical_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\detail_html_text_vertical_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_activity_chooser_view_list_item.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/abc_screen_toolbar.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_screen_toolbar.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\detail_text_vertical_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\detail_text_vertical_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/edit_text_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/edit_text_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_menu_item_layout.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_menu_item_layout.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/abc_list_menu_item_checkbox.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_simple_dropdown_hint.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_simple_dropdown_hint.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\spinner_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\spinner_inline_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\text_picker_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\text_picker_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/edit_text_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/edit_text_inline_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_screen_content_include.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_content_include.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\text_picker_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\text_picker_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_activity_chooser_view_include.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_activity_chooser_view_include.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/abc_activity_chooser_view_include.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_activity_chooser_view_include.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\spinner_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\spinner_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\edit_text_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\edit_text_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\height_picker_dialog_metric.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\height_picker_dialog_metric.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\detail_html_text_vertical_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\detail_html_text_vertical_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\edit_text_inline_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\edit_text_inline_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_activity_chooser_view_include.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_activity_chooser_view_include.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\detail_text_vertical_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\detail_text_vertical_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_popup_menu_item_layout.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_popup_menu_item_layout.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_menu_item_layout.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\height_picker_dialog_metric.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\height_picker_dialog_metric.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/section_seperator_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/section_seperator_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_bar_view_list_nav_layout.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/abc_action_mode_close_item_material.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\support_simple_spinner_dropdown_item.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\text_picker_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\text_picker_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_search_view.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_search_view.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_simple_dropdown_hint.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_simple_dropdown_hint.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\integer_slider_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\integer_slider_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/selector_segmented_control_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/selector_segmented_control_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\time_inline_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\time_inline_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_screen_content_include.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_content_include.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\boolean_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\boolean_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_activity_chooser_view_include.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_activity_chooser_view_include.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\edit_text_inline_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\edit_text_inline_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\spinner_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\spinner_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_screen_toolbar.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_toolbar.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/time_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/time_inline_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\detail_text_inline_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\detail_text_inline_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/text_picker_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/text_picker_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\date_inline_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\date_inline_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/abc_action_bar_title_item.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_action_bar_title_item.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_search_dropdown_item_icons_2line.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\height_picker_dialog_metric.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\height_picker_dialog_metric.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_activity_chooser_view.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_activity_chooser_view.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\text_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\text_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_activity_chooser_view_include.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_activity_chooser_view_include.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_mode_close_item_material.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_mode_close_item_material.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\edit_text_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\edit_text_inline_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\selector_segmented_control_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\selector_segmented_control_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\height_picker_dialog_metric.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\height_picker_dialog_metric.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_menu_item_layout.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_menu_item_layout.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_list_menu_item_radio.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_radio.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\detail_text_vertical_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\detail_text_vertical_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/abc_action_menu_item_layout.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_action_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\edit_text_view_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\edit_text_view_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_search_view.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_search_view.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_bar_view_list_nav_layout.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/selector_segmented_control_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/selector_segmented_control_inline_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\text_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\text_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\integer_slider_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\integer_slider_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_list_menu_item_icon.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_icon.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\time_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\time_inline_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\section_seperator_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\section_seperator_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\boolean_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\boolean_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\boolean_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\boolean_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\edit_text_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\edit_text_inline_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\button_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\button_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_screen_toolbar.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_activity_chooser_view.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_activity_chooser_view.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\detail_text_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\detail_text_inline_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\check_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\check_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\date_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\date_inline_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\detail_text_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\detail_text_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_list_menu_item_checkbox.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_checkbox.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_activity_chooser_view.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\button_inline_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\button_inline_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\text_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\text_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_bar_title_item.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_bar_title_item.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/check_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/check_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\check_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\check_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_activity_chooser_view_list_item.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\selector_segmented_control_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\selector_segmented_control_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\detail_text_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\detail_text_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_menu_item_layout.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_list_menu_item_layout.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_layout.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/boolean_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/boolean_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_expanded_menu_layout.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_expanded_menu_layout.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_list_menu_item_radio.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_list_menu_item_radio.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_radio.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\detail_text_vertical_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\detail_text_vertical_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\selector_segmented_control_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\selector_segmented_control_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\edit_text_view_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\edit_text_view_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\spinner_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\spinner_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_menu_layout.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_menu_layout.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\text_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\text_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\selector_segmented_control_inline_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\selector_segmented_control_inline_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/abc_action_menu_layout.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_action_menu_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_bar_title_item.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_bar_title_item.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_list_menu_item_icon.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_menu_layout.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_menu_layout.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\section_seperator_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\section_seperator_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\button_inline_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\button_inline_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\boolean_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\boolean_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\detail_html_text_vertical_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\detail_html_text_vertical_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/edit_text_view_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/edit_text_view_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_list_menu_item_layout.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_layout.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/section_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/section_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_mode_bar.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_mode_bar.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\button_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\button_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_screen_toolbar.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_toolbar.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_activity_chooser_view.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_screen_simple_overlay_action_mode.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\check_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\check_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\spinner_inline_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\spinner_inline_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_screen_simple_overlay_action_mode.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_list_menu_item_icon.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_icon.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/abc_action_bar_view_list_nav_layout.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_action_bar_view_list_nav_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_screen_simple.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_simple.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\detail_text_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\detail_text_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_screen_simple.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_simple.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\edit_text_view_inline_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\edit_text_view_inline_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\button_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\button_inline_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_screen_content_include.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_content_include.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_bar_title_item.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\edit_text_view_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\edit_text_view_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/abc_list_menu_item_radio.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_list_menu_item_radio.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\date_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\date_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/abc_action_mode_bar.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_action_mode_bar.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\selector_segmented_control_inline_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\selector_segmented_control_inline_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\check_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\check_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\support_simple_spinner_dropdown_item.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/integer_slider_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/integer_slider_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_expanded_menu_layout.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_expanded_menu_layout.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_bar_up_container.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_bar_up_container.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\detail_text_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\detail_text_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\time_inline_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\time_inline_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_list_menu_item_layout.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_popup_menu_item_layout.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_popup_menu_item_layout.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/height_picker_dialog_metric.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/height_picker_dialog_metric.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\section_seperator_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\section_seperator_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/date_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/date_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_search_dropdown_item_icons_2line.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_expanded_menu_layout.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_expanded_menu_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\date_inline_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\date_inline_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_list_menu_item_radio.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\edit_text_view_inline_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\edit_text_view_inline_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\selector_segmented_control_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\selector_segmented_control_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_screen_simple_overlay_action_mode.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\spinner_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\spinner_field_cell.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\integer_slider_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\integer_slider_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_menu_layout.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\date_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\date_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/abc_list_menu_item_layout.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_list_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\edit_text_field_cell.xml",
-        "source": "C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\edit_text_field_cell.xml"
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\selector_segmented_control_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\selector_segmented_control_inline_field_cell.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/detail_text_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/detail_text_field_cell.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_bar_title_item.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_menu_layout.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/abc_popup_menu_item_layout.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\button_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\button_inline_field_cell.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\detail_html_text_vertical_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\detail_html_text_vertical_field_cell.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_list_menu_item_layout.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/abc_screen_simple.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/detail_html_text_vertical_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/detail_html_text_vertical_field_cell.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/date_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/date_inline_field_cell.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/abc_search_view.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_search_view.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_mode_bar.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_screen_toolbar.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/button_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/button_field_cell.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\spinner_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\spinner_inline_field_cell.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_list_menu_item_icon.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/detail_text_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/detail_text_inline_field_cell.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_screen_simple.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_screen_simple.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/button_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/button_inline_field_cell.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\edit_text_view_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\edit_text_view_inline_field_cell.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/abc_list_menu_item_icon.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/spinner_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/spinner_field_cell.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_screen_content_include.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\edit_text_view_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\edit_text_view_field_cell.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/abc_activity_chooser_view.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\date_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\date_field_cell.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\selector_segmented_control_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\selector_segmented_control_inline_field_cell.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_expanded_menu_layout.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_bar_up_container.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\time_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\time_inline_field_cell.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\section_seperator_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\section_seperator_cell.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/abc_expanded_menu_layout.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\date_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\date_inline_field_cell.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/edit_text_view_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/edit_text_view_inline_field_cell.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\edit_text_view_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\edit_text_view_inline_field_cell.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\integer_slider_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\integer_slider_field_cell.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\date_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\OpenSCAD\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\date_field_cell.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/abc_screen_content_include.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_screen_content_include.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\build\\intermediates\\res\\merged\\release\\layout\\edit_text_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/C:\\Users\\Collins\\Documents\\Neurolog\\android\\Neurolog\\lib\\QMBForm\\src\\main\\res\\layout\\edit_text_field_cell.xml"
+    },
+    {
+        "merged": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/build/intermediates/res/merged/release/layout/spinner_inline_field_cell.xml",
+        "source": "/Users/Marti/Documents/UCL/1yr/term2/OOP/Neurolog/android/Neurolog/lib/QMBForm/src/main/res/layout/spinner_inline_field_cell.xml"
     }
 ]
