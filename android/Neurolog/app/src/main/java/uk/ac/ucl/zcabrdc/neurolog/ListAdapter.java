@@ -46,6 +46,10 @@ public class ListAdapter extends ArrayAdapter<Record> {
         TextView dateText = (TextView) convertView.findViewById(R.id.dateText);
         dateText.setText(dateFormat.format(record.getDate()));
 
+        TextView caseNumber = (TextView) convertView.findViewById(R.id.caseNumber);
+        caseNumber.setText(Integer.toString(record.getCases().size()));
+        if (record.getSetting().equals("Teaching")) caseNumber.setVisibility(View.INVISIBLE);
+
         return convertView;
     }
 }

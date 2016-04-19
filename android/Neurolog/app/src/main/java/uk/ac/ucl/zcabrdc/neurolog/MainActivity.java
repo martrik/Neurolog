@@ -19,10 +19,14 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.github.mikephil.charting.charts.HorizontalBarChart;
+import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.formatter.ValueFormatter;
 import com.github.mikephil.charting.utils.ColorTemplate;
+import com.github.mikephil.charting.utils.ViewPortHandler;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
@@ -61,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         RealmConfiguration realmConfig = new RealmConfiguration.Builder(this).build();
         realm = Realm.getInstance(realmConfig);
 
-        colours = new int[] {Color.argb(255,253,158,8), Color.argb(255,7,158,0), Color.argb(255,22,38,191), Color.argb(255,188,133,0), Color.argb(255,112,8,253)};
+        colours = new int[] {Color.argb(255,253,158,8), Color.argb(255,7,158,0), Color.argb(255, 0x16, 0x26, 0xbf), Color.argb(255,188,133,0), Color.argb(0xff, 0x70, 0x8, 0xfd)};
     }
 
     @Override
@@ -137,12 +141,24 @@ public class MainActivity extends AppCompatActivity {
 
                     BarDataSet dataset = new BarDataSet(entries, "Number of records per setting");
                     BarData data = new BarData(labels, dataset);
+                    data.setValueFormatter(new ValueFormatter() {
+                        @Override
+                        public String getFormattedValue(float value, Entry entry, int dataSetIndex, ViewPortHandler viewPortHandler) {
+                            return Integer.toString((int) value);
+                        }
+                    });
+                    data.setValueTextSize(10f);
+                    data.setValueTextColor(0xfff0f0f0);
                     settingChart.setData(data);
                     settingChart.setDrawGridBackground(false);
                     settingChart.setDrawValueAboveBar(false);
-                    settingChart.setPinchZoom(true);
+                    settingChart.setPinchZoom(false);
                     settingChart.setDescription("");
                     dataset.setColors(MainActivity.colours);
+
+                    XAxis xAxis = settingChart.getXAxis();
+                    xAxis.setDrawGridLines(false);
+                    xAxis.setDrawAxisLine(false);
 
                     //age chart
                     HorizontalBarChart ageChart = (HorizontalBarChart) rootView.findViewById(R.id.ageChart);
@@ -156,11 +172,24 @@ public class MainActivity extends AppCompatActivity {
 
                     BarDataSet agedataset = new BarDataSet(entries, "Number of cases per age range");
                     BarData agedata = new BarData(labels, agedataset);
+                    agedata.setValueFormatter(new ValueFormatter() {
+                        @Override
+                        public String getFormattedValue(float value, Entry entry, int dataSetIndex, ViewPortHandler viewPortHandler) {
+                            return Integer.toString((int) value);
+                        }
+                    });
+                    agedata.setValueTextSize(8f);
+                    agedata.setValueTextColor(0xfff0f0f0);
                     ageChart.setData(agedata);
                     ageChart.setDrawGridBackground(false);
                     ageChart.setDrawValueAboveBar(false);
                     ageChart.setPinchZoom(true);
                     ageChart.setDescription("");
+                    agedataset.setColor(0xFFFF4200);
+
+                    XAxis ageAxis = ageChart.getXAxis();
+                    ageAxis.setDrawGridLines(false);
+                    ageAxis.setDrawAxisLine(false);
                     break;
             }
             return rootView;

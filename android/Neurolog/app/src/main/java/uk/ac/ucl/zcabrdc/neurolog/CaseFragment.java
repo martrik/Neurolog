@@ -83,7 +83,7 @@ public class CaseFragment extends Fragment implements OnFormRowValueChangedListe
             sectionDescriptor.addRow(RowDescriptor.newInstance("time", RowDescriptor.FormRowDescriptorTypeTime, "Time:", newMap.get("time")));
         else
             sectionDescriptor.addRow(RowDescriptor.newInstance("time", RowDescriptor.FormRowDescriptorTypeTime, "Time:"));
-        mChangesMap.put("time", new Value<>(null));
+        mChangesMap.put("time", new Value<>(new Date()));
 
         //disease
         if (editCheck)

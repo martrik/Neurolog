@@ -31,9 +31,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
@@ -92,7 +95,7 @@ public class AddFragment extends Fragment implements OnFormRowValueChangedListen
             sectionDescriptor.addRow(RowDescriptor.newInstance("dateDialog", RowDescriptor.FormRowDescriptorTypeDate, "Date:", newMap.get("dateDialog")));
         else
             sectionDescriptor.addRow(RowDescriptor.newInstance("dateDialog", RowDescriptor.FormRowDescriptorTypeDate, "Date:"));
-        mChangesMap.put("dateDialog", new Value<Date>(null));
+        mChangesMap.put("dateDialog", new Value<>(new Date()));
 
         //location
         if (editCheck)

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#61cddb</color>
-    <color name="colorPrimaryDark">#54b2be</color>
+    <color name="colorPrimary">#1626df</color>
+    <color name="colorPrimaryDark">#1626bf</color>
     <color name="colorTab">#fafafa</color>
     <color name="colorBlack">#000000</color>
-    <color name="colorAccent">#61cddb</color>
+    <color name="colorAccent">#1626df</color>
     <color name="black25PercentColor">#404040</color>
     <color name="black50PercentColor">#808080</color>
     <color name="black75PercentColor">#c0c0c0</color>

@@ -36,7 +36,7 @@ public class RecordActivity extends AppCompatActivity {
         record = OptionDialogFragment.record;
 
         TextView settingDisplay = (TextView) findViewById(R.id.settingDisplay);
-        settingDisplay.setText("Setting: " + record.getSetting());
+        settingDisplay.setText(record.getSetting());
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         TextView dateDisplay = (TextView) findViewById(R.id.dateDisplay);

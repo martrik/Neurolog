@@ -19,6 +19,7 @@ public class CaseActivity extends AppCompatActivity {
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         setContentView(R.layout.activity_case);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (CaseFragment.editCheck) toolbar.setTitle("Update Case");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

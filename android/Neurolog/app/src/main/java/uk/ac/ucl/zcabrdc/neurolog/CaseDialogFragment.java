@@ -29,16 +29,13 @@ public class CaseDialogFragment extends DialogFragment { //change for cases, the
                                 editMap = new HashMap<>();
                                 editMap.put("time", new Value<>(newCase.getTime()));
                                 editMap.put("disease", new Value<>(newCase.getDisease()));
-                                editMap.put("age", new Value<>(newCase.getAge()));
+                                editMap.put("age", new Value<>(Integer.toString(newCase.getAge())));
                                 editMap.put("gender", new Value<>(newCase.getGender()));
 
                                 CaseFragment.editCheck = true;
                                 startActivity(new Intent(getActivity(), CaseActivity.class));
                                 break;
                             case 1:
-                                //Share
-                                break;
-                            case 2:
                                 //Delete
                                 Realm realm = MainActivity.realm;
                                 realm.beginTransaction();
@@ -49,7 +46,7 @@ public class CaseDialogFragment extends DialogFragment { //change for cases, the
                                 Intent i = new Intent(getActivity(), RecordActivity.class);
                                 startActivity(i);
                                 break;
-                            case 3:
+                            case 2:
                                 //Cancel
                                 dialog.dismiss();
                                 break;

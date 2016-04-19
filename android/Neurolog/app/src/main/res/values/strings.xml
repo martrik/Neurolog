@@ -22,7 +22,6 @@
     <string name="options">Pick an option.</string>
     <string-array name="option_array">
         <item>Edit</item>
-        <item>Share</item>
         <item>Delete</item>
         <item>Cancel</item>
     </string-array>

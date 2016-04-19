@@ -7,6 +7,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 
+import com.quemb.qmbform.descriptor.Value;
+
+import java.util.HashMap;
+
 import io.realm.Realm;
 
 public class OptionDialogFragment extends DialogFragment {
@@ -25,12 +29,25 @@ public class OptionDialogFragment extends DialogFragment {
                         switch (which) {
                             case 0:
                                 //Edit
-                                startActivity(new Intent(getActivity(), RecordActivity.class));
+                                if (record.getSetting().equals("Teaching")) {
+                                    RecordActivity.editMap = new HashMap<>();
+                                    HashMap<String, Value<?>> editMap = RecordActivity.editMap;
+                                    editMap.put("dateDialog", new Value<>(record.getDate()));
+                                    editMap.put("location", new Value<>(record.getLocation()));
+                                    editMap.put("setting", new Value<>(record.getSetting()));
+                                    editMap.put("title", new Value<>(record.getTitle()));
+                                    editMap.put("lecturer", new Value<>(record.getLecturer()));
+                                    editMap.put("topic", new Value<>(record.getTopic()));
+                                    editMap.put("supervisor", new Value<>(record.getSupervisor()));
+                                    editMap.put("name", new Value<>(record.getName()));
+
+                                    AddFragment.editCheck = true;
+                                    startActivity(new Intent(getActivity(), AddActivity.class));
+                                }
+                                else
+                                    startActivity(new Intent(getActivity(), RecordActivity.class));
                                 break;
                             case 1:
-                                //Share
-                                break;
-                            case 2:
                                 //Delete
                                 Realm realm = MainActivity.realm;
                                 realm.beginTransaction();
@@ -42,7 +59,7 @@ public class OptionDialogFragment extends DialogFragment {
                                 Intent i = new Intent(getActivity(), MainActivity.class);
                                 startActivity(i);
                                 break;
-                            case 3:
+                            case 2:
                                 //Cancel
                                 dialog.dismiss();
                                 break;
