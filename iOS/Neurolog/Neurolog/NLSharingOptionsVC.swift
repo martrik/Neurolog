@@ -39,6 +39,7 @@ class NLSharingOptionsVC: FormViewController, MFMailComposeViewControllerDelegat
     
     func configuredMailComposeViewController() -> MFMailComposeViewController {
         let emailController = MFMailComposeViewController()
+        emailController.navigationBar.tintColor = UIColor.whiteColor()
         emailController.mailComposeDelegate = self
         emailController.setSubject("Shared records")
         emailController.setMessageBody("", isHTML: false)
