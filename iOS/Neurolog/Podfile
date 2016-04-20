@@ -19,7 +19,7 @@ end
 def testing_pods
   pod 'SwiftyJSON'
   pod 'RealmSwift'
-  pod  'SwiftRandom'
+  pod 'SwiftRandom'
 end
 
 

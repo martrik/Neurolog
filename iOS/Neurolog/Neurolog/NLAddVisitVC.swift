@@ -21,7 +21,7 @@ class NLAddVisitVC: FormViewController {
         
         form  +++=
             
-            Section(footer: "Tap on save to store this Case")
+            Section(footer: "Tap on save to store this case")
             
             <<< TimeRow("time") {
                 $0.title = "Time:"
@@ -66,6 +66,7 @@ class NLAddVisitVC: FormViewController {
         }
     }
 
+    
     @IBAction func didTapSave(sender: AnyObject) {
         if form.values()["disease"]! != nil && form.values()["age"]! != nil && form.values()["sex"]! != nil {
             if edittingVisit != nil {
@@ -77,10 +78,12 @@ class NLAddVisitVC: FormViewController {
                 self.dismissViewControllerAnimated(true, completion: nil)
             } else {
                 NLVisitsManager.sharedInstance.saveVisitInRecord(record, info: form.values())
-                self.noticeSuccess("Saved!")
-                self.navigationController?.popViewControllerAnimated(true)
+                if let completion = didDismiss {
+                    self.noticeSuccess("Saved!")
+                    completion()
+                }
+                self.dismissViewControllerAnimated(true, completion: nil)
             }
-
         } else {
             self.noticeInfo("Missing info")
         }
@@ -96,7 +99,7 @@ class NLAddVisitVC: FormViewController {
     }
     
 
-    @IBAction func didTapCancel(sender: AnyObject) {
+    @IBAction func didTapCancel() {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     /*
