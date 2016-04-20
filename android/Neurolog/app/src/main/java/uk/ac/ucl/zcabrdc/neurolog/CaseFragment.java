@@ -180,6 +180,8 @@ public class CaseFragment extends Fragment implements OnFormRowValueChangedListe
             if (validate("gender", realm)) return super.onOptionsItemSelected(item);
             newCase.setGender((String) mChangesMap.get("gender").getValue());
 
+            newCase.setRecord(record);
+
             if (!editCheck)
                 record.getCases().add(newCase);
             else

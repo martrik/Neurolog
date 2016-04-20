@@ -25,6 +25,7 @@ import com.quemb.qmbform.descriptor.SectionDescriptor;
 import com.quemb.qmbform.descriptor.Value;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 
@@ -110,18 +111,28 @@ public class ExportFragment extends Fragment implements OnFormRowValueChangedLis
             Date fromDate = (Date) mChangesMap.get("fromDate").getValue();
             Date toDate = (Date) mChangesMap.get("toDate").getValue();
             Boolean teaching = (Boolean) mChangesMap.get("teaching").getValue();
+            Boolean detailed = (Boolean) mChangesMap.get("report").getValue();
 
-
+            Intent sendIntent = new Intent(Intent.ACTION_SEND_MULTIPLE);
+            sendIntent.putExtra(Intent.EXTRA_SUBJECT, "Person Details");
+            sendIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 
             File newFile = new File(CSVManager.generateGeneralCSV(fromDate, toDate, teaching).getAbsolutePath());
             Uri contentUri = FileProvider.getUriForFile(getActivity(), "uk.ac.ucl.zcabrdc.neurolog.fileprovider", newFile);
 
 
-            Intent sendIntent = new Intent(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_SUBJECT, "Person Details");
-            sendIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            if (detailed) {
+                File newFileDetailed = new File(CSVManager.generateDetailedCSV(fromDate, toDate, teaching).getAbsolutePath());
+                Uri contentUriDetailed = FileProvider.getUriForFile(getActivity(), "uk.ac.ucl.zcabrdc.neurolog.fileprovider", newFileDetailed);
+                ArrayList<Uri> uris = new ArrayList<>();
+                uris.add(contentUri);
+                uris.add(contentUriDetailed);
+                sendIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
+            } else {
+                sendIntent.putExtra(Intent.EXTRA_STREAM, contentUri);
+            }
+
             sendIntent.setDataAndType(contentUri, getActivity().getContentResolver().getType(contentUri));
-            sendIntent.putExtra(Intent.EXTRA_STREAM, contentUri);
             sendIntent.setType("text/html");
             this.getActivity().startActivity(Intent.createChooser(sendIntent,
                     "Send Email Using: "));
