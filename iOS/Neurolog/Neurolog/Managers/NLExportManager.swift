@@ -55,6 +55,9 @@ class NLExportManager: NSObject {
         let timeFormatter = NSDateFormatter()
         timeFormatter.locale = NSLocale.currentLocale()
         
+        mailString.appendString("Topic, Number of cases\n")
+
+        
         var stats = NLStatsManager.sharedInstance.statsForTopics(fromDate, to: toDate)
         var i = 0
         for topic in  stats.0 {
