@@ -53,7 +53,7 @@ class NLAddVisitVC: FormViewController {
                 }
             }
             <<< ActionSheetRow<String>("sex") { (row : ActionSheetRow<String>) -> Void in
-                row.title = "Sex:"
+                row.title = "Gender:"
                 row.options = ["Female", "Male"]
                 
                 if edittingVisit != nil {

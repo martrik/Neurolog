@@ -105,7 +105,7 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
         
         let visit = record.visits[indexPath.row]
         cell.disease.text = visit.topic
-        cell.info.text =  "Sex: " + visit.sex + " Age: " + String(visit.age)
+        cell.info.text =  "Gender: " + visit.sex + " Age: " + String(visit.age)
         
         let timeFormatter = NSDateFormatter()
         timeFormatter.locale = NSLocale.currentLocale()

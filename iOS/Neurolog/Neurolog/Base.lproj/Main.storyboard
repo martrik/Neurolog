@@ -32,9 +32,9 @@
                                 <rect key="frame" x="-0.5" y="58" width="375" height="545"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIN-tf-zo4" customClass="NLStatsView" customModule="Neurolog" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="850"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="500" id="qWb-hU-omT"/>
+                                            <constraint firstAttribute="height" constant="850" id="qWb-hU-omT"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -488,7 +488,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dNx-3e-TeC"/>
+        <segue reference="GXa-d7-RMs"/>
         <segue reference="2LF-uL-vv8"/>
     </inferredMetricsTieBreakers>
 </document>

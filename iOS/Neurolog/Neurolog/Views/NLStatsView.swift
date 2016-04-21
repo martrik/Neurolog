@@ -18,9 +18,28 @@ class NLStatsView: UIView {
         for view in self.subviews {
             view.removeFromSuperview()
         }
-        clinicalSettingsGraph(CGRectMake(CGRectGetWidth(self.frame)*(0.5-0.45), 20, CGRectGetWidth(self.frame)*0.95, 200))
-        ageRangesGraph(CGRectMake(CGRectGetWidth(self.frame)*(0.5-0.45), 220, CGRectGetWidth(self.frame)*0.95, 250))
-        print(NLStatsManager.sharedInstance.statsForAgeRanges())
+        
+        let settingLabel = UILabel(frame: CGRectMake(20, 15, 250, 20))
+        settingLabel.text = "Records per clinical setting:"
+        settingLabel.font = UIFont.systemFontOfSize(16)
+        self.addSubview(settingLabel)
+        
+        clinicalSettingsGraph(CGRectMake(CGRectGetWidth(self.frame)*(0.5-0.45), 40, CGRectGetWidth(self.frame)*0.95, 180))
+        
+        let ageLabel = UILabel(frame: CGRectMake(20, 230, 250, 20))
+        ageLabel.text = "Cases per age range:"
+        ageLabel.font = UIFont.systemFontOfSize(16)
+        self.addSubview(ageLabel)
+        
+        ageRangesGraph(CGRectMake(CGRectGetWidth(self.frame)*(0.5-0.45), 260, CGRectGetWidth(self.frame)*0.95, 250))
+        
+        
+        let topicLabel = UILabel(frame: CGRectMake(20, 520, 250, 20))
+        topicLabel.text = "Cases per topic:"
+        topicLabel.font = UIFont.systemFontOfSize(16)
+        self.addSubview(topicLabel)
+        
+        visitTopicsGraph(CGRectMake(CGRectGetWidth(self.frame)*(0.5-0.45), 540, CGRectGetWidth(self.frame)*0.95, 300))
     }
     
     func clinicalSettingsGraph(frame: CGRect) {
@@ -28,10 +47,18 @@ class NLStatsView: UIView {
         drawBarGraphWithData(yValues.reverse(), xValues: xValues.reverse(), frame: frame, description:  "Records per setting", colors: UIColor.graphColors().reverse())
     }
     
+    
     func ageRangesGraph(frame: CGRect) {
         let (xValues, yValues) = NLStatsManager.sharedInstance.statsForAgeRanges()
         drawBarGraphWithData(yValues.reverse(), xValues: xValues.reverse(), frame: frame, description:  "Visits per age range", colors: nil)
     }
+    
+    
+    func visitTopicsGraph(frame: CGRect) {
+        let (xValues, yValues) = NLStatsManager.sharedInstance.statsForTopics(NSDate(timeIntervalSince1970: 0), to: NSDate())
+        drawBarGraphWithData(yValues.reverse(), xValues: xValues.reverse(), frame: frame, description:  "Cases per topic", colors: nil)
+    }
+    
     
     func drawBarGraphWithData(yValues: [Int], xValues: [String], frame: CGRect, description: String, colors: [UIColor]?) {
         var dataEntries: [BarChartDataEntry] = []
@@ -63,6 +90,7 @@ class NLStatsView: UIView {
         settingsBarChart.leftAxis.enabled = false
         settingsBarChart.leftAxis.drawAxisLineEnabled = false
         settingsBarChart.leftAxis.valueFormatter = NSNumberFormatter()
+        settingsBarChart.pinchZoomEnabled = false
         //settingsBarChart.animate(xAxisDuration: 1.0, yAxisDuration: 1.0, easingOption: .EaseInBack)
         self.addSubview(settingsBarChart)
     }

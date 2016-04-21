@@ -25,7 +25,7 @@ class NLExportManager: NSObject {
             let string = "\(timeFormatter.stringFromDate(record.date)), \(record.setting), \(record.location), " + (record.supervisor != nil ? record.supervisor!  : "none") + "\n"
             mailString.appendString(string)
             
-            mailString.appendString("Time, Disease, Age, Sex\n")
+            mailString.appendString("Time, Disease, Age, Gender\n")
             
             timeFormatter.dateStyle = .NoStyle
             timeFormatter.timeStyle = .ShortStyle
