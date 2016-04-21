@@ -105,7 +105,7 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
         
         let visit = record.visits[indexPath.row]
         cell.disease.text = visit.topic
-        cell.info.text =  "Sex: " + visit.sex + " Age: " + String(visit.age)
+        cell.info.text =  "Gender: " + visit.sex + " Age: " + String(visit.age)
         
         let timeFormatter = NSDateFormatter()
         timeFormatter.locale = NSLocale.currentLocale()
@@ -117,7 +117,7 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         table.deselectRowAtIndexPath(indexPath, animated: true)
-        self.performSegueWithIdentifier("NLEditVisit", sender: self.record.visits[indexPath.row])
+        self.performSegueWithIdentifier("NLEditVisitSegue", sender: self.record.visits[indexPath.row])
     }
     
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
@@ -155,7 +155,7 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
             })
             
             // Save image
-            alert.addAction(SimpleAlert.Action(title: "I approve these visits", style: .OK) { action in
+            alert.addAction(SimpleAlert.Action(title: "I approve these cases", style: .OK) { action in
                 if viewController.signatureView?.hasSignature == true {
                     let imageData = NSData(data: UIImageJPEGRepresentation(viewController.getSignature(), 0.8)!)
 
@@ -212,8 +212,14 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
             recordPC?.delegate = self
         }
         else if segue.identifier == "NLAddVisitSegue" {
-            let dest = segue.destinationViewController as! NLAddVisitVC
-            dest.record = record
+            let visit = segue.destinationViewController as! NLAddVisitVC
+            visit.record = record
+            
+            visit.didDismiss = { () -> Void in
+                self.table.reloadData()
+            }
+            let visitVC = visit.popoverPresentationController
+            visitVC?.delegate = self
         }
         else if let editVisit = segue.destinationViewController as? NLAddVisitVC {
             editVisit.edittingVisit = sender as? Visit

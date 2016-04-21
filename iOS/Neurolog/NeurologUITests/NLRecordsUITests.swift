@@ -65,12 +65,12 @@ class NLRecordsUITests: XCTestCase {
         app.tables.staticTexts["Age:"].tap()
         app.tables.staticTexts["24"].tap()
         
-        app.tables.staticTexts["Sex:"].tap()
+        app.tables.staticTexts["Gender:"].tap()
         app.sheets.collectionViews.buttons["Female"].tap()
         
         app.navigationBars["Add case"].buttons["Save"].tap()
                 
-        XCTAssert(app.staticTexts["Sex: Female Age: 24"].exists)
+        XCTAssert(app.staticTexts["Gender: Female Age: 24"].exists)
         XCTAssert(app.staticTexts["Disorders of Sleep"].exists)
     }
 }

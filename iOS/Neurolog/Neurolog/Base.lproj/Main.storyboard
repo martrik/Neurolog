@@ -32,9 +32,9 @@
                                 <rect key="frame" x="-0.5" y="58" width="375" height="545"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIN-tf-zo4" customClass="NLStatsView" customModule="Neurolog" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="850"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="500" id="qWb-hU-omT"/>
+                                            <constraint firstAttribute="height" constant="850" id="qWb-hU-omT"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -351,7 +351,9 @@
                             <barButtonItem style="plain" systemItem="add" id="Jn0-75-dog">
                                 <connections>
                                     <action selector="didTapSave:" destination="hxT-Hq-w5N" id="gYf-q1-fNf"/>
-                                    <segue destination="blI-DO-O8H" kind="show" identifier="NLAddVisitSegue" id="ISH-WM-DFP"/>
+                                    <segue destination="blI-DO-O8H" kind="popoverPresentation" identifier="NLAddVisitSegue" popoverAnchorBarButtonItem="Jn0-75-dog" id="ISH-WM-DFP">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Edit" id="XJx-IY-NgD">
@@ -378,7 +380,7 @@
                         <outlet property="table" destination="6iP-wk-Q09" id="klF-gg-Vt2"/>
                         <outlet property="titleLabel" destination="jvl-Hb-dCk" id="L4Q-xH-169"/>
                         <outlet property="topicLabel" destination="tJT-9t-GaP" id="Y4v-WF-0a2"/>
-                        <segue destination="blI-DO-O8H" kind="popoverPresentation" identifier="NLEditVisit" popoverAnchorView="6iP-wk-Q09" id="2LF-uL-vv8">
+                        <segue destination="blI-DO-O8H" kind="popoverPresentation" identifier="NLEditVisitSegue" popoverAnchorView="6iP-wk-Q09" id="2LF-uL-vv8">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                         </segue>
                     </connections>
@@ -396,7 +398,7 @@
                         <viewControllerLayoutGuide type="bottom" id="8qX-uz-dBw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qva-6l-Kbk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -404,7 +406,7 @@
                     <navigationItem key="navigationItem" title="Add case" id="pGi-H6-hO2">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="HnM-98-ccN">
                             <connections>
-                                <action selector="didTapCancel:" destination="blI-DO-O8H" id="kC1-wL-XXW"/>
+                                <action selector="didTapCancel" destination="blI-DO-O8H" id="ROE-8R-Kof"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="xkP-Qg-Kew">
@@ -413,6 +415,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ZO-Ds-3Rq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -451,6 +454,19 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8z9-5u-Dek" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-444.5" y="-54.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bfR-E5-Afx">
+            <objects>
+                <navigationController id="ril-S9-Skr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qnB-hw-yA5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Poi-J6-h4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-359" y="-850"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iyO-Ut-EMp">

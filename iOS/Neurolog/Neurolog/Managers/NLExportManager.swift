@@ -25,7 +25,7 @@ class NLExportManager: NSObject {
             let string = "\(timeFormatter.stringFromDate(record.date)), \(record.setting), \(record.location), " + (record.supervisor != nil ? record.supervisor!  : "none") + "\n"
             mailString.appendString(string)
             
-            mailString.appendString("Time, Disease, Age, Sex\n")
+            mailString.appendString("Time, Disease, Age, Gender\n")
             
             timeFormatter.dateStyle = .NoStyle
             timeFormatter.timeStyle = .ShortStyle
@@ -54,6 +54,9 @@ class NLExportManager: NSObject {
         let mailString = NSMutableString()
         let timeFormatter = NSDateFormatter()
         timeFormatter.locale = NSLocale.currentLocale()
+        
+        mailString.appendString("Topic, Number of cases\n")
+
         
         var stats = NLStatsManager.sharedInstance.statsForTopics(fromDate, to: toDate)
         var i = 0
@@ -102,7 +105,7 @@ class NLExportManager: NSObject {
             dateFormatter.dateStyle = .MediumStyle
             
             mailString.appendString("Detailed statistics for teaching\n")
-            
+
             for topic in topics {
                 if teachingRecords[topic] != nil {
                     mailString.appendString("\(topic) teachings\n")
@@ -126,8 +129,8 @@ class NLExportManager: NSObject {
         let visitsWithTopic = realm.objects(Visit).filter("topic = '\(topic)' AND time <= %@ AND time >= %@", to, from)
         
         let string = NSMutableString()
-        string.appendString("\(topic) cases\n")
-        string.appendString("Date, Age, Sex, Location, Supervisor\n")
+        string.appendString("\(topic) cases \n")
+        string.appendString("Date, Age, Gender, Location, Supervisor\n")
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.locale = NSLocale.currentLocale()

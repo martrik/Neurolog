@@ -9,6 +9,7 @@ public class Case extends RealmObject {
     private String disease;
     private int age;
     private String gender;
+    private Record record;
 
     public String getDisease() {
         return disease;
@@ -40,5 +41,14 @@ public class Case extends RealmObject {
 
     public void setTime(Date time) {
         this.time = time;
+    }
+
+
+    public Record getRecord() {
+        return record;
+    }
+
+    public void setRecord(Record record) {
+        this.record = record;
     }
 }

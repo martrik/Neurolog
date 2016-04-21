@@ -1,7 +1,11 @@
 package uk.ac.ucl.zcabrdc.neurolog;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.FileProvider;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -20,6 +24,9 @@ import com.quemb.qmbform.descriptor.RowDescriptor;
 import com.quemb.qmbform.descriptor.SectionDescriptor;
 import com.quemb.qmbform.descriptor.Value;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 
 public class ExportFragment extends Fragment implements OnFormRowValueChangedListener, OnFormRowClickListener {
@@ -100,8 +107,39 @@ public class ExportFragment extends Fragment implements OnFormRowValueChangedLis
             if (validate("toDate")) return super.onOptionsItemSelected(item);
             if (validate("report")) return super.onOptionsItemSelected(item);
             if (validate("teaching")) return super.onOptionsItemSelected(item);
-            //export code
+
+            Date fromDate = (Date) mChangesMap.get("fromDate").getValue();
+            Date toDate = (Date) mChangesMap.get("toDate").getValue();
+            Boolean teaching = (Boolean) mChangesMap.get("teaching").getValue();
+            Boolean detailed = (Boolean) mChangesMap.get("report").getValue();
+
+            Intent sendIntent = new Intent(Intent.ACTION_SEND_MULTIPLE);
+            sendIntent.putExtra(Intent.EXTRA_SUBJECT, "Person Details");
+            sendIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
+            File newFile = new File(CSVManager.generateGeneralCSV(fromDate, toDate, teaching).getAbsolutePath());
+            Uri contentUri = FileProvider.getUriForFile(getActivity(), "uk.ac.ucl.zcabrdc.neurolog.fileprovider", newFile);
+
+
+            if (detailed) {
+                File newFileDetailed = new File(CSVManager.generateDetailedCSV(fromDate, toDate, teaching).getAbsolutePath());
+                Uri contentUriDetailed = FileProvider.getUriForFile(getActivity(), "uk.ac.ucl.zcabrdc.neurolog.fileprovider", newFileDetailed);
+                ArrayList<Uri> uris = new ArrayList<>();
+                uris.add(contentUri);
+                uris.add(contentUriDetailed);
+                sendIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
+            } else {
+                sendIntent.putExtra(Intent.EXTRA_STREAM, contentUri);
+            }
+
+            sendIntent.setDataAndType(contentUri, getActivity().getContentResolver().getType(contentUri));
+            sendIntent.setType("text/html");
+            this.getActivity().startActivity(Intent.createChooser(sendIntent,
+                    "Send Email Using: "));
+
         }
+
+
         return super.onOptionsItemSelected(item);
     }
 
