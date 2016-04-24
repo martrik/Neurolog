@@ -34,7 +34,7 @@ class NLAddVisitVC: FormViewController {
                     
             }
             <<< PushRow<String>("disease") { (row : PushRow<String>) -> Void in
-                row.title = "Disease:"
+                row.title = "Topic:"
                 
                 row.options = NLSelectionManager.sharedInstance.portfolioTopics()
                 
