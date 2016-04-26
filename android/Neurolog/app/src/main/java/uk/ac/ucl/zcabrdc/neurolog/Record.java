@@ -1,5 +1,7 @@
 package uk.ac.ucl.zcabrdc.neurolog;
 
+import android.graphics.Bitmap;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -15,6 +17,7 @@ public class Record extends RealmObject {
     private String topic = null;
     private Boolean supervisor;
     private String name = null;
+    private byte[] signature;
     private RealmList<Case> cases;
 
     public Date getDate() {
@@ -87,5 +90,13 @@ public class Record extends RealmObject {
 
     public void setCases(RealmList<Case> cases) {
         this.cases = cases;
+    }
+
+    public byte[] getSignature() {
+        return signature;
+    }
+
+    public void setSignature(byte[] signature) {
+        this.signature = signature;
     }
 }

@@ -20,10 +20,17 @@
         <com.github.mikephil.charting.charts.HorizontalBarChart
             android:id="@+id/ageChart"
             android:layout_marginTop="5dip"
-            android:layout_marginBottom="35dip"
             android:layout_below="@id/settingChart"
             android:layout_width="match_parent"
             android:layout_height="300dp" />
+
+        <com.github.mikephil.charting.charts.HorizontalBarChart
+            android:id="@+id/diseaseChart"
+            android:layout_marginTop="5dip"
+            android:layout_marginBottom="35dip"
+            android:layout_below="@id/ageChart"
+            android:layout_width="match_parent"
+            android:layout_height="800dp" />
 
     </RelativeLayout>
 </ScrollView>

@@ -20,6 +20,7 @@
     <string name="section_multiValue">Multiple Value</string>
     <string name="lb_add_new_tag">Add new tag</string>
     <string name="options">Pick an option.</string>
+    <string name="approve">Approve this record</string>
     <string-array name="option_array">
         <item>Edit</item>
         <item>Delete</item>
@@ -32,4 +33,5 @@
     <string name="title_activity_record">Record</string>
     <string name="title_activity_case">Add Case</string>
     <string name="title_activity_export">Export</string>
+    <string name="title_activity_sign">Sign Here</string>
 </resources>

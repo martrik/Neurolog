@@ -3,10 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:paddingBottom="45dp"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="5dp"
+    android:paddingBottom="30dp"
     tools:context="uk.ac.ucl.zcabrdc.neurolog.MainActivity$PlaceholderFragment" >
 
     <ListView

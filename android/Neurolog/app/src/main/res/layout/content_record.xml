@@ -1,60 +1,94 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:paddingBottom="45dp"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="70dp"
     tools:context="uk.ac.ucl.zcabrdc.neurolog.RecordActivity">
 
-    <TextView
-        android:id="@+id/settingDisplay"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="5dip"
-        android:textColor="#040404"
-        android:typeface="sans"
-        android:textSize="20sp"
-        android:textStyle="bold"/>
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:id="@+id/relativeLayout">
+        <TextView
+            android:id="@+id/settingDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dip"
+            android:layout_marginStart="10dp"
+            android:textColor="#040404"
+            android:typeface="sans"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
-    <TextView
-        android:id="@+id/dateDisplay"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dip"
-        android:layout_below="@id/settingDisplay"
-        android:textColor="#343434"
-        android:textSize="13sp"
-        android:layout_marginTop="1dip" />
+        <TextView
+            android:layout_below="@id/settingDisplay"
+            android:id="@+id/dateDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dip"
+            android:layout_marginStart="10dp"
+            android:textColor="#343434"
+            android:textSize="13sp"
+            android:layout_marginTop="1dip" />
 
-    <TextView
-        android:id="@+id/locationDisplay"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dip"
-        android:layout_below="@id/dateDisplay"
-        android:textColor="#343434"
-        android:textSize="13sp"
-        android:layout_marginTop="1dip" />
+        <TextView
+            android:layout_below="@id/dateDisplay"
+            android:id="@+id/locationDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dip"
+            android:layout_marginStart="10dp"
+            android:textColor="#343434"
+            android:textSize="13sp"
+            android:layout_marginTop="1dip" />
 
-    <TextView
-        android:id="@+id/supervisorDisplay"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dip"
-        android:layout_below="@id/locationDisplay"
-        android:textColor="#343434"
-        android:textSize="13sp"
-        android:layout_marginTop="1dip"/>
+        <TextView
+            android:layout_below="@id/locationDisplay"
+            android:id="@+id/supervisorDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dip"
+            android:layout_marginStart="10dp"
+            android:textColor="#343434"
+            android:textSize="13sp"
+            android:layout_marginTop="1dip"/>
+
+        <ImageView
+            android:id="@+id/signed_image"
+            android:src="@drawable/signed_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showImage"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:layout_centerVertical="true"
+            android:gravity="center" />
+    </RelativeLayout>
 
     <ListView
         android:id="@+id/caseList"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/supervisorDisplay"
+        android:layout_marginTop="15dp"
+        android:layout_above="@+id/approveButton"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/relativeLayout">
     </ListView>
 
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/approveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+        <Button
+            android:text="@string/approve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff0bdd06"
+            android:onClick="approveRecord"
+            android:textColor="#fffafafa" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -55,6 +55,7 @@ public class OptionDialogFragment extends DialogFragment {
                                     removeCase.removeFromRealm();
                                 record.removeFromRealm();
                                 realm.commitTransaction();
+                                record = null;
                                 dialog.dismiss();
                                 Intent i = new Intent(getActivity(), MainActivity.class);
                                 startActivity(i);

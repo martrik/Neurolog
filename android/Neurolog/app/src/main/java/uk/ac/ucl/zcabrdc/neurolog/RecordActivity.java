@@ -1,30 +1,59 @@
 package uk.ac.ucl.zcabrdc.neurolog;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import com.quemb.qmbform.descriptor.Value;
-
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashMap;
 
-import io.realm.Realm;
 
 public class RecordActivity extends AppCompatActivity {
 
     public static HashMap<String, Value<?>> editMap;
+    //public static Boolean hasSigned;
     private Record record;
+
+    public void showImage(View view) {
+        Dialog builder = new Dialog(this);
+        builder.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        builder.getWindow().setBackgroundDrawable(
+                new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialogInterface) {
+                //nothing;
+            }
+        });
+
+        ImageView imageView = new ImageView(this);
+        byte[] data = record.getSignature();
+        Bitmap bmp = BitmapFactory.decodeByteArray(data, 0, data.length);
+        imageView.setImageBitmap(bmp);
+        //imageView.setImageURI(imageUri); //change this
+        builder.addContentView(imageView, new RelativeLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT));
+        builder.show();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,9 +74,17 @@ public class RecordActivity extends AppCompatActivity {
         TextView locationDisplay = (TextView) findViewById(R.id.locationDisplay);
         locationDisplay.setText("Location: " + record.getLocation());
 
+        View buttonApprove = findViewById(R.id.approveButton);
+        buttonApprove.setVisibility(View.INVISIBLE);
+
+        ImageView signatureBadge = (ImageView) findViewById(R.id.signed_image);
+        signatureBadge.setVisibility(View.INVISIBLE);
+
         if (record.getSupervisor()) {
             TextView supervisorDisplay = (TextView) findViewById(R.id.supervisorDisplay);
             supervisorDisplay.setText("Supervisor: " + record.getName());
+            if (record.getSignature() == null) buttonApprove.setVisibility(View.VISIBLE);
+            if (record.getSignature() != null) signatureBadge.setVisibility(View.VISIBLE);
         }
 
         //Listview stuff here
@@ -94,4 +131,8 @@ public class RecordActivity extends AppCompatActivity {
         }
     }
 
+    public void approveRecord(View view) {
+        //Log.d("Test", "The button works woop!");
+        startActivity(new Intent(this, SignActivity.class));
+    }
 }

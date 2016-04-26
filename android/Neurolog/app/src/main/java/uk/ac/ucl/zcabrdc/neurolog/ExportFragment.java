@@ -137,6 +137,7 @@ public class ExportFragment extends Fragment implements OnFormRowValueChangedLis
             this.getActivity().startActivity(Intent.createChooser(sendIntent,
                     "Send Email Using: "));
 
+            return true;
         }
 
 

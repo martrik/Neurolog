@@ -185,11 +185,43 @@ public class MainActivity extends AppCompatActivity {
                     ageChart.setDrawValueAboveBar(false);
                     ageChart.setPinchZoom(true);
                     ageChart.setDescription("");
-                    agedataset.setColor(0xFFFF4200);
+                    agedataset.setColor(0xff1626df);
 
                     XAxis ageAxis = ageChart.getXAxis();
                     ageAxis.setDrawGridLines(false);
                     ageAxis.setDrawAxisLine(false);
+
+                    //disease chart
+                    HorizontalBarChart disChart = (HorizontalBarChart) rootView.findViewById(R.id.diseaseChart);
+                    entries = new ArrayList<>();
+                    labels = new ArrayList<>();
+
+                    for (int i = 0; i < response.getPortfolio().size(); i++) {
+                        int total = realm.where(Case.class).contains("disease", response.getPortfolio().get(i)).findAll().size();
+                        entries.add(new BarEntry(total, i));
+                        labels.add(response.getPortfolio().get(i));
+                    }
+
+                    BarDataSet disdataset = new BarDataSet(entries, "Number of cases per disease");
+                    BarData disdata = new BarData(labels, disdataset);
+                    disdata.setValueFormatter(new ValueFormatter() {
+                        @Override
+                        public String getFormattedValue(float value, Entry entry, int dataSetIndex, ViewPortHandler viewPortHandler) {
+                            return Integer.toString((int) value);
+                        }
+                    });
+                    disdata.setValueTextSize(8f);
+                    disdata.setValueTextColor(0xfff0f0f0);
+                    disChart.setData(disdata);
+                    disChart.setDrawGridBackground(false);
+                    disChart.setDrawValueAboveBar(false);
+                    disChart.setPinchZoom(true);
+                    disChart.setDescription("");
+                    disdataset.setColor(0xff1626df);
+
+                    XAxis disAxis = disChart.getXAxis();
+                    disAxis.setDrawGridLines(false);
+                    disAxis.setDrawAxisLine(false);
                     break;
             }
             return rootView;

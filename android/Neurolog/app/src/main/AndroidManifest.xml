@@ -62,13 +62,22 @@
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="uk.ac.ucl.zcabrdc.neurolog.fileprovider"
-            android:grantUriPermissions="true"
-            android:exported="false">
+            android:exported="false"
+            android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/filepaths" />
         </provider>
 
+        <activity
+            android:name=".SignActivity"
+            android:label="@string/title_activity_sign"
+            android:parentActivityName=".RecordActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uk.ac.ucl.zcabrdc.neurolog.RecordActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -219,10 +219,15 @@ public class AddFragment extends Fragment implements OnFormRowValueChangedListen
             realm.commitTransaction();
 
             mChangesMap.clear();
-            editCheck = false;
 
-            Intent i = new Intent(getActivity(), MainActivity.class);
-            startActivity(i);
+
+            if (editCheck) {
+                startActivity(new Intent(getActivity(), RecordActivity.class));
+            } else {
+                startActivity(new Intent(getActivity(), MainActivity.class));
+            }
+
+            editCheck = false;
             return true;
         }
         return super.onOptionsItemSelected(item);
