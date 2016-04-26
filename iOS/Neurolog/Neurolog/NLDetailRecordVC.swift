@@ -48,14 +48,17 @@ class NLDetailRecordVC: UIViewController, UITableViewDataSource, UITableViewDele
         setAttributed(settingLabel, title: "Setting: ", text: record.setting, size: 19)
 
         if record.setting == "Teaching" {
+            lecturerLabel.hidden = false
+            topicLabel.hidden = false
+            titleLabel.hidden = false
             setAttributed(lecturerLabel, title: "Lecturer: ", text: record.teachingInfo!.lecturer, size: 16)
             setAttributed(topicLabel, title: "Topic: ", text: record.teachingInfo!.topic, size: 16)
             setAttributed(titleLabel, title: "Title: ", text: record.teachingInfo!.title, size: 16)
             dateVerticalDistance.constant = CGRectGetMaxY(topicLabel.frame) - CGRectGetMaxY(settingLabel.frame) + 12
         } else {
-            lecturerLabel.removeFromSuperview()
-            topicLabel.removeFromSuperview()
-            titleLabel.removeFromSuperview()
+            lecturerLabel.hidden = true
+            topicLabel.hidden = true
+            titleLabel.hidden = true
             dateVerticalDistance.constant = 8
         }
         

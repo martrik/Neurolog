@@ -71,7 +71,7 @@ class NLMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         case 0:
             self.performSegueWithIdentifier("NLDetailSegue", sender: data[selectedRow])
             break;
-        case 1, 2:
+        case 1:
             break;
         default:
             break;

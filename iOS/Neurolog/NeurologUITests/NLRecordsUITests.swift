@@ -59,7 +59,7 @@ class NLRecordsUITests: XCTestCase {
         // Add visit
         app.navigationBars["Record"].buttons["Add"].tap()
         
-        app.tables.staticTexts["Disease:"].tap()
+        app.tables.staticTexts["Topic:"].tap()
         app.tables.staticTexts["Disorders of Sleep"].tap()
         
         app.tables.staticTexts["Age:"].tap()

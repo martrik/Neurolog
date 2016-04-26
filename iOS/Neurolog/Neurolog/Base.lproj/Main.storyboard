@@ -356,7 +356,7 @@
                                     </segue>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Edit" id="XJx-IY-NgD">
+                            <barButtonItem systemItem="compose" id="XJx-IY-NgD">
                                 <connections>
                                     <segue destination="hxT-Hq-w5N" kind="popoverPresentation" identifier="NLEditRecord" popoverAnchorBarButtonItem="XJx-IY-NgD" id="dNx-3e-TeC">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -488,7 +488,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GXa-d7-RMs"/>
+        <segue reference="dNx-3e-TeC"/>
         <segue reference="2LF-uL-vv8"/>
     </inferredMetricsTieBreakers>
 </document>
