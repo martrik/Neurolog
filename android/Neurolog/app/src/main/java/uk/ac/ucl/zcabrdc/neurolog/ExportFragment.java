@@ -120,18 +120,16 @@ public class ExportFragment extends Fragment implements OnFormRowValueChangedLis
             File newFile = new File(CSVManager.generateGeneralCSV(fromDate, toDate, teaching).getAbsolutePath());
             Uri contentUri = FileProvider.getUriForFile(getActivity(), "uk.ac.ucl.zcabrdc.neurolog.fileprovider", newFile);
 
+            ArrayList<Uri> uris = new ArrayList<>();
+            uris.add(contentUri);
 
             if (detailed) {
                 File newFileDetailed = new File(CSVManager.generateDetailedCSV(fromDate, toDate, teaching).getAbsolutePath());
                 Uri contentUriDetailed = FileProvider.getUriForFile(getActivity(), "uk.ac.ucl.zcabrdc.neurolog.fileprovider", newFileDetailed);
-                ArrayList<Uri> uris = new ArrayList<>();
-                uris.add(contentUri);
                 uris.add(contentUriDetailed);
-                sendIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
-            } else {
-                sendIntent.putExtra(Intent.EXTRA_STREAM, contentUri);
             }
-
+            
+            sendIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris); //new
             sendIntent.setDataAndType(contentUri, getActivity().getContentResolver().getType(contentUri));
             sendIntent.setType("text/html");
             this.getActivity().startActivity(Intent.createChooser(sendIntent,

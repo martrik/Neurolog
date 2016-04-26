@@ -43,7 +43,6 @@ public class Case extends RealmObject {
         this.time = time;
     }
 
-
     public Record getRecord() {
         return record;
     }
